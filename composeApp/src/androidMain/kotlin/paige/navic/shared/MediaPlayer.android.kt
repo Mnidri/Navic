@@ -5,6 +5,7 @@ import android.app.PendingIntent
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import androidx.annotation.OptIn
 import androidx.core.net.toUri
 import androidx.lifecycle.viewModelScope
@@ -208,20 +209,21 @@ class AndroidMediaPlayerViewModel(
 		}
 	}
 
-	private fun getStreamUrl(id: String) =
-		when (connectivityManager.isCellular.value) {
-			true -> SessionManager.api.getStreamUrl(
-				id,
-				if(Settings.shared.isAdvancedTranscodingActive) Settings.shared.customMaxBitrateCellular else Settings.shared.streamingQualityCellular.bitrateAndroid,
-				Settings.shared.streamingQualityCellular.containerAndroid
-			).toUri()
+	private fun getStreamUrl(id: String): Uri {
+		val isCellular = connectivityManager.isCellular.value
+		val bitrate = if (Settings.shared.isAdvancedTranscodingActive) {
+			if (isCellular) Settings.shared.customMaxBitrateCellular else Settings.shared.customMaxBitrateWifi
+		} else {
+			if (isCellular) Settings.shared.streamingQualityCellular.bitrateAndroid else Settings.shared.streamingQualityWifi.bitrateAndroid
+		}
+		val container = if (isCellular) Settings.shared.streamingQualityCellular.containerAndroid else Settings.shared.streamingQualityWifi.containerAndroid
 
-			false -> SessionManager.api.getStreamUrl(
-				id,
-				if(Settings.shared.isAdvancedTranscodingActive) Settings.shared.customMaxBitrateWifi else Settings.shared.streamingQualityWifi.bitrateAndroid,
-				Settings.shared.streamingQualityWifi.containerAndroid
-			).toUri()
-		}.buildUpon().appendQueryParameter("estimateContentLength", "true").build()
+		return SessionManager.api.getStreamUrl(id, bitrate, container)
+			.toUri()
+			.buildUpon()
+			.appendQueryParameter("estimateContentLength", "true")
+			.build()
+	}
 
 	private fun setupController() {
 		viewModelScope.launch {
