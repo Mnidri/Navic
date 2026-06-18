@@ -1,25 +1,28 @@
 package com.flexify.app.util.core
 
-import androidx.compose.runtime.Composable
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.count_hours
-import navic.composeapp.generated.resources.count_minutes
-import org.jetbrains.compose.resources.pluralStringResource
-import kotlin.math.max
-import kotlin.time.Duration
-import kotlin.time.Duration.Companion.hours
+fun getLabelForRating(rating: Int): String {
+    return when (rating) {
+        0 -> "Not Rated"
+        1 -> "⭐"
+        2 -> "⭐⭐"
+        3 -> "⭐⭐⭐"
+        4 -> "⭐⭐⭐⭐"
+        5 -> "⭐⭐⭐⭐⭐"
+        else -> "Unknown"
+    }
+}
 
-@Composable
-fun Duration.label(): String {
-	val hours = inWholeHours.toInt()
-	val minutes = (this - hours.hours).inWholeMinutes.toInt()
+fun getLabelForYear(year: Int): String {
+    return if (year > 0) year.toString() else "Unknown Year"
+}
 
-	return when {
-		hours > 0 && minutes > 0 ->
-			"${pluralStringResource(Res.plurals.count_hours, hours, hours)} ${pluralStringResource(Res.plurals.count_minutes, minutes, minutes)}"
-		hours > 0 ->
-			pluralStringResource(Res.plurals.count_hours, hours, hours)
-		else ->
-			pluralStringResource(Res.plurals.count_minutes, max(1, minutes), max(1, minutes))
-	}
+fun getLabelForDuration(seconds: Int): String {
+    val minutes = seconds / 60
+    val remainingSeconds = seconds % 60
+    return if (minutes > 0) {
+        if (remainingSeconds > 0) "$minutes min $remainingSeconds sec"
+        else "$minutes min"
+    } else {
+        "$seconds sec"
+    }
 }
