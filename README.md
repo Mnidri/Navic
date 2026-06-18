@@ -49,3 +49,4 @@ You can help translate Navic by contributing on [Weblate](https://hosted.weblate
 [ALTSOURCE]: https://stikstore.app/altdirect/?url=https://raw.githubusercontent.com/ssalggnikool/Navic/refs/heads/master/app-repo.json
 
 [LATEST_RELEASE]: https://github.com/ssalggnikool/Navic/releases/latest
+# Flexify

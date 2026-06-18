@@ -17,7 +17,8 @@ extensions.configure<ApplicationExtension> {
 	}
 
 	defaultConfig {
-		applicationId = "paige.navic"
+
+applicationId = "com.flexify.app"
 		minSdk = libs.versions.android.minSdk.get().toInt()
 		targetSdk = libs.versions.android.targetSdk.get().toInt()
 		versionCode = 40
