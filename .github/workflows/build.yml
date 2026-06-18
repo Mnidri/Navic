@@ -165,7 +165,21 @@ jobs:
           payload=$(jq -n --arg content "Builds for [${GITHUB_SHA::7}](<$run_url>)" '{$content}')
 
           curl -XPOST "$CI_BUILD_WEBHOOK" -F "payload_json=$payload" "${files[@]}"
-
+upload-apk:
+  name: Upload APK
+  needs: build-android
+  runs-on: ubuntu-latest
+  steps:
+    - name: Download APK from build
+      uses: actions/download-artifact@v4
+      with:
+        name: android-app
+        path: android-app
+    - name: Upload APK as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: Flexify-APK
+        path: android-app/*.apk
   create-release:
     name: Create GitHub Release
     if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
