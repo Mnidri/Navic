@@ -37,11 +37,11 @@ import kotlinx.coroutines.launch
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_dont_show_again
-import navic.composeapp.generated.resources.action_update_app
-import navic.composeapp.generated.resources.info_update
-import navic.composeapp.generated.resources.title_update
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_dont_show_again
+import com.flexify.app.composeapp.generated.resources.action_update_app
+import com.flexify.app.composeapp.generated.resources.info_update
+import com.flexify.app.composeapp.generated.resources.title_update
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
@@ -130,12 +130,12 @@ fun ChangelogSheet() {
 					horizontalAlignment = Alignment.CenterHorizontally
 				) {
 					Text(
-						text = stringResource(Res.string.title_update),
+						text = stringResource(com.flexify.app.generated.resources.Res.string.title_update),
 						style = MaterialTheme.typography.titleLarge,
 						fontFamily = defaultFont(round = 100f)
 					)
 					Text(
-						stringResource(Res.string.info_update, release.tag),
+						stringResource(com.flexify.app.generated.resources.Res.string.info_update, release.tag),
 						style = MaterialTheme.typography.bodyMedium
 					)
 				}
@@ -166,7 +166,7 @@ fun ChangelogSheet() {
 					shape = ContinuousCapsule
 				) {
 					Text(
-						text = stringResource(Res.string.action_update_app),
+						text = stringResource(com.flexify.app.generated.resources.Res.string.action_update_app),
 						fontFamily = defaultFont(100)
 					)
 				}
@@ -181,7 +181,7 @@ fun ChangelogSheet() {
 					shape = ContinuousCapsule
 				) {
 					Text(
-						text = stringResource(Res.string.action_dont_show_again),
+						text = stringResource(com.flexify.app.generated.resources.Res.string.action_dont_show_again),
 						fontFamily = defaultFont(100)
 					)
 				}

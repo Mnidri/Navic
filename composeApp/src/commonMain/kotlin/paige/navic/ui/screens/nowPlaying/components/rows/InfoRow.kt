@@ -15,8 +15,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.dropUnlessResumed
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.info_not_playing
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.info_not_playing
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import com.flexify.app.LocalNavStack
@@ -99,7 +99,7 @@ fun NowPlayingInfoRow(
 						color = MaterialTheme.colorScheme.onSurfaceVariant,
 						fontSize = MaterialTheme.typography.bodyMedium.fontSize * 1.1
 					),
-				text = song?.artistName ?: stringResource(Res.string.info_not_playing)
+				text = song?.artistName ?: stringResource(com.flexify.app.generated.resources.Res.string.info_not_playing)
 			)
 		}
 		Row(

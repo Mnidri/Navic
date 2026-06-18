@@ -27,20 +27,20 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.dropUnlessResumed
 import kotlinx.collections.immutable.toImmutableList
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.option_audio_offload
-import navic.composeapp.generated.resources.option_enable_scrobbling
-import navic.composeapp.generated.resources.option_gapless_playback
-import navic.composeapp.generated.resources.option_min_duration_to_scrobble
-import navic.composeapp.generated.resources.option_replay_gain
-import navic.composeapp.generated.resources.option_scrobble_percentage
-import navic.composeapp.generated.resources.subtitle_audio_offload
-import navic.composeapp.generated.resources.subtitle_enable_scrobbling
-import navic.composeapp.generated.resources.subtitle_gapless_playback
-import navic.composeapp.generated.resources.subtitle_streaming_quality
-import navic.composeapp.generated.resources.title_behaviour
-import navic.composeapp.generated.resources.title_playback
-import navic.composeapp.generated.resources.title_streaming_quality
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.option_audio_offload
+import com.flexify.app.composeapp.generated.resources.option_enable_scrobbling
+import com.flexify.app.composeapp.generated.resources.option_gapless_playback
+import com.flexify.app.composeapp.generated.resources.option_min_duration_to_scrobble
+import com.flexify.app.composeapp.generated.resources.option_replay_gain
+import com.flexify.app.composeapp.generated.resources.option_scrobble_percentage
+import com.flexify.app.composeapp.generated.resources.subtitle_audio_offload
+import com.flexify.app.composeapp.generated.resources.subtitle_enable_scrobbling
+import com.flexify.app.composeapp.generated.resources.subtitle_gapless_playback
+import com.flexify.app.composeapp.generated.resources.subtitle_streaming_quality
+import com.flexify.app.composeapp.generated.resources.title_behaviour
+import com.flexify.app.composeapp.generated.resources.title_playback
+import com.flexify.app.composeapp.generated.resources.title_streaming_quality
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import com.flexify.app.LocalNavStack
@@ -68,7 +68,7 @@ fun SettingsPlaybackScreen() {
 	Scaffold(
 		topBar = {
 			NestedTopBar(
-				{ Text(stringResource(Res.string.title_playback)) },
+				{ Text(stringResource(com.flexify.app.generated.resources.Res.string.title_playback)) },
 				hideBack = platformContext.sizeClass.widthSizeClass >= WindowWidthSizeClass.Medium
 			)
 		}
@@ -88,9 +88,9 @@ fun SettingsPlaybackScreen() {
 						horizontalArrangement = Arrangement.Start
 					) {
 						Column(Modifier.weight(1f)) {
-							Text(stringResource(Res.string.title_streaming_quality))
+							Text(stringResource(com.flexify.app.generated.resources.Res.string.title_streaming_quality))
 							Text(
-								text = stringResource(Res.string.subtitle_streaming_quality),
+								text = stringResource(com.flexify.app.generated.resources.Res.string.subtitle_streaming_quality),
 								style = MaterialTheme.typography.bodyMedium,
 								color = MaterialTheme.colorScheme.onSurfaceVariant
 							)
@@ -99,32 +99,32 @@ fun SettingsPlaybackScreen() {
 					}
 					if (platformContext.platformType == PlatformType.Android) {
 						SettingSelectionRow(
-							title = { Text(stringResource(Res.string.option_replay_gain)) },
+							title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_replay_gain)) },
 							items = ReplayGainMode.entries.toImmutableList(),
 							label = { stringResource(it.displayName) },
 							selection = preferenceManager.replayGainMode,
 							onSelect = { preferenceManager.replayGainMode = it }
 						)
 						SettingSwitchRow(
-							title = { Text(stringResource(Res.string.option_gapless_playback)) },
-							subtitle = { Text(stringResource(Res.string.subtitle_gapless_playback)) },
+							title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_gapless_playback)) },
+							subtitle = { Text(stringResource(com.flexify.app.generated.resources.Res.string.subtitle_gapless_playback)) },
 							value = preferenceManager.gaplessPlayback,
 							onSetValue = { preferenceManager.gaplessPlayback = it }
 						)
 						SettingSwitchRow(
-							title = { Text(stringResource(Res.string.option_audio_offload)) },
-							subtitle = { Text(stringResource(Res.string.subtitle_audio_offload)) },
+							title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_audio_offload)) },
+							subtitle = { Text(stringResource(com.flexify.app.generated.resources.Res.string.subtitle_audio_offload)) },
 							value = preferenceManager.audioOffload,
 							onSetValue = { preferenceManager.audioOffload = it }
 						)
 					}
 				}
 
-				FormTitle(stringResource(Res.string.title_behaviour))
+				FormTitle(stringResource(com.flexify.app.generated.resources.Res.string.title_behaviour))
 				Form {
 					SettingSwitchRow(
-						title = { Text(stringResource(Res.string.option_enable_scrobbling)) },
-						subtitle = { Text(stringResource(Res.string.subtitle_enable_scrobbling)) },
+						title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_enable_scrobbling)) },
+						subtitle = { Text(stringResource(com.flexify.app.generated.resources.Res.string.subtitle_enable_scrobbling)) },
 						value = preferenceManager.enableScrobbling,
 						onSetValue = { preferenceManager.enableScrobbling = it }
 					)
@@ -135,7 +135,7 @@ fun SettingsPlaybackScreen() {
 								modifier = Modifier.fillMaxWidth(),
 								horizontalArrangement = Arrangement.SpaceBetween
 							) {
-								Text(stringResource(Res.string.option_scrobble_percentage))
+								Text(stringResource(com.flexify.app.generated.resources.Res.string.option_scrobble_percentage))
 								Text(
 									"${(preferenceManager.scrobblePercentage * 100).roundToInt()}%",
 									fontFamily = FontFamily.Monospace,
@@ -159,7 +159,7 @@ fun SettingsPlaybackScreen() {
 								modifier = Modifier.fillMaxWidth(),
 								horizontalArrangement = Arrangement.SpaceBetween
 							) {
-								Text(stringResource(Res.string.option_min_duration_to_scrobble))
+								Text(stringResource(com.flexify.app.generated.resources.Res.string.option_min_duration_to_scrobble))
 								Text(
 									"${preferenceManager.minDurationToScrobble.toInt()}s",
 									fontFamily = FontFamily.Monospace,

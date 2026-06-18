@@ -22,9 +22,9 @@ import com.flexify.app.domain.manager.DownloadManager
 import com.flexify.app.ui.components.layouts.ArtGridItem
 import com.flexify.app.ui.components.sheets.CollectionSheet
 import com.flexify.app.ui.screens.playlist.dialogs.PlaylistUpdateDialog
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.notice_download_started
-import navic.composeapp.generated.resources.notice_deleted_download
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.notice_download_started
+import com.flexify.app.composeapp.generated.resources.notice_deleted_download
 import com.flexify.app.domain.manager.SnackBarManager
 
 @Composable
@@ -81,7 +81,7 @@ fun AlbumListScreenItem(
 				onDownloadAll = { 
 					scope.launch {
 						downloadManager.downloadCollection(album)
-						snackBarManager.notify(Res.string.notice_download_started)
+						snackBarManager.notify(com.flexify.app.generated.resources.Res.string.notice_download_started)
 					}
 				},
 				onCancelDownloadAll = {
@@ -92,7 +92,7 @@ fun AlbumListScreenItem(
 				onDeleteDownloadAll = {
 					scope.launch {
 						downloadManager.deleteDownloadedCollection(album)
-						snackBarManager.notify(Res.string.notice_deleted_download)
+						snackBarManager.notify(com.flexify.app.generated.resources.Res.string.notice_deleted_download)
 					}
 				},
 				starred = starred,

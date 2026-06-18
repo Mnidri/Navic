@@ -18,18 +18,18 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import kotlinx.collections.immutable.toImmutableList
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.option_bottom_bar_collapse_mode
-import navic.composeapp.generated.resources.option_bottom_bar_visibility_mode
-import navic.composeapp.generated.resources.option_mini_player_progress_style
-import navic.composeapp.generated.resources.option_mini_player_style
-import navic.composeapp.generated.resources.option_navigation_bar_label_visibility
-import navic.composeapp.generated.resources.option_navigation_bar_style
-import navic.composeapp.generated.resources.option_navigation_bar_tabs
-import navic.composeapp.generated.resources.option_swipe_to_skip
-import navic.composeapp.generated.resources.title_bottom_app_bar
-import navic.composeapp.generated.resources.title_mini_player
-import navic.composeapp.generated.resources.title_navigation_bar
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.option_bottom_bar_collapse_mode
+import com.flexify.app.composeapp.generated.resources.option_bottom_bar_visibility_mode
+import com.flexify.app.composeapp.generated.resources.option_mini_player_progress_style
+import com.flexify.app.composeapp.generated.resources.option_mini_player_style
+import com.flexify.app.composeapp.generated.resources.option_navigation_bar_label_visibility
+import com.flexify.app.composeapp.generated.resources.option_navigation_bar_style
+import com.flexify.app.composeapp.generated.resources.option_navigation_bar_tabs
+import com.flexify.app.composeapp.generated.resources.option_swipe_to_skip
+import com.flexify.app.composeapp.generated.resources.title_bottom_app_bar
+import com.flexify.app.composeapp.generated.resources.title_mini_player
+import com.flexify.app.composeapp.generated.resources.title_navigation_bar
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import com.flexify.app.LocalPlatformContext
@@ -59,7 +59,7 @@ fun BottomBarScreen() {
 	Scaffold(
 		topBar = {
 			NestedTopBar(
-				{ Text(stringResource(Res.string.title_bottom_app_bar)) },
+				{ Text(stringResource(com.flexify.app.generated.resources.Res.string.title_bottom_app_bar)) },
 				hideBack = platformContext.sizeClass.widthSizeClass >= WindowWidthSizeClass.Medium
 			)
 		}
@@ -75,7 +75,7 @@ fun BottomBarScreen() {
 			) {
 				Form {
 					SettingSwitchRow(
-						title = { Text(stringResource(Res.string.option_swipe_to_skip)) },
+						title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_swipe_to_skip)) },
 						value = preferenceManager.swipeToSkip,
 						onSetValue = { preferenceManager.swipeToSkip = it }
 					)
@@ -85,7 +85,7 @@ fun BottomBarScreen() {
 						label = { stringResource(it.displayName) },
 						selection = preferenceManager.bottomBarCollapseMode,
 						onSelect = { preferenceManager.bottomBarCollapseMode = it },
-						title = { Text(stringResource(Res.string.option_bottom_bar_collapse_mode)) },
+						title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_bottom_bar_collapse_mode)) },
 					)
 
 					SettingSelectionRow(
@@ -93,18 +93,18 @@ fun BottomBarScreen() {
 						label = { stringResource(it.displayName) },
 						selection = preferenceManager.bottomBarVisibilityMode,
 						onSelect = { preferenceManager.bottomBarVisibilityMode = it },
-						title = { Text(stringResource(Res.string.option_bottom_bar_visibility_mode)) },
+						title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_bottom_bar_visibility_mode)) },
 					)
 				}
 
-				FormTitle(stringResource(Res.string.title_navigation_bar))
+				FormTitle(stringResource(com.flexify.app.generated.resources.Res.string.title_navigation_bar))
 				Form {
 					SettingSelectionRow(
 						items = NavigationBarStyle.entries.toImmutableList(),
 						label = { stringResource(it.displayName) },
 						selection = preferenceManager.navigationBarStyle,
 						onSelect = { preferenceManager.navigationBarStyle = it },
-						title = { Text(stringResource(Res.string.option_navigation_bar_style)) },
+						title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_navigation_bar_style)) },
 					)
 
 					SettingSelectionRow(
@@ -112,25 +112,25 @@ fun BottomBarScreen() {
 						label = { stringResource(it.displayName) },
 						selection = preferenceManager.navigationBarLabelVisibility,
 						onSelect = { preferenceManager.navigationBarLabelVisibility = it },
-						title = { Text(stringResource(Res.string.option_navigation_bar_label_visibility)) },
+						title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_navigation_bar_label_visibility)) },
 					)
 
 					FormRow(
 						onClick = { showNavtabsDialog = true }
 					) {
-						Text(stringResource(Res.string.option_navigation_bar_tabs))
+						Text(stringResource(com.flexify.app.generated.resources.Res.string.option_navigation_bar_tabs))
 						Icon(Icons.Outlined.ChevronForward, null)
 					}
 				}
 
-				FormTitle(stringResource(Res.string.title_mini_player))
+				FormTitle(stringResource(com.flexify.app.generated.resources.Res.string.title_mini_player))
 				Form {
 					SettingSelectionRow(
 						items = MiniPlayerStyle.entries.toImmutableList(),
 						label = { stringResource(it.displayName) },
 						selection = preferenceManager.miniPlayerStyle,
 						onSelect = { preferenceManager.miniPlayerStyle = it },
-						title = { Text(stringResource(Res.string.option_mini_player_style)) },
+						title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_mini_player_style)) },
 					)
 
 					SettingSelectionRow(
@@ -138,7 +138,7 @@ fun BottomBarScreen() {
 						label = { stringResource(it.displayName) },
 						selection = preferenceManager.miniPlayerProgressStyle,
 						onSelect = { preferenceManager.miniPlayerProgressStyle = it },
-						title = { Text(stringResource(Res.string.option_mini_player_progress_style)) },
+						title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_mini_player_progress_style)) },
 					)
 				}
 			}

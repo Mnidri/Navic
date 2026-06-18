@@ -19,17 +19,17 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.dropUnlessResumed
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_cancel
-import navic.composeapp.generated.resources.action_ok
-import navic.composeapp.generated.resources.action_test_exception_handler
-import navic.composeapp.generated.resources.info_exception_handler
-import navic.composeapp.generated.resources.option_check_for_updates
-import navic.composeapp.generated.resources.option_custom_headers
-import navic.composeapp.generated.resources.subtitle_check_for_updates
-import navic.composeapp.generated.resources.title_confirm
-import navic.composeapp.generated.resources.title_developer
-import navic.composeapp.generated.resources.title_logs
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_cancel
+import com.flexify.app.composeapp.generated.resources.action_ok
+import com.flexify.app.composeapp.generated.resources.action_test_exception_handler
+import com.flexify.app.composeapp.generated.resources.info_exception_handler
+import com.flexify.app.composeapp.generated.resources.option_check_for_updates
+import com.flexify.app.composeapp.generated.resources.option_custom_headers
+import com.flexify.app.composeapp.generated.resources.subtitle_check_for_updates
+import com.flexify.app.composeapp.generated.resources.title_confirm
+import com.flexify.app.composeapp.generated.resources.title_developer
+import com.flexify.app.composeapp.generated.resources.title_logs
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import com.flexify.app.LocalNavStack
@@ -56,7 +56,7 @@ fun SettingsDeveloperScreen() {
 	Scaffold(
 		topBar = {
 			NestedTopBar(
-				{ Text(stringResource(Res.string.title_developer)) },
+				{ Text(stringResource(com.flexify.app.generated.resources.Res.string.title_developer)) },
 				hideBack = platformContext.sizeClass.widthSizeClass >= WindowWidthSizeClass.Medium
 			)
 		}
@@ -73,8 +73,8 @@ fun SettingsDeveloperScreen() {
 				Form {
 					if (platformContext.platformType == PlatformType.Android) {
 						SettingSwitchRow(
-							title = { Text(stringResource(Res.string.option_check_for_updates)) },
-							subtitle = { Text(stringResource(Res.string.subtitle_check_for_updates)) },
+							title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_check_for_updates)) },
+							subtitle = { Text(stringResource(com.flexify.app.generated.resources.Res.string.subtitle_check_for_updates)) },
 							value = preferenceManager.checkForUpdates,
 							onSetValue = { preferenceManager.checkForUpdates = it }
 						)
@@ -88,7 +88,7 @@ fun SettingsDeveloperScreen() {
 							}
 						}
 					) {
-						Text(stringResource(Res.string.option_custom_headers))
+						Text(stringResource(com.flexify.app.generated.resources.Res.string.option_custom_headers))
 						Icon(Icons.Outlined.ChevronForward, null)
 					}
 					if (platformContext.platformType == PlatformType.Android) {
@@ -101,7 +101,7 @@ fun SettingsDeveloperScreen() {
 								}
 							}
 						) {
-							Text(stringResource(Res.string.title_logs))
+							Text(stringResource(com.flexify.app.generated.resources.Res.string.title_logs))
 							Icon(Icons.Outlined.ChevronForward, null)
 						}
 					}
@@ -111,7 +111,7 @@ fun SettingsDeveloperScreen() {
 						exceptionConfirmationShown = true
 					}) {
 						Text(
-							text = stringResource(Res.string.action_test_exception_handler),
+							text = stringResource(com.flexify.app.generated.resources.Res.string.action_test_exception_handler),
 							color = MaterialTheme.colorScheme.error
 						)
 					}
@@ -123,8 +123,8 @@ fun SettingsDeveloperScreen() {
 	if (exceptionConfirmationShown) {
 		FormDialog(
 			onDismissRequest = { exceptionConfirmationShown = false },
-			title = { Text(stringResource(Res.string.title_confirm)) },
-			content = { Text(stringResource(Res.string.info_exception_handler)) },
+			title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.title_confirm)) },
+			content = { Text(stringResource(com.flexify.app.generated.resources.Res.string.info_exception_handler)) },
 			buttons = {
 				FormButton(
 					onClick = {
@@ -133,14 +133,14 @@ fun SettingsDeveloperScreen() {
 					},
 					color = MaterialTheme.colorScheme.error
 				) {
-					Text(stringResource(Res.string.action_ok))
+					Text(stringResource(com.flexify.app.generated.resources.Res.string.action_ok))
 				}
 				FormButton(
 					onClick = {
 						exceptionConfirmationShown = false
 					}
 				) {
-					Text(stringResource(Res.string.action_cancel))
+					Text(stringResource(com.flexify.app.generated.resources.Res.string.action_cancel))
 				}
 			},
 		)

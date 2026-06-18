@@ -21,15 +21,15 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_cancel
-import navic.composeapp.generated.resources.action_delete
-import navic.composeapp.generated.resources.info_action_is_permanent
-import navic.composeapp.generated.resources.info_error
-import navic.composeapp.generated.resources.notice_deleted_playlist
-import navic.composeapp.generated.resources.notice_deleted_share
-import navic.composeapp.generated.resources.title_delete_playlist
-import navic.composeapp.generated.resources.title_delete_share
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_cancel
+import com.flexify.app.composeapp.generated.resources.action_delete
+import com.flexify.app.composeapp.generated.resources.info_action_is_permanent
+import com.flexify.app.composeapp.generated.resources.info_error
+import com.flexify.app.composeapp.generated.resources.notice_deleted_playlist
+import com.flexify.app.composeapp.generated.resources.notice_deleted_share
+import com.flexify.app.composeapp.generated.resources.title_delete_playlist
+import com.flexify.app.composeapp.generated.resources.title_delete_share
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
@@ -47,8 +47,8 @@ enum class DeletionEndpoint(
 	val questionText: StringResource,
 	val deletedText: StringResource
 ) {
-	PLAYLIST(Res.string.title_delete_playlist, Res.string.notice_deleted_playlist),
-	SHARE(Res.string.title_delete_share, Res.string.notice_deleted_share)
+	PLAYLIST(com.flexify.app.generated.resources.Res.string.title_delete_playlist, com.flexify.app.generated.resources.Res.string.notice_deleted_playlist),
+	SHARE(com.flexify.app.generated.resources.Res.string.title_delete_share, com.flexify.app.generated.resources.Res.string.notice_deleted_share)
 }
 
 class DeletionViewModel(
@@ -132,10 +132,10 @@ fun DeletionDialog(
 					if (state is UiState.Loading) {
 						CircularProgressIndicator(Modifier.size(20.dp))
 					}
-					Text(stringResource(Res.string.action_delete))
+					Text(stringResource(com.flexify.app.generated.resources.Res.string.action_delete))
 				}
 				FormButton(onClick = onIdClear) {
-					Text(stringResource(Res.string.action_cancel))
+					Text(stringResource(com.flexify.app.generated.resources.Res.string.action_cancel))
 				}
 			},
 			content = {
@@ -147,8 +147,8 @@ fun DeletionDialog(
 				Text(
 					stringResource(
 						if (state !is UiState.Error)
-							Res.string.info_action_is_permanent
-						else Res.string.info_error
+							com.flexify.app.generated.resources.Res.string.info_action_is_permanent
+						else com.flexify.app.generated.resources.Res.string.info_error
 					)
 				)
 			}

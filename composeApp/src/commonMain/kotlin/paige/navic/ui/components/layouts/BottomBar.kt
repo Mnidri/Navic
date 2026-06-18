@@ -21,15 +21,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.sp
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.title_albums
-import navic.composeapp.generated.resources.title_artists
-import navic.composeapp.generated.resources.title_genres
-import navic.composeapp.generated.resources.title_library
-import navic.composeapp.generated.resources.title_playlists
-import navic.composeapp.generated.resources.title_radios
-import navic.composeapp.generated.resources.title_search
-import navic.composeapp.generated.resources.title_songs
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.title_albums
+import com.flexify.app.composeapp.generated.resources.title_artists
+import com.flexify.app.composeapp.generated.resources.title_genres
+import com.flexify.app.composeapp.generated.resources.title_library
+import com.flexify.app.composeapp.generated.resources.title_playlists
+import com.flexify.app.composeapp.generated.resources.title_radios
+import com.flexify.app.composeapp.generated.resources.title_search
+import com.flexify.app.composeapp.generated.resources.title_songs
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
@@ -70,48 +70,48 @@ private enum class NavItem(
 		destination = Screen.Library(),
 		icon = Icons.Filled.LibraryMusic,
 		iconUnselected = Icons.Outlined.LibraryMusic,
-		label = Res.string.title_library
+		label = com.flexify.app.generated.resources.Res.string.title_library
 	),
 	ALBUMS(
 		destination = Screen.AlbumList(),
 		icon = Icons.Filled.Album,
 		iconUnselected = Icons.Outlined.Album,
-		label = Res.string.title_albums
+		label = com.flexify.app.generated.resources.Res.string.title_albums
 	),
 	PLAYLISTS(
 		destination = Screen.PlaylistList(),
 		icon = Icons.Outlined.PlaylistPlay,
-		label = Res.string.title_playlists
+		label = com.flexify.app.generated.resources.Res.string.title_playlists
 	),
 	ARTISTS(
 		destination = Screen.ArtistList(),
 		icon = Icons.Filled.Artist,
 		iconUnselected = Icons.Outlined.Artist,
-		label = Res.string.title_artists
+		label = com.flexify.app.generated.resources.Res.string.title_artists
 	),
 	SEARCH(
 		destination = Screen.Search(),
 		icon = Icons.Outlined.Search,
 		iconUnselected = Icons.Outlined.Search,
-		label = Res.string.title_search
+		label = com.flexify.app.generated.resources.Res.string.title_search
 	),
 	GENRES(
 		destination = Screen.GenreList(),
 		icon = Icons.Filled.Genre,
 		iconUnselected = Icons.Outlined.Genre,
-		label = Res.string.title_genres
+		label = com.flexify.app.generated.resources.Res.string.title_genres
 	),
 	SONGS(
 		destination = Screen.SongList(),
 		icon = Icons.Outlined.Note,
 		iconUnselected = Icons.Outlined.Note,
-		label = Res.string.title_songs
+		label = com.flexify.app.generated.resources.Res.string.title_songs
 	),
 	RADIOS(
 		destination = Screen.RadioList(),
 		icon = Icons.Filled.Radio,
 		iconUnselected = Icons.Outlined.Radio,
-		label = Res.string.title_radios
+		label = com.flexify.app.generated.resources.Res.string.title_radios
 	)
 }
 

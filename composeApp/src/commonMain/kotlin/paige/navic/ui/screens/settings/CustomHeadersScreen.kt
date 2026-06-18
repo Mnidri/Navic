@@ -28,10 +28,10 @@ import androidx.compose.runtime.toMutableStateList
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_delete
-import navic.composeapp.generated.resources.action_new
-import navic.composeapp.generated.resources.option_custom_headers
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_delete
+import com.flexify.app.composeapp.generated.resources.action_new
+import com.flexify.app.composeapp.generated.resources.option_custom_headers
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import com.flexify.app.LocalPlatformContext
@@ -81,7 +81,7 @@ fun SettingsCustomHeadersScreen() {
 	Scaffold(
 		topBar = {
 			NestedTopBar(
-				{ Text(stringResource(Res.string.option_custom_headers)) },
+				{ Text(stringResource(com.flexify.app.generated.resources.Res.string.option_custom_headers)) },
 				hideBack = platformContext.sizeClass.widthSizeClass >= WindowWidthSizeClass.Medium
 			)
 		}
@@ -95,7 +95,7 @@ fun SettingsCustomHeadersScreen() {
 					.verticalScroll(rememberScrollState())
 					.padding(top = 16.dp, end = 16.dp, start = 16.dp)
 			) {
-				FormTitle(stringResource(Res.string.option_custom_headers))
+				FormTitle(stringResource(com.flexify.app.generated.resources.Res.string.option_custom_headers))
 				Form(
 					Modifier.animateContentSize().fillMaxWidth(),
 					bottomPadding = 8.dp
@@ -135,7 +135,7 @@ fun SettingsCustomHeadersScreen() {
 					Icon(Icons.Outlined.Add, null)
 					Spacer(Modifier.width(8.dp))
 					Text(
-						stringResource(Res.string.action_new),
+						stringResource(com.flexify.app.generated.resources.Res.string.action_new),
 						fontFamily = defaultFont(100)
 					)
 				}
@@ -189,7 +189,7 @@ private fun HeaderRow(
 			contentPadding = PaddingValues(horizontal = 0.dp, vertical = 16.dp),
 			shape = MaterialTheme.shapes.medium
 		) {
-			Icon(Icons.Outlined.Delete, stringResource(Res.string.action_delete))
+			Icon(Icons.Outlined.Delete, stringResource(com.flexify.app.generated.resources.Res.string.action_delete))
 		}
 	}
 }

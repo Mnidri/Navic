@@ -25,13 +25,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.kyant.capsule.ContinuousCapsule
 import kotlinx.coroutines.launch
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_delete_download
-import navic.composeapp.generated.resources.action_play
-import navic.composeapp.generated.resources.action_shuffle
-import navic.composeapp.generated.resources.info_download_failed
-import navic.composeapp.generated.resources.notice_deleted_download
-import navic.composeapp.generated.resources.notice_download_started
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_delete_download
+import com.flexify.app.composeapp.generated.resources.action_play
+import com.flexify.app.composeapp.generated.resources.action_shuffle
+import com.flexify.app.composeapp.generated.resources.info_download_failed
+import com.flexify.app.composeapp.generated.resources.notice_deleted_download
+import com.flexify.app.composeapp.generated.resources.notice_download_started
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import com.flexify.app.LocalPlatformContext
@@ -85,7 +85,7 @@ fun CollectionDetailScreenHeadingRowButtons(
 		) {
 			Icon(
 				Icons.Outlined.Shuffle,
-				contentDescription = stringResource(Res.string.action_shuffle),
+				contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.action_shuffle),
 				modifier = Modifier.size(24.dp)
 			)
 		}
@@ -104,7 +104,7 @@ fun CollectionDetailScreenHeadingRowButtons(
 				modifier = Modifier.size(25.dp).padding(end = 3.dp)
 			)
 			Text(
-				stringResource(Res.string.action_play),
+				stringResource(com.flexify.app.generated.resources.Res.string.action_play),
 				maxLines = 1,
 				autoSize = TextAutoSize.StepBased(
 					minFontSize = 1.sp,
@@ -122,14 +122,14 @@ fun CollectionDetailScreenHeadingRowButtons(
 					when (downloadStatus) {
 						DownloadStatus.NOT_DOWNLOADED, DownloadStatus.FAILED -> {
 							downloadManager.downloadCollection(collection)
-							snackBarManager.notify(Res.string.notice_download_started)
+							snackBarManager.notify(com.flexify.app.generated.resources.Res.string.notice_download_started)
 						}
 						DownloadStatus.DOWNLOADING -> {
 							downloadManager.cancelCollectionDownload(collection)
 						}
 						DownloadStatus.DOWNLOADED -> {
 							downloadManager.deleteDownloadedCollection(collection)
-							snackBarManager.notify(Res.string.notice_deleted_download)
+							snackBarManager.notify(com.flexify.app.generated.resources.Res.string.notice_deleted_download)
 						}
 					}
 				}
@@ -159,7 +159,7 @@ fun CollectionDetailScreenHeadingRowButtons(
 				DownloadStatus.DOWNLOADED -> {
 					Icon(
 						imageVector = Icons.Outlined.Delete,
-						contentDescription = stringResource(Res.string.action_delete_download),
+						contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.action_delete_download),
 						modifier = Modifier.size(24.dp),
 						tint = MaterialTheme.colorScheme.primary
 					)
@@ -168,7 +168,7 @@ fun CollectionDetailScreenHeadingRowButtons(
 				DownloadStatus.FAILED -> {
 					Icon(
 						imageVector = Icons.Outlined.DownloadOff,
-						contentDescription = stringResource(Res.string.info_download_failed),
+						contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.info_download_failed),
 						modifier = Modifier.size(24.dp),
 						tint = MaterialTheme.colorScheme.error
 					)

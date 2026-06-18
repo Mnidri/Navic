@@ -17,13 +17,13 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_cancel
-import navic.composeapp.generated.resources.action_ok
-import navic.composeapp.generated.resources.option_radio_homepage_url
-import navic.composeapp.generated.resources.option_radio_name
-import navic.composeapp.generated.resources.option_radio_stream_url
-import navic.composeapp.generated.resources.title_create_radio
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_cancel
+import com.flexify.app.composeapp.generated.resources.action_ok
+import com.flexify.app.composeapp.generated.resources.option_radio_homepage_url
+import com.flexify.app.composeapp.generated.resources.option_radio_name
+import com.flexify.app.composeapp.generated.resources.option_radio_stream_url
+import com.flexify.app.composeapp.generated.resources.title_create_radio
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
 import com.flexify.app.LocalPlatformContext
@@ -57,7 +57,7 @@ fun RadioCreateDialog(
 	FormDialog(
 		onDismissRequest = onDismissRequest,
 		icon = { Icon(Icons.Outlined.Radio, null) },
-		title = { Text(stringResource(Res.string.title_create_radio)) },
+		title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.title_create_radio)) },
 		buttons = {
 			FormButton(
 				onClick = {
@@ -70,7 +70,7 @@ fun RadioCreateDialog(
 				color = MaterialTheme.colorScheme.primary
 			) {
 				if (state !is UiState.Loading) {
-					Text(stringResource(Res.string.action_ok))
+					Text(stringResource(com.flexify.app.generated.resources.Res.string.action_ok))
 				} else {
 					CircularProgressIndicator(
 						modifier = Modifier.size(20.dp)
@@ -83,7 +83,7 @@ fun RadioCreateDialog(
 					onDismissRequest()
 				},
 				enabled = state !is UiState.Loading,
-				content = { Text(stringResource(Res.string.action_cancel)) }
+				content = { Text(stringResource(com.flexify.app.generated.resources.Res.string.action_cancel)) }
 			)
 		},
 		content = {
@@ -100,19 +100,19 @@ fun RadioCreateDialog(
 				TextField(
 					modifier = fieldModifier,
 					state = viewModel.name,
-					label = { Text("${stringResource(Res.string.option_radio_name)}*") },
+					label = { Text("${stringResource(com.flexify.app.generated.resources.Res.string.option_radio_name)}*") },
 					lineLimits = fieldLineLimits
 				)
 				TextField(
 					modifier = fieldModifier,
 					state = viewModel.streamUrl,
-					label = { Text("${stringResource(Res.string.option_radio_stream_url)}*") },
+					label = { Text("${stringResource(com.flexify.app.generated.resources.Res.string.option_radio_stream_url)}*") },
 					lineLimits = fieldLineLimits
 				)
 				TextField(
 					modifier = fieldModifier,
 					state = viewModel.homepageUrl,
-					label = { Text(stringResource(Res.string.option_radio_homepage_url)) },
+					label = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_radio_homepage_url)) },
 					lineLimits = fieldLineLimits
 				)
 			}

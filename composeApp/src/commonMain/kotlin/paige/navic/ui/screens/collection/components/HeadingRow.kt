@@ -17,10 +17,10 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.dropUnlessResumed
 import androidx.navigation3.ui.LocalNavAnimatedContentScope
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.info_unknown_genre
-import navic.composeapp.generated.resources.info_unknown_year
-import navic.composeapp.generated.resources.subtitle_playlist
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.info_unknown_genre
+import com.flexify.app.composeapp.generated.resources.info_unknown_year
+import com.flexify.app.composeapp.generated.resources.subtitle_playlist
 import org.jetbrains.compose.resources.stringResource
 import com.flexify.app.LocalPlatformContext
 import com.flexify.app.LocalNavStack
@@ -95,12 +95,12 @@ fun CollectionDetailScreenHeadingRow(
 			}
 			Text(
 				if (collection is DomainAlbum)
-					"${collection.genre ?: stringResource(Res.string.info_unknown_genre)} • ${
+					"${collection.genre ?: stringResource(com.flexify.app.generated.resources.Res.string.info_unknown_genre)} • ${
 						collection.year ?: stringResource(
-							Res.string.info_unknown_year
+							com.flexify.app.generated.resources.Res.string.info_unknown_year
 						)
 					}"
-				else stringResource(Res.string.subtitle_playlist),
+				else stringResource(com.flexify.app.generated.resources.Res.string.subtitle_playlist),
 				color = MaterialTheme.colorScheme.onSurfaceVariant,
 				style = MaterialTheme.typography.bodySmall,
 				fontFamily = defaultFont(grade = 100, round = 100f)

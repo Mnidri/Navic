@@ -16,11 +16,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_cancel
-import navic.composeapp.generated.resources.action_ok
-import navic.composeapp.generated.resources.option_playlist_name
-import navic.composeapp.generated.resources.title_create_playlist
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_cancel
+import com.flexify.app.composeapp.generated.resources.action_ok
+import com.flexify.app.composeapp.generated.resources.option_playlist_name
+import com.flexify.app.composeapp.generated.resources.title_create_playlist
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
 import org.koin.core.parameter.parametersOf
@@ -68,7 +68,7 @@ fun PlaylistCreateDialog(
 	FormDialog(
 		onDismissRequest = onDismissRequest,
 		icon = { Icon(Icons.Outlined.PlaylistAdd, null) },
-		title = { Text(stringResource(Res.string.title_create_playlist)) },
+		title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.title_create_playlist)) },
 		buttons = {
 			FormButton(
 				onClick = {
@@ -78,7 +78,7 @@ fun PlaylistCreateDialog(
 				color = MaterialTheme.colorScheme.primary
 			) {
 				if (state !is UiState.Loading) {
-					Text(stringResource(Res.string.action_ok))
+					Text(stringResource(com.flexify.app.generated.resources.Res.string.action_ok))
 				} else {
 					CircularProgressIndicator(
 						modifier = Modifier.size(20.dp)
@@ -90,7 +90,7 @@ fun PlaylistCreateDialog(
 					onDismissRequest()
 				},
 				enabled = state !is UiState.Loading,
-				content = { Text(stringResource(Res.string.action_cancel)) }
+				content = { Text(stringResource(com.flexify.app.generated.resources.Res.string.action_cancel)) }
 			)
 		},
 		content = {
@@ -101,7 +101,7 @@ fun PlaylistCreateDialog(
 			}
 			TextField(
 				state = viewModel.name,
-				label = { Text(stringResource(Res.string.option_playlist_name)) },
+				label = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_playlist_name)) },
 				lineLimits = TextFieldLineLimits.SingleLine
 			)
 		}

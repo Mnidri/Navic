@@ -22,8 +22,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.notice_login_suggestion
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.notice_login_suggestion
 import org.jetbrains.compose.resources.stringResource
 import com.flexify.app.LocalPlatformContext
 
@@ -47,7 +47,7 @@ fun LoginScreenSuggestionChips(
 		) {
 			Spacer(Modifier.height(4.dp))
 			Text(
-				text = stringResource(Res.string.notice_login_suggestion),
+				text = stringResource(com.flexify.app.generated.resources.Res.string.notice_login_suggestion),
 				style = MaterialTheme.typography.labelMedium,
 				color = MaterialTheme.colorScheme.onSurfaceVariant,
 				modifier = Modifier.padding(horizontal = 16.dp)

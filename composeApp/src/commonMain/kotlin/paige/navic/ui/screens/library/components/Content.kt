@@ -13,15 +13,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.unit.dp
 import kotlinx.collections.immutable.ImmutableList
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.option_sort_frequent
-import navic.composeapp.generated.resources.option_sort_newest
-import navic.composeapp.generated.resources.option_sort_random
-import navic.composeapp.generated.resources.option_sort_recent
-import navic.composeapp.generated.resources.option_sort_starred
-import navic.composeapp.generated.resources.title_artists
-import navic.composeapp.generated.resources.title_genres
-import navic.composeapp.generated.resources.title_playlists
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.option_sort_frequent
+import com.flexify.app.composeapp.generated.resources.option_sort_newest
+import com.flexify.app.composeapp.generated.resources.option_sort_random
+import com.flexify.app.composeapp.generated.resources.option_sort_recent
+import com.flexify.app.composeapp.generated.resources.option_sort_starred
+import com.flexify.app.composeapp.generated.resources.title_artists
+import com.flexify.app.composeapp.generated.resources.title_genres
+import com.flexify.app.composeapp.generated.resources.title_playlists
 import com.flexify.app.ui.navigation.Screen
 import com.flexify.app.domain.models.DomainAlbum
 import com.flexify.app.domain.models.DomainAlbumListType
@@ -92,31 +92,31 @@ fun LibraryScreenContent(
 	) {
 		libraryScreenOverviewButton(
 			icon = Icons.Outlined.LibraryAdd,
-			label = Res.string.option_sort_newest,
+			label = com.flexify.app.generated.resources.Res.string.option_sort_newest,
 			destination = Screen.AlbumList(true, DomainAlbumListType.Newest),
 			start = true
 		)
 		libraryScreenOverviewButton(
 			icon = Icons.Outlined.Shuffle,
-			label = Res.string.option_sort_random,
+			label = com.flexify.app.generated.resources.Res.string.option_sort_random,
 			destination = Screen.AlbumList(true, DomainAlbumListType.Random),
 			start = false
 		)
 		libraryScreenOverviewButton(
 			icon = Icons.Outlined.Star,
-			label = Res.string.option_sort_starred,
+			label = com.flexify.app.generated.resources.Res.string.option_sort_starred,
 			destination = Screen.Starred(),
 			start = true
 		)
 		libraryScreenOverviewButton(
 			icon = Icons.Outlined.History,
-			label = Res.string.option_sort_frequent,
+			label = com.flexify.app.generated.resources.Res.string.option_sort_frequent,
 			destination = Screen.AlbumList(true, DomainAlbumListType.Frequent),
 			start = false
 		)
 
 		horizontalSection(
-			title = Res.string.option_sort_recent,
+			title = com.flexify.app.generated.resources.Res.string.option_sort_recent,
 			destination = Screen.AlbumList(true, DomainAlbumListType.Recent),
 			state = albumsState,
 			key = { it.id },
@@ -140,7 +140,7 @@ fun LibraryScreenContent(
 		}
 
 		horizontalSection(
-			title = Res.string.title_playlists,
+			title = com.flexify.app.generated.resources.Res.string.title_playlists,
 			destination = Screen.PlaylistList(true),
 			state = playlistsState,
 			key = { it.id },
@@ -161,7 +161,7 @@ fun LibraryScreenContent(
 		}
 
 		horizontalSection(
-			title = Res.string.title_artists,
+			title = com.flexify.app.generated.resources.Res.string.title_artists,
 			destination = Screen.ArtistList(true),
 			state = artistsState,
 			key = { it.id },
@@ -183,7 +183,7 @@ fun LibraryScreenContent(
 		}
 
 		horizontalSection(
-			title = Res.string.title_genres,
+			title = com.flexify.app.generated.resources.Res.string.title_genres,
 			destination = Screen.GenreList(true),
 			state = genresState,
 			key = { it.name },

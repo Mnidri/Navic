@@ -23,8 +23,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.dropUnlessResumed
 import androidx.navigation3.runtime.NavKey
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_see_all
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_see_all
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
 import com.flexify.app.LocalPlatformContext
@@ -86,7 +86,7 @@ fun LazyGridScope.header(
 			val platformContext = LocalPlatformContext.current
 			val backStack = LocalNavStack.current
 			Text(
-				stringResource(Res.string.action_see_all),
+				stringResource(com.flexify.app.generated.resources.Res.string.action_see_all),
 				fontSize = 12.sp,
 				color = MaterialTheme.colorScheme.primary,
 				textAlign = TextAlign.Right,

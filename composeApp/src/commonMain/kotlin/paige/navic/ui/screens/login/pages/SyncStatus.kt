@@ -12,8 +12,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.info_syncing
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.info_syncing
 import org.jetbrains.compose.resources.stringResource
 import com.flexify.app.ui.core.LoginUiState
 
@@ -29,7 +29,7 @@ fun LoginScreenSyncStatus(
 	) {
 		val syncState = loginUiState as? LoginUiState.Syncing
 		Text(
-			text = stringResource(syncState?.message ?: Res.string.info_syncing),
+			text = stringResource(syncState?.message ?: com.flexify.app.generated.resources.Res.string.info_syncing),
 			style = MaterialTheme.typography.bodySmall,
 			color = MaterialTheme.colorScheme.primary,
 			textAlign = TextAlign.Center,

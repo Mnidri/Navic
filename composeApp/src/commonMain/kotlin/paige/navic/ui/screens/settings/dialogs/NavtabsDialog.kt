@@ -24,10 +24,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.unit.dp
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_ok
-import navic.composeapp.generated.resources.action_reorder
-import navic.composeapp.generated.resources.option_navigation_bar_tabs
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_ok
+import com.flexify.app.composeapp.generated.resources.action_reorder
+import com.flexify.app.composeapp.generated.resources.option_navigation_bar_tabs
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
 import com.flexify.app.LocalPlatformContext
@@ -66,7 +66,7 @@ fun NavtabsDialog(
 			val config = (state as UiState.Success).data
 			AlertDialog(
 				title = {
-					Text(stringResource(Res.string.option_navigation_bar_tabs))
+					Text(stringResource(com.flexify.app.generated.resources.Res.string.option_navigation_bar_tabs))
 				},
 				text = {
 					LazyColumn(
@@ -95,7 +95,7 @@ fun NavtabsDialog(
 				onDismissRequest = onDismissRequest,
 				confirmButton = {
 					Button(onClick = onDismissRequest) {
-						Text(stringResource(Res.string.action_ok))
+						Text(stringResource(com.flexify.app.generated.resources.Res.string.action_ok))
 					}
 				}
 			)
@@ -147,7 +147,7 @@ private fun NavtabRow(
 			) {
 				Icon(
 					Icons.Outlined.DragHandle,
-					contentDescription = stringResource(Res.string.action_reorder)
+					contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.action_reorder)
 				)
 			}
 		}

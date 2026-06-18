@@ -31,8 +31,8 @@ import coil3.network.httpHeaders
 import coil3.request.CachePolicy
 import coil3.request.ImageRequest
 import coil3.request.crossfade
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.info_image_failed_to_load
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.info_image_failed_to_load
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import com.flexify.app.domain.manager.PreferenceManager
@@ -113,7 +113,7 @@ fun CoverArt(
 				item { Icon(Icons.Outlined.Error, null) }
 				item {
 					Text(
-						stringResource(Res.string.info_image_failed_to_load),
+						stringResource(com.flexify.app.generated.resources.Res.string.info_image_failed_to_load),
 						maxLines = 1,
 						autoSize = TextAutoSize.StepBased(
 							minFontSize = 1.sp,

@@ -4,8 +4,8 @@ import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.items
 import androidx.compose.ui.Modifier
 import kotlinx.collections.immutable.ImmutableList
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.info_no_songs
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.info_no_songs
 import org.jetbrains.compose.resources.stringResource
 import com.flexify.app.data.database.entities.DownloadEntity
 import com.flexify.app.domain.models.DomainSong
@@ -66,7 +66,7 @@ fun LazyListScope.songListScreenContent(
 				item {
 					ContentUnavailable(
 						icon = Icons.Outlined.Note,
-						label = stringResource(Res.string.info_no_songs)
+						label = stringResource(com.flexify.app.generated.resources.Res.string.info_no_songs)
 					)
 				}
 			}

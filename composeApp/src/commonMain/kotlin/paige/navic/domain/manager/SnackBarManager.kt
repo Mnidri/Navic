@@ -7,9 +7,9 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.notice_added_to_queue
-import navic.composeapp.generated.resources.notice_play_next
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.notice_added_to_queue
+import com.flexify.app.composeapp.generated.resources.notice_play_next
 import org.jetbrains.compose.resources.StringResource
 import com.flexify.app.domain.models.snackbars.PlayerEvent
 
@@ -25,6 +25,6 @@ class SnackBarManager {
 		}
 	}
 
-	fun notifyAddedToQueue() = notify(Res.string.notice_added_to_queue)
-	fun notifyPlayNext() = notify(Res.string.notice_play_next)
+	fun notifyAddedToQueue() = notify(com.flexify.app.generated.resources.Res.string.notice_added_to_queue)
+	fun notifyPlayNext() = notify(com.flexify.app.generated.resources.Res.string.notice_play_next)
 }

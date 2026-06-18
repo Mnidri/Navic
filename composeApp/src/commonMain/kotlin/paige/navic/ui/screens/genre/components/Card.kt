@@ -21,8 +21,8 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.dropUnlessResumed
 import com.materialkolor.rememberDynamicColorScheme
 import dev.zt64.compose.pipette.HsvColor
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.count_albums
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.count_albums
 import org.jetbrains.compose.resources.pluralStringResource
 import org.koin.compose.koinInject
 import com.flexify.app.LocalNavStack
@@ -126,7 +126,7 @@ fun GenreListScreenCard(
 				)
 				Text(
 					pluralStringResource(
-						Res.plurals.count_albums,
+						com.flexify.app.generated.resources.Res.plurals.count_albums,
 						genre.albums.count(),
 						genre.albums.count()
 					),

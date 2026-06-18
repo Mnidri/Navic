@@ -32,8 +32,8 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withLink
 import androidx.compose.ui.unit.dp
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_more
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_more
 import org.jetbrains.compose.resources.stringResource
 import com.flexify.app.ui.components.common.CoverArt
 import com.flexify.app.ui.components.common.MarqueeText
@@ -93,7 +93,7 @@ fun ArtistDetailScreenHeading(
 							if (subtitle.length > 200 && lastfm != null) {
 								append(" ")
 								withLink(LinkAnnotation.Url(lastfm)) {
-									append(stringResource(Res.string.action_more))
+									append(stringResource(com.flexify.app.generated.resources.Res.string.action_more))
 								}
 							}
 						},

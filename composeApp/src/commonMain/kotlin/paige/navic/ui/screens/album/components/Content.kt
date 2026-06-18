@@ -4,8 +4,8 @@ import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyGridScope
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.ui.Modifier
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.info_no_albums
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.info_no_albums
 import org.jetbrains.compose.resources.stringResource
 import com.flexify.app.domain.models.DomainAlbum
 import com.flexify.app.icons.Icons
@@ -56,7 +56,7 @@ fun LazyGridScope.albumListScreenContent(
 				item(span = { GridItemSpan(maxLineSpan) }) {
 					ContentUnavailable(
 						icon = Icons.Outlined.Album,
-						label = stringResource(Res.string.info_no_albums)
+						label = stringResource(com.flexify.app.generated.resources.Res.string.info_no_albums)
 					)
 				}
 			}

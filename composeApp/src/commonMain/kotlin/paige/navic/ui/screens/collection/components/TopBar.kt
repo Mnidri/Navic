@@ -15,8 +15,8 @@ import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.lifecycle.compose.dropUnlessResumed
 import kotlinx.collections.immutable.toPersistentList
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_more
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_more
 import org.jetbrains.compose.resources.stringResource
 import com.flexify.app.LocalNavStack
 import com.flexify.app.data.database.entities.DownloadStatus
@@ -71,7 +71,7 @@ fun CollectionDetailScreenTopBar(
 				}) {
 					Icon(
 						Icons.Outlined.MoreVert,
-						stringResource(Res.string.action_more)
+						stringResource(com.flexify.app.generated.resources.Res.string.action_more)
 					)
 				}
 				if (expanded) {

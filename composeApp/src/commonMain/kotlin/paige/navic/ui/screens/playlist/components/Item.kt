@@ -12,8 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.dropUnlessResumed
 import kotlinx.collections.immutable.toPersistentList
 import kotlinx.coroutines.launch
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.count_songs
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.count_songs
 import org.jetbrains.compose.resources.pluralStringResource
 import org.koin.compose.koinInject
 import com.flexify.app.LocalPlatformContext
@@ -25,8 +25,8 @@ import com.flexify.app.domain.manager.DownloadManager
 import com.flexify.app.ui.components.layouts.ArtGridItem
 import com.flexify.app.ui.components.sheets.CollectionSheet
 import com.flexify.app.ui.screens.playlist.dialogs.PlaylistUpdateDialog
-import navic.composeapp.generated.resources.notice_deleted_download
-import navic.composeapp.generated.resources.notice_download_started
+import com.flexify.app.composeapp.generated.resources.notice_deleted_download
+import com.flexify.app.composeapp.generated.resources.notice_download_started
 import com.flexify.app.domain.manager.SnackBarManager
 
 @Composable
@@ -67,7 +67,7 @@ fun PlaylistListScreenItem(
 			subtitle = buildString {
 				append(
 					pluralStringResource(
-						Res.plurals.count_songs,
+						com.flexify.app.generated.resources.Res.plurals.count_songs,
 						playlist.songCount,
 						playlist.songCount
 					)
@@ -92,7 +92,7 @@ fun PlaylistListScreenItem(
 				onDownloadAll = { 
 					scope.launch {
 						downloadManager.downloadCollection(playlist)
-						snackBarManager.notify(Res.string.notice_download_started)
+						snackBarManager.notify(com.flexify.app.generated.resources.Res.string.notice_download_started)
 					}
 				},
 				onCancelDownloadAll = {
@@ -103,7 +103,7 @@ fun PlaylistListScreenItem(
 				onDeleteDownloadAll = {
 					scope.launch {
 						downloadManager.deleteDownloadedCollection(playlist)
-						snackBarManager.notify(Res.string.notice_deleted_download)
+						snackBarManager.notify(com.flexify.app.generated.resources.Res.string.notice_deleted_download)
 					}
 				}
 			)

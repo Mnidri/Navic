@@ -16,12 +16,12 @@ import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.dropUnlessResumed
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.info_app_version
-import navic.composeapp.generated.resources.title_about
-import navic.composeapp.generated.resources.title_acknowledgements
-import navic.composeapp.generated.resources.title_chat
-import navic.composeapp.generated.resources.title_source
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.info_app_version
+import com.flexify.app.composeapp.generated.resources.title_about
+import com.flexify.app.composeapp.generated.resources.title_acknowledgements
+import com.flexify.app.composeapp.generated.resources.title_chat
+import com.flexify.app.composeapp.generated.resources.title_source
 import org.jetbrains.compose.resources.stringResource
 import com.flexify.app.LocalPlatformContext
 import com.flexify.app.LocalNavStack
@@ -43,7 +43,7 @@ fun SettingsAboutScreen() {
 	Scaffold(
 		topBar = {
 			NestedTopBar(
-				{ Text(stringResource(Res.string.title_about)) },
+				{ Text(stringResource(com.flexify.app.generated.resources.Res.string.title_about)) },
 				hideBack = hideBack
 			)
 		}
@@ -58,7 +58,7 @@ fun SettingsAboutScreen() {
 				SelectionContainer {
 					val text = buildString {
 						append(platformContext.name + "\n")
-						append(stringResource(Res.string.info_app_version, platformContext.appVersion))
+						append(stringResource(com.flexify.app.generated.resources.Res.string.info_app_version, platformContext.appVersion))
 					}
 					FormRow(onClick = {
 						clipboard.setText(AnnotatedString(text))
@@ -71,19 +71,19 @@ fun SettingsAboutScreen() {
 				FormRow(onClick = {
 					uriHandler.openUri("https://github.com/ssalggnikool/Navic")
 				}) {
-					Text(stringResource(Res.string.title_source))
+					Text(stringResource(com.flexify.app.generated.resources.Res.string.title_source))
 					Icon(Icons.Outlined.ChevronForward, null)
 				}
 				FormRow(onClick = {
 					uriHandler.openUri("https://discord.gg/TBcnNX66PH")
 				}) {
-					Text(stringResource(Res.string.title_chat))
+					Text(stringResource(com.flexify.app.generated.resources.Res.string.title_chat))
 					Icon(Icons.Outlined.ChevronForward, null)
 				}
 				FormRow(onClick = dropUnlessResumed {
 					backStack.add(Screen.Settings.Acknowledgements)
 				}) {
-					Text(stringResource(Res.string.title_acknowledgements))
+					Text(stringResource(com.flexify.app.generated.resources.Res.string.title_acknowledgements))
 					Icon(Icons.Outlined.ChevronForward, null)
 				}
 			}

@@ -29,13 +29,13 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.dropUnlessResumed
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.coroutines.launch
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_add_to_queue
-import navic.composeapp.generated.resources.action_play_next
-import navic.composeapp.generated.resources.info_download_failed
-import navic.composeapp.generated.resources.info_downloaded
-import navic.composeapp.generated.resources.info_unknown_album
-import navic.composeapp.generated.resources.info_unknown_year
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_add_to_queue
+import com.flexify.app.composeapp.generated.resources.action_play_next
+import com.flexify.app.composeapp.generated.resources.info_download_failed
+import com.flexify.app.composeapp.generated.resources.info_downloaded
+import com.flexify.app.composeapp.generated.resources.info_unknown_album
+import com.flexify.app.composeapp.generated.resources.info_unknown_year
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import com.flexify.app.LocalNavStack
@@ -105,7 +105,7 @@ fun SongListScreenItem(
 					SwipeToDismissBoxValue.StartToEnd -> {
 						Icon(
 							imageVector = Icons.Outlined.Queue,
-							contentDescription = stringResource(Res.string.action_add_to_queue),
+							contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.action_add_to_queue),
 							tint = MaterialTheme.colorScheme.onPrimaryContainer,
 							modifier = Modifier.align(Alignment.CenterStart)
 						)
@@ -113,7 +113,7 @@ fun SongListScreenItem(
 					SwipeToDismissBoxValue.EndToStart -> {
 						Icon(
 							imageVector = Icons.Outlined.QueuePlayNext,
-							contentDescription = stringResource(Res.string.action_play_next),
+							contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.action_play_next),
 							tint = MaterialTheme.colorScheme.onPrimaryContainer,
 							modifier = Modifier.align(Alignment.CenterEnd)
 						)
@@ -142,11 +142,11 @@ fun SongListScreenItem(
 				supportingContent = {
 					Text(
 						buildString {
-							append(song.albumTitle ?: stringResource(Res.string.info_unknown_album))
+							append(song.albumTitle ?: stringResource(com.flexify.app.generated.resources.Res.string.info_unknown_album))
 							append(" • ")
 							append(song.artistName)
 							append(" • ")
-							append(song.year ?: stringResource(Res.string.info_unknown_year))
+							append(song.year ?: stringResource(com.flexify.app.generated.resources.Res.string.info_unknown_year))
 						},
 						maxLines = 1
 					)
@@ -178,7 +178,7 @@ fun SongListScreenItem(
 							DownloadStatus.DOWNLOADED -> {
 								Icon(
 									Icons.Outlined.Check,
-									contentDescription = stringResource(Res.string.info_downloaded),
+									contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.info_downloaded),
 									modifier = Modifier.size(16.dp),
 									tint = MaterialTheme.colorScheme.primary
 								)
@@ -186,7 +186,7 @@ fun SongListScreenItem(
 							DownloadStatus.FAILED -> {
 								Icon(
 									Icons.Outlined.DownloadOff,
-									contentDescription = stringResource(Res.string.info_download_failed),
+									contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.info_download_failed),
 									modifier = Modifier.size(16.dp),
 									tint = MaterialTheme.colorScheme.error
 								)

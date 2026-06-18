@@ -38,19 +38,19 @@ import androidx.lifecycle.compose.dropUnlessResumed
 import dev.zt64.compose.pipette.HsvColor
 import dev.zt64.compose.pipette.RingColorPicker
 import kotlinx.collections.immutable.toImmutableList
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.option_accent_colour
-import navic.composeapp.generated.resources.option_alphabetical_scroll
-import navic.composeapp.generated.resources.option_animation_style
-import navic.composeapp.generated.resources.option_artwork_shape
-import navic.composeapp.generated.resources.option_choose_theme
-import navic.composeapp.generated.resources.option_cover_art_size
-import navic.composeapp.generated.resources.option_grid_items_per_row
-import navic.composeapp.generated.resources.option_use_marquee_text
-import navic.composeapp.generated.resources.title_appearance
-import navic.composeapp.generated.resources.title_choose_font
-import navic.composeapp.generated.resources.title_layout
-import navic.composeapp.generated.resources.title_miscellaneous
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.option_accent_colour
+import com.flexify.app.composeapp.generated.resources.option_alphabetical_scroll
+import com.flexify.app.composeapp.generated.resources.option_animation_style
+import com.flexify.app.composeapp.generated.resources.option_artwork_shape
+import com.flexify.app.composeapp.generated.resources.option_choose_theme
+import com.flexify.app.composeapp.generated.resources.option_cover_art_size
+import com.flexify.app.composeapp.generated.resources.option_grid_items_per_row
+import com.flexify.app.composeapp.generated.resources.option_use_marquee_text
+import com.flexify.app.composeapp.generated.resources.title_appearance
+import com.flexify.app.composeapp.generated.resources.title_choose_font
+import com.flexify.app.composeapp.generated.resources.title_layout
+import com.flexify.app.composeapp.generated.resources.title_miscellaneous
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import com.flexify.app.LocalNavStack
@@ -82,7 +82,7 @@ fun SettingsAppearanceScreen() {
 	Scaffold(
 		topBar = {
 			NestedTopBar(
-				{ Text(stringResource(Res.string.title_appearance)) },
+				{ Text(stringResource(com.flexify.app.generated.resources.Res.string.title_appearance)) },
 				hideBack = platformContext.sizeClass.widthSizeClass >= WindowWidthSizeClass.Medium
 			)
 		},
@@ -104,7 +104,7 @@ fun SettingsAppearanceScreen() {
 						}
 					) {
 						Column(Modifier.weight(1f)) {
-							Text(stringResource(Res.string.title_choose_font))
+							Text(stringResource(com.flexify.app.generated.resources.Res.string.title_choose_font))
 							Text(
 								preferenceManager.font.displayName,
 								style = MaterialTheme.typography.bodyMedium,
@@ -120,7 +120,7 @@ fun SettingsAppearanceScreen() {
 						}
 					) {
 						Column(Modifier.weight(1f)) {
-							Text(stringResource(Res.string.option_choose_theme))
+							Text(stringResource(com.flexify.app.generated.resources.Res.string.option_choose_theme))
 							Text(
 								stringResource(preferenceManager.theme.title),
 								style = MaterialTheme.typography.bodyMedium,
@@ -137,7 +137,7 @@ fun SettingsAppearanceScreen() {
 					if (preferenceManager.theme == Theme.Seeded) {
 						var expanded by remember { mutableStateOf(false) }
 						FormRow {
-							Text(stringResource(Res.string.option_accent_colour))
+							Text(stringResource(com.flexify.app.generated.resources.Res.string.option_accent_colour))
 							Box {
 								Box(
 									Modifier
@@ -185,7 +185,7 @@ fun SettingsAppearanceScreen() {
 					}
 				}
 
-				FormTitle(stringResource(Res.string.title_layout))
+				FormTitle(stringResource(com.flexify.app.generated.resources.Res.string.title_layout))
 				Form {
 					FormRow(
 						onClick = {
@@ -193,7 +193,7 @@ fun SettingsAppearanceScreen() {
 						}
 					) {
 						Column(Modifier.weight(1f)) {
-							Text(stringResource(Res.string.option_artwork_shape))
+							Text(stringResource(com.flexify.app.generated.resources.Res.string.option_artwork_shape))
 							Text(
 								preferenceManager.coverArtShape.name,
 								style = MaterialTheme.typography.bodyMedium,
@@ -221,7 +221,7 @@ fun SettingsAppearanceScreen() {
 						if (platformContext.sizeClass.widthSizeClass <= WindowWidthSizeClass.Compact) {
 
 							Column(Modifier.weight(1f)) {
-								Text(stringResource(Res.string.option_grid_items_per_row))
+								Text(stringResource(com.flexify.app.generated.resources.Res.string.option_grid_items_per_row))
 								Text(
 									preferenceManager.gridSize.label,
 									style = MaterialTheme.typography.bodyMedium,
@@ -241,7 +241,7 @@ fun SettingsAppearanceScreen() {
 									modifier = Modifier.fillMaxWidth(),
 									horizontalArrangement = Arrangement.SpaceBetween
 								) {
-									Text(stringResource(Res.string.option_cover_art_size))
+									Text(stringResource(com.flexify.app.generated.resources.Res.string.option_cover_art_size))
 									Text(
 										"${preferenceManager.artGridItemSize}",
 										fontFamily = FontFamily.Monospace,
@@ -263,10 +263,10 @@ fun SettingsAppearanceScreen() {
 					}
 				}
 
-				FormTitle(stringResource(Res.string.title_miscellaneous))
+				FormTitle(stringResource(com.flexify.app.generated.resources.Res.string.title_miscellaneous))
 				Form {
 					SettingSelectionRow(
-						title = { Text(stringResource(Res.string.option_use_marquee_text)) },
+						title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_use_marquee_text)) },
 						items = MarqueeSpeed.entries.toImmutableList(),
 						label = { it.name },
 						selection = preferenceManager.marqueeSpeed,
@@ -274,13 +274,13 @@ fun SettingsAppearanceScreen() {
 					)
 
 					SettingSwitchRow(
-						title = { Text(stringResource(Res.string.option_alphabetical_scroll)) },
+						title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_alphabetical_scroll)) },
 						value = preferenceManager.alphabeticalScroll,
 						onSetValue = { preferenceManager.alphabeticalScroll = it }
 					)
 
 					SettingSelectionRow(
-						title = { Text(stringResource(Res.string.option_animation_style)) },
+						title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_animation_style)) },
 						items = AnimationStyle.entries.toImmutableList(),
 						label = { stringResource(it.displayName) },
 						selection = preferenceManager.animationStyle,

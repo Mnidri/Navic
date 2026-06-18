@@ -25,8 +25,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.materialkolor.rememberDynamicColorScheme
 import dev.zt64.compose.pipette.HsvColor
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.info_unknown
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.info_unknown
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import com.flexify.app.LocalPlatformContext
@@ -111,7 +111,7 @@ fun RadioListScreenCard(
 
 				Text(
 					text = radio.homepageUrl?.removePrefix("http://")?.removePrefix("https://")?.trimEnd('/')
-						?: stringResource(Res.string.info_unknown),
+						?: stringResource(com.flexify.app.generated.resources.Res.string.info_unknown),
 					style = MaterialTheme.typography.labelMedium,
 					maxLines = 1,
 					overflow = TextOverflow.Ellipsis,

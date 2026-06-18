@@ -8,8 +8,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.count_songs
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.count_songs
 import org.jetbrains.compose.resources.pluralStringResource
 import com.flexify.app.domain.models.DomainSongCollection
 import com.flexify.app.ui.theme.defaultFont
@@ -23,7 +23,7 @@ fun CollectionDetailScreenFooterRow(
 		buildString {
 			append(
 				pluralStringResource(
-					Res.plurals.count_songs,
+					com.flexify.app.generated.resources.Res.plurals.count_songs,
 					collection.songCount,
 					collection.songCount
 				)

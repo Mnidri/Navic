@@ -28,10 +28,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import com.kyant.capsule.ContinuousRoundedRectangle
 import kotlinx.coroutines.launch
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_remove_from_queue
-import navic.composeapp.generated.resources.action_reorder
-import navic.composeapp.generated.resources.info_not_available_offline
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_remove_from_queue
+import com.flexify.app.composeapp.generated.resources.action_reorder
+import com.flexify.app.composeapp.generated.resources.info_not_available_offline
 import org.jetbrains.compose.resources.stringResource
 import com.flexify.app.domain.models.DomainSong
 import com.flexify.app.icons.Icons
@@ -106,7 +106,7 @@ fun QueueScreenItem(
 			) {
 				Icon(
 					imageVector = Icons.Outlined.Delete,
-					contentDescription = stringResource(Res.string.action_remove_from_queue),
+					contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.action_remove_from_queue),
 					tint = MaterialTheme.colorScheme.onErrorContainer,
 					modifier = Modifier.align(when (dismissState.dismissDirection) {
 						SwipeToDismissBoxValue.StartToEnd -> Alignment.CenterStart
@@ -150,7 +150,7 @@ fun QueueScreenItem(
 							if (!canPlay) {
 								Icon(
 									Icons.Outlined.Offline,
-									stringResource(Res.string.info_not_available_offline),
+									stringResource(com.flexify.app.generated.resources.Res.string.info_not_available_offline),
 									modifier = Modifier.size(20.dp)
 								)
 							}
@@ -166,7 +166,7 @@ fun QueueScreenItem(
 							) {
 								Icon(
 									Icons.Outlined.DragHandle,
-									contentDescription = stringResource(Res.string.action_reorder)
+									contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.action_reorder)
 								)
 							}
 						}

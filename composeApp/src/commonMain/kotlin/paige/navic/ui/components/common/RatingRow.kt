@@ -10,8 +10,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.count_rate_stars
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.count_rate_stars
 import org.jetbrains.compose.resources.pluralStringResource
 import com.flexify.app.LocalPlatformContext
 import com.flexify.app.icons.Icons
@@ -48,7 +48,7 @@ fun RatingRow(
 						Icons.Filled.Star
 					else Icons.Outlined.Star,
 					contentDescription = pluralStringResource(
-						Res.plurals.count_rate_stars, idx, idx
+						com.flexify.app.generated.resources.Res.plurals.count_rate_stars, idx, idx
 					),
 					tint = MaterialTheme.colorScheme.primary
 				)

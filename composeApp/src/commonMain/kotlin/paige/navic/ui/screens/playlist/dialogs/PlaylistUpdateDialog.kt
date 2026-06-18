@@ -30,14 +30,14 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
 import dev.zt64.subsonic.api.model.Playlist as ApiPlaylist
 import kotlinx.collections.immutable.ImmutableList
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_add_to_playlist
-import navic.composeapp.generated.resources.action_cancel
-import navic.composeapp.generated.resources.action_new
-import navic.composeapp.generated.resources.action_ok
-import navic.composeapp.generated.resources.action_refresh
-import navic.composeapp.generated.resources.info_no_other_playlists
-import navic.composeapp.generated.resources.info_no_playlists
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_add_to_playlist
+import com.flexify.app.composeapp.generated.resources.action_cancel
+import com.flexify.app.composeapp.generated.resources.action_new
+import com.flexify.app.composeapp.generated.resources.action_ok
+import com.flexify.app.composeapp.generated.resources.action_refresh
+import com.flexify.app.composeapp.generated.resources.info_no_other_playlists
+import com.flexify.app.composeapp.generated.resources.info_no_playlists
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
 import org.koin.core.parameter.parametersOf
@@ -115,7 +115,7 @@ fun PlaylistUpdateDialog(
 	FormDialog(
 		onDismissRequest = onDismissRequest,
 		icon = { Icon(Icons.Outlined.PlaylistAdd, null) },
-		title = { Text(stringResource(Res.string.action_add_to_playlist)) },
+		title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.action_add_to_playlist)) },
 		action = {
 			IconButton(
 				onClick = {
@@ -126,7 +126,7 @@ fun PlaylistUpdateDialog(
 				content = {
 					Icon(
 						Icons.Outlined.Refresh,
-						contentDescription = stringResource(Res.string.action_refresh)
+						contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.action_refresh)
 					)
 				}
 			)
@@ -143,7 +143,7 @@ fun PlaylistUpdateDialog(
 					color = MaterialTheme.colorScheme.primary
 				) {
 					if (confirmState !is UiState.Loading) {
-						Text(stringResource(Res.string.action_ok))
+						Text(stringResource(com.flexify.app.generated.resources.Res.string.action_ok))
 					} else {
 						CircularProgressIndicator(
 							modifier = Modifier.size(20.dp)
@@ -155,7 +155,7 @@ fun PlaylistUpdateDialog(
 					onClick = {
 						createDialogShown = true
 					},
-					content = { Text(stringResource(Res.string.action_new)) }
+					content = { Text(stringResource(com.flexify.app.generated.resources.Res.string.action_new)) }
 				)
 			}
 			FormButton(
@@ -163,7 +163,7 @@ fun PlaylistUpdateDialog(
 					onDismissRequest()
 				},
 				enabled = state !is UiState.Loading,
-				content = { Text(stringResource(Res.string.action_cancel)) }
+				content = { Text(stringResource(com.flexify.app.generated.resources.Res.string.action_cancel)) }
 			)
 		},
 		content = {
@@ -190,8 +190,8 @@ fun PlaylistUpdateDialog(
 						Text(
 							stringResource(
 								if (playlistToExclude != null)
-									Res.string.info_no_other_playlists
-								else Res.string.info_no_playlists
+									com.flexify.app.generated.resources.Res.string.info_no_other_playlists
+								else com.flexify.app.generated.resources.Res.string.info_no_playlists
 							)
 						)
 					}

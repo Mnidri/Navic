@@ -26,11 +26,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.kyant.capsule.ContinuousCapsule
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_cancel_download
-import navic.composeapp.generated.resources.action_delete_download
-import navic.composeapp.generated.resources.action_play
-import navic.composeapp.generated.resources.info_download_failed
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_cancel_download
+import com.flexify.app.composeapp.generated.resources.action_delete_download
+import com.flexify.app.composeapp.generated.resources.action_play
+import com.flexify.app.composeapp.generated.resources.info_download_failed
 import org.jetbrains.compose.resources.stringResource
 import com.flexify.app.LocalPlatformContext
 import com.flexify.app.data.database.entities.DownloadStatus
@@ -88,7 +88,7 @@ fun ArtistActionButtons(
 					modifier = Modifier.size(25.dp)
 				)
 				Text(
-					stringResource(Res.string.action_play),
+					stringResource(com.flexify.app.generated.resources.Res.string.action_play),
 					style = MaterialTheme.typography.labelLarge,
 					color = MaterialTheme.colorScheme.onPrimary,
 					fontWeight = FontWeight.SemiBold,
@@ -127,7 +127,7 @@ fun ArtistActionButtons(
 						)
 						Icon(
 							imageVector = Icons.Outlined.Close,
-							contentDescription = stringResource(Res.string.action_cancel_download),
+							contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.action_cancel_download),
 							modifier = Modifier.size(12.dp),
 							tint = MaterialTheme.colorScheme.primary
 						)
@@ -137,7 +137,7 @@ fun ArtistActionButtons(
 				DownloadStatus.DOWNLOADED -> {
 					Icon(
 						imageVector = Icons.Outlined.Delete,
-						contentDescription = stringResource(Res.string.action_delete_download),
+						contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.action_delete_download),
 						modifier = Modifier.size(24.dp),
 						tint = MaterialTheme.colorScheme.primary
 					)
@@ -146,7 +146,7 @@ fun ArtistActionButtons(
 				DownloadStatus.FAILED -> {
 					Icon(
 						imageVector = Icons.Outlined.DownloadOff,
-						contentDescription = stringResource(Res.string.info_download_failed),
+						contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.info_download_failed),
 						modifier = Modifier.size(24.dp),
 						tint = MaterialTheme.colorScheme.error
 					)

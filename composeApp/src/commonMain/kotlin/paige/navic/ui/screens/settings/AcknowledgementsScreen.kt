@@ -9,8 +9,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import com.mikepenz.aboutlibraries.ui.compose.m3.LibrariesContainer
 import com.mikepenz.aboutlibraries.ui.compose.produceLibraries
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.title_acknowledgements
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.title_acknowledgements
 import org.jetbrains.compose.resources.stringResource
 import com.flexify.app.LocalPlatformContext
 import com.flexify.app.ui.components.layouts.NestedTopBar
@@ -18,14 +18,14 @@ import com.flexify.app.ui.components.layouts.NestedTopBar
 @Composable
 fun SettingsAcknowledgementsScreen() {
 	val libraries by produceLibraries {
-		Res.readBytes("files/acknowledgements.json").decodeToString()
+		com.flexify.app.generated.resources.Res.readBytes("files/acknowledgements.json").decodeToString()
 	}
 	val platformContext = LocalPlatformContext.current
 	val hideBack = platformContext.sizeClass.widthSizeClass >= WindowWidthSizeClass.Medium
 	Scaffold(
 		topBar = {
 			NestedTopBar(
-				{ Text(stringResource(Res.string.title_acknowledgements)) },
+				{ Text(stringResource(com.flexify.app.generated.resources.Res.string.title_acknowledgements)) },
 				hideBack = hideBack
 			)
 		}

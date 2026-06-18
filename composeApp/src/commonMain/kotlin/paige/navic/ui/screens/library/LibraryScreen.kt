@@ -17,8 +17,8 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.title_library
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.title_library
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
@@ -94,7 +94,7 @@ fun LibraryScreen() {
 	}
 
 	Scaffold(
-		topBar = { RootTopBar({ Text(stringResource(Res.string.title_library)) }, scrollBehavior) },
+		topBar = { RootTopBar({ Text(stringResource(com.flexify.app.generated.resources.Res.string.title_library)) }, scrollBehavior) },
 		bottomBar = {
 			val scrollManager = LocalBottomBarScrollManager.current
 			RootBottomBar(scrolled = scrollManager.isTriggered)

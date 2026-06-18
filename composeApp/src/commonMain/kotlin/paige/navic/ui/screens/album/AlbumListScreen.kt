@@ -19,8 +19,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.title_albums
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.title_albums
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
@@ -82,12 +82,12 @@ fun AlbumListScreen(
 		topBar = {
 			if (!nested) {
 				RootTopBar(
-					{ Text(stringResource(Res.string.title_albums)) },
+					{ Text(stringResource(com.flexify.app.generated.resources.Res.string.title_albums)) },
 					scrollBehavior,
 					actions
 				)
 			} else {
-				NestedTopBar({ Text(stringResource(Res.string.title_albums)) }, actions)
+				NestedTopBar({ Text(stringResource(com.flexify.app.generated.resources.Res.string.title_albums)) }, actions)
 			}
 		},
 		bottomBar = {

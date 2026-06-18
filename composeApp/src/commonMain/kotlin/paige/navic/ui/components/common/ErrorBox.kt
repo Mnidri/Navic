@@ -22,8 +22,8 @@ import androidx.compose.ui.draw.scale
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.materialkolor.ktx.darken
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.info_error
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.info_error
 import org.jetbrains.compose.resources.stringResource
 import com.flexify.app.LocalPlatformContext
 import com.flexify.app.icons.Icons
@@ -63,7 +63,7 @@ fun <T> ErrorBox(
 			horizontalArrangement = Arrangement.Center
 		) {
 			Text(
-				stringResource(Res.string.info_error),
+				stringResource(com.flexify.app.generated.resources.Res.string.info_error),
 				modifier = Modifier.weight(1f)
 			)
 			onRetry?.let { onRetry ->

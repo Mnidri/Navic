@@ -36,9 +36,9 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.title_create_playlist
-import navic.composeapp.generated.resources.title_playlists
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.title_create_playlist
+import com.flexify.app.composeapp.generated.resources.title_playlists
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
@@ -111,13 +111,13 @@ fun PlaylistListScreen(
 		topBar = {
 			if (!nested) {
 				RootTopBar(
-					title = { Text(stringResource(Res.string.title_playlists)) },
+					title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.title_playlists)) },
 					scrollBehavior = scrollBehavior,
 					actions = actions
 				)
 			} else {
 				NestedTopBar(
-					title = { Text(stringResource(Res.string.title_playlists)) },
+					title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.title_playlists)) },
 					actions = actions
 				)
 			}
@@ -148,7 +148,7 @@ fun PlaylistListScreen(
 					) {
 						Icon(
 							imageVector = Icons.Outlined.Add,
-							contentDescription = stringResource(Res.string.title_create_playlist),
+							contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.title_create_playlist),
 							modifier = Modifier.size(26.dp)
 						)
 					}

@@ -30,9 +30,9 @@ import com.flexify.app.domain.manager.DownloadManager
 import com.flexify.app.util.core.Logger
 import com.flexify.app.shared.MediaPlayerViewModel
 import com.flexify.app.ui.core.UiState
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.notice_download_started
-import navic.composeapp.generated.resources.notice_deleted_download
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.notice_download_started
+import com.flexify.app.composeapp.generated.resources.notice_deleted_download
 import com.flexify.app.domain.manager.SnackBarManager
 
 @Immutable
@@ -263,7 +263,7 @@ class ArtistDetailViewModel(
 
 	fun downloadSong(song: DomainSong) {
 		downloadManager.downloadSong(song)
-		snackBarManager.notify(Res.string.notice_download_started)
+		snackBarManager.notify(com.flexify.app.generated.resources.Res.string.notice_download_started)
 	}
 
 	fun cancelDownload(songId: String) {
@@ -272,7 +272,7 @@ class ArtistDetailViewModel(
 
 	fun deleteDownload(songId: String) {
 		downloadManager.deleteDownload(songId)
-		snackBarManager.notify(Res.string.notice_deleted_download)
+		snackBarManager.notify(com.flexify.app.generated.resources.Res.string.notice_deleted_download)
 	}
 
 	@OptIn(ExperimentalCoroutinesApi::class)

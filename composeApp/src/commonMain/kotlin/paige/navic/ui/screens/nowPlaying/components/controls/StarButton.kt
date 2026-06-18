@@ -9,8 +9,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_star
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_star
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import com.flexify.app.LocalPlatformContext
@@ -38,7 +38,7 @@ fun NowPlayingStarButton(
 	) {
 		Icon(
 			if (songIsStarred) Icons.Filled.Star else Icons.Outlined.Star,
-			contentDescription = stringResource(Res.string.action_star)
+			contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.action_star)
 		)
 	}
 }

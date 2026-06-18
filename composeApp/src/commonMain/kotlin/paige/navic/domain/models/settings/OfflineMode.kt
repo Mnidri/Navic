@@ -1,13 +1,13 @@
 package com.flexify.app.domain.models.settings
 
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.option_offline_mode_auto
-import navic.composeapp.generated.resources.option_offline_mode_forced
-import navic.composeapp.generated.resources.option_offline_mode_no_wifi
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.option_offline_mode_auto
+import com.flexify.app.composeapp.generated.resources.option_offline_mode_forced
+import com.flexify.app.composeapp.generated.resources.option_offline_mode_no_wifi
 import org.jetbrains.compose.resources.StringResource
 
 enum class OfflineMode(val displayName: StringResource) {
-	Auto(Res.string.option_offline_mode_auto),
-	Forced(Res.string.option_offline_mode_forced),
-	NoWiFi(Res.string.option_offline_mode_no_wifi),
+	Auto(com.flexify.app.generated.resources.Res.string.option_offline_mode_auto),
+	Forced(com.flexify.app.generated.resources.Res.string.option_offline_mode_forced),
+	NoWiFi(com.flexify.app.generated.resources.Res.string.option_offline_mode_no_wifi),
 }

@@ -15,15 +15,15 @@ import kotlinx.coroutines.sync.Semaphore
 import kotlinx.coroutines.sync.withPermit
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.SerializationException
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.info_syncing
-import navic.composeapp.generated.resources.info_syncing_albums
-import navic.composeapp.generated.resources.info_syncing_artists
-import navic.composeapp.generated.resources.info_syncing_finished
-import navic.composeapp.generated.resources.info_syncing_genres
-import navic.composeapp.generated.resources.info_syncing_playlists
-import navic.composeapp.generated.resources.info_syncing_radios
-import navic.composeapp.generated.resources.info_syncing_saved
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.info_syncing
+import com.flexify.app.composeapp.generated.resources.info_syncing_albums
+import com.flexify.app.composeapp.generated.resources.info_syncing_artists
+import com.flexify.app.composeapp.generated.resources.info_syncing_finished
+import com.flexify.app.composeapp.generated.resources.info_syncing_genres
+import com.flexify.app.composeapp.generated.resources.info_syncing_playlists
+import com.flexify.app.composeapp.generated.resources.info_syncing_radios
+import com.flexify.app.composeapp.generated.resources.info_syncing_saved
 import org.jetbrains.compose.resources.StringResource
 import com.flexify.app.data.database.dao.AlbumDao
 import com.flexify.app.data.database.dao.ArtistDao
@@ -89,18 +89,18 @@ class DbRepository(
 			onProgress(progress, message)
 		}
 
-		progressCallback(0.0f, Res.string.info_syncing)
+		progressCallback(0.0f, com.flexify.app.generated.resources.Res.string.info_syncing)
 
-		progressCallback(0.01f, Res.string.info_syncing_genres)
+		progressCallback(0.01f, com.flexify.app.generated.resources.Res.string.info_syncing_genres)
 		syncGenres().getOrThrow()
 
-		progressCallback(0.02f, Res.string.info_syncing_radios)
+		progressCallback(0.02f, com.flexify.app.generated.resources.Res.string.info_syncing_radios)
 		syncRadios().getOrThrow()
 
-		progressCallback(0.04f, Res.string.info_syncing_artists)
+		progressCallback(0.04f, com.flexify.app.generated.resources.Res.string.info_syncing_artists)
 		syncArtists().getOrThrow()
 
-		progressCallback(0.07f, Res.string.info_syncing_playlists)
+		progressCallback(0.07f, com.flexify.app.generated.resources.Res.string.info_syncing_playlists)
 		val playlists = syncPlaylists().getOrThrow()
 
 		syncLibrarySongs { localProgress, message ->
@@ -119,14 +119,14 @@ class DbRepository(
 							syncPlaylistSongs(playlist.playlistId).getOrThrow()
 							val done = completedPlaylists.incrementAndGet()
 							val globalProgress = 0.75f + (0.25f * (done.toFloat() / totalPlaylists))
-							progressCallback(globalProgress, Res.string.info_syncing_playlists)
+							progressCallback(globalProgress, com.flexify.app.generated.resources.Res.string.info_syncing_playlists)
 						}
 					}
 				}.awaitAll()
 			}
 		}
 
-		progressCallback(1.0f, Res.string.info_syncing_finished)
+		progressCallback(1.0f, com.flexify.app.generated.resources.Res.string.info_syncing_finished)
 	}
 
 	suspend fun syncLibrarySongs(
@@ -136,7 +136,7 @@ class DbRepository(
 		var offset = 0
 		val allAlbumSummaries = mutableListOf<ApiAlbum>()
 
-		onProgress(0.0f, Res.string.info_syncing_albums)
+		onProgress(0.0f, com.flexify.app.generated.resources.Res.string.info_syncing_albums)
 		while (true) {
 			val batch = sessionManager.api.getAlbums(ApiAlbumListType.AlphabeticalByName, pageSize, offset)
 			if (batch.isEmpty()) break
@@ -154,7 +154,7 @@ class DbRepository(
 		val allValidAlbumIds = mutableSetOf<String>()
 		val allValidSongIds = mutableSetOf<String>()
 
-		onProgress(0.1f, Res.string.info_syncing_albums)
+		onProgress(0.1f, com.flexify.app.generated.resources.Res.string.info_syncing_albums)
 
 		val albumChannel = Channel<ApiAlbum>(capacity = 100)
 
@@ -168,7 +168,7 @@ class DbRepository(
 
 								val done = completedAlbums.incrementAndGet()
 								val fetchProgress = 0.1f + (0.8f * (done.toFloat() / totalAlbums))
-								onProgress(fetchProgress, Res.string.info_syncing_albums)
+								onProgress(fetchProgress, com.flexify.app.generated.resources.Res.string.info_syncing_albums)
 
 								albumChannel.send(album)
 							} catch (e: Exception) {
@@ -233,7 +233,7 @@ class DbRepository(
 			"- Songs Synced: $totalAlbums albums, $finalSongsSynced songs"
 		)
 
-		onProgress(1.0f, Res.string.info_syncing_saved)
+		onProgress(1.0f, com.flexify.app.generated.resources.Res.string.info_syncing_saved)
 		finalSongsSynced
 	}
 

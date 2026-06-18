@@ -22,22 +22,22 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.dropUnlessResumed
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.subtitle_about
-import navic.composeapp.generated.resources.subtitle_appearance
-import navic.composeapp.generated.resources.subtitle_bottom_app_bar
-import navic.composeapp.generated.resources.subtitle_data_storage
-import navic.composeapp.generated.resources.subtitle_developer
-import navic.composeapp.generated.resources.subtitle_now_playing
-import navic.composeapp.generated.resources.subtitle_playback
-import navic.composeapp.generated.resources.title_about
-import navic.composeapp.generated.resources.title_appearance
-import navic.composeapp.generated.resources.title_bottom_app_bar
-import navic.composeapp.generated.resources.title_data_storage
-import navic.composeapp.generated.resources.title_developer
-import navic.composeapp.generated.resources.title_now_playing
-import navic.composeapp.generated.resources.title_playback
-import navic.composeapp.generated.resources.title_settings
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.subtitle_about
+import com.flexify.app.composeapp.generated.resources.subtitle_appearance
+import com.flexify.app.composeapp.generated.resources.subtitle_bottom_app_bar
+import com.flexify.app.composeapp.generated.resources.subtitle_data_storage
+import com.flexify.app.composeapp.generated.resources.subtitle_developer
+import com.flexify.app.composeapp.generated.resources.subtitle_now_playing
+import com.flexify.app.composeapp.generated.resources.subtitle_playback
+import com.flexify.app.composeapp.generated.resources.title_about
+import com.flexify.app.composeapp.generated.resources.title_appearance
+import com.flexify.app.composeapp.generated.resources.title_bottom_app_bar
+import com.flexify.app.composeapp.generated.resources.title_data_storage
+import com.flexify.app.composeapp.generated.resources.title_developer
+import com.flexify.app.composeapp.generated.resources.title_now_playing
+import com.flexify.app.composeapp.generated.resources.title_playback
+import com.flexify.app.composeapp.generated.resources.title_settings
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
@@ -61,7 +61,7 @@ import com.flexify.app.ui.theme.defaultFont
 @Composable
 fun SettingsScreen() {
 	Scaffold(
-		topBar = { NestedTopBar({ Text(stringResource(Res.string.title_settings)) }) }
+		topBar = { NestedTopBar({ Text(stringResource(com.flexify.app.generated.resources.Res.string.title_settings)) }) }
 	) { innerPadding ->
 		Column(
 			modifier = Modifier
@@ -74,51 +74,51 @@ fun SettingsScreen() {
 					destination = Screen.Settings.Appearance,
 					icon = Icons.Filled.Palette,
 					iconSize = 24.dp,
-					title = Res.string.title_appearance,
-					subtitle = Res.string.subtitle_appearance
+					title = com.flexify.app.generated.resources.Res.string.title_appearance,
+					subtitle = com.flexify.app.generated.resources.Res.string.subtitle_appearance
 				)
 				PageRow(
 					destination = Screen.Settings.NowPlaying,
 					icon = Icons.Filled.Play,
 					iconSize = 24.dp,
-					title = Res.string.title_now_playing,
-					subtitle = Res.string.subtitle_now_playing
+					title = com.flexify.app.generated.resources.Res.string.title_now_playing,
+					subtitle = com.flexify.app.generated.resources.Res.string.subtitle_now_playing
 				)
 				PageRow(
 					destination = Screen.Settings.BottomAppBar,
 					icon = Icons.Filled.BottomNavigation,
 					iconSize = 24.dp,
-					title = Res.string.title_bottom_app_bar,
-					subtitle = Res.string.subtitle_bottom_app_bar
+					title = com.flexify.app.generated.resources.Res.string.title_bottom_app_bar,
+					subtitle = com.flexify.app.generated.resources.Res.string.subtitle_bottom_app_bar
 				)
 				PageRow(
 					destination = Screen.Settings.Playback,
 					icon = Icons.Outlined.Note,
 					iconSize = 24.dp,
-					title = Res.string.title_playback,
-					subtitle = Res.string.subtitle_playback
+					title = com.flexify.app.generated.resources.Res.string.title_playback,
+					subtitle = com.flexify.app.generated.resources.Res.string.subtitle_playback
 				)
 				PageRow(
 					destination = Screen.Settings.DataStorage,
 					icon = Icons.Outlined.DataTable,
 					iconSize = 24.dp,
-					title = Res.string.title_data_storage,
-					subtitle = Res.string.subtitle_data_storage
+					title = com.flexify.app.generated.resources.Res.string.title_data_storage,
+					subtitle = com.flexify.app.generated.resources.Res.string.subtitle_data_storage
 				)
 				PageRow(
 					destination = Screen.Settings.Developer,
 					icon = Icons.Outlined.Code,
 					iconSize = 24.dp,
-					title = Res.string.title_developer,
-					subtitle = Res.string.subtitle_developer
+					title = com.flexify.app.generated.resources.Res.string.title_developer,
+					subtitle = com.flexify.app.generated.resources.Res.string.subtitle_developer
 				)
 			}
 			Form {
 				PageRow(
 					destination = Screen.Settings.About,
 					icon = Icons.Filled.Info,
-					title = Res.string.title_about,
-					subtitle = Res.string.subtitle_about
+					title = com.flexify.app.generated.resources.Res.string.title_about,
+					subtitle = com.flexify.app.generated.resources.Res.string.subtitle_about
 				)
 			}
 		}

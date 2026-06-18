@@ -23,9 +23,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.info_no_shares
-import navic.composeapp.generated.resources.title_shares
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.info_no_shares
+import com.flexify.app.composeapp.generated.resources.title_shares
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
@@ -57,7 +57,7 @@ fun ShareListScreen() {
 	val preferenceManager = koinInject<PreferenceManager>()
 
 	Scaffold(
-		topBar = { NestedTopBar({ Text(stringResource(Res.string.title_shares)) }) },
+		topBar = { NestedTopBar({ Text(stringResource(com.flexify.app.generated.resources.Res.string.title_shares)) }) },
 		bottomBar = {
 			val scrollManager = LocalBottomBarScrollManager.current
 			if (preferenceManager.bottomBarVisibilityMode == BottomBarVisibilityMode.AllScreens) {
@@ -105,7 +105,7 @@ fun ShareListScreen() {
 								item(span = { GridItemSpan(maxLineSpan) }) {
 									ContentUnavailable(
 										icon = Icons.Filled.ShareOff,
-										label = stringResource(Res.string.info_no_shares)
+										label = stringResource(com.flexify.app.generated.resources.Res.string.info_no_shares)
 									)
 								}
 							}

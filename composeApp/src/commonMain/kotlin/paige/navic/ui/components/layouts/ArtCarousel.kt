@@ -28,8 +28,8 @@ import androidx.navigation3.runtime.NavKey
 import androidx.lifecycle.compose.dropUnlessResumed
 import org.jetbrains.compose.resources.stringResource
 import kotlinx.collections.immutable.ImmutableList
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_see_all
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_see_all
 import com.flexify.app.LocalPlatformContext
 import com.flexify.app.LocalNavStack
 import com.flexify.app.ui.components.common.CoverArt
@@ -62,7 +62,7 @@ fun <T> ArtCarousel(
 						modifier = Modifier.heightIn(min = 32.dp).padding(top = 8.dp)
 					)
 					Text(
-						stringResource(Res.string.action_see_all),
+						stringResource(com.flexify.app.generated.resources.Res.string.action_see_all),
 						style = MaterialTheme.typography.labelLarge,
 						color = MaterialTheme.colorScheme.primary,
 						modifier = Modifier

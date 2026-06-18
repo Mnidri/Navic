@@ -4,8 +4,8 @@ import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyGridScope
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.ui.Modifier
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.info_no_playlists_short
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.info_no_playlists_short
 import org.jetbrains.compose.resources.stringResource
 import com.flexify.app.domain.models.DomainPlaylist
 import com.flexify.app.icons.Icons
@@ -50,7 +50,7 @@ fun LazyGridScope.playlistListScreenContent(
 				item(span = { GridItemSpan(maxLineSpan) }) {
 					ContentUnavailable(
 						icon = Icons.Outlined.PlaylistRemove,
-						label = stringResource(Res.string.info_no_playlists_short)
+						label = stringResource(com.flexify.app.generated.resources.Res.string.info_no_playlists_short)
 					)
 				}
 			}

@@ -9,10 +9,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_ok
-import navic.composeapp.generated.resources.info_error
-import navic.composeapp.generated.resources.info_error_show
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_ok
+import com.flexify.app.composeapp.generated.resources.info_error
+import com.flexify.app.composeapp.generated.resources.info_error_show
 import org.jetbrains.compose.resources.getString
 import org.jetbrains.compose.resources.stringResource
 import com.flexify.app.LocalSnackbarState
@@ -33,8 +33,8 @@ fun ErrorSnackbar(
 
 	LaunchedEffect(error) {
 		val result = snackbarState.showSnackbar(
-			message = getString(Res.string.info_error),
-			actionLabel = getString(Res.string.info_error_show),
+			message = getString(com.flexify.app.generated.resources.Res.string.info_error),
+			actionLabel = getString(com.flexify.app.generated.resources.Res.string.info_error_show),
 			duration = SnackbarDuration.Long
 		)
 		if (result == SnackbarResult.ActionPerformed) {
@@ -57,7 +57,7 @@ fun ErrorSnackbar(
 				visible = false
 				onClearError()
 			}) {
-				Text(stringResource(Res.string.action_ok))
+				Text(stringResource(com.flexify.app.generated.resources.Res.string.action_ok))
 			}
 		}
 	) {

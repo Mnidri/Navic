@@ -48,42 +48,42 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_cancel_download
-import navic.composeapp.generated.resources.action_clear_downloads
-import navic.composeapp.generated.resources.action_clear_image_cache
-import navic.composeapp.generated.resources.action_clear_pending_actions
-import navic.composeapp.generated.resources.action_rebuild_database
-import navic.composeapp.generated.resources.action_trigger_sync
-import navic.composeapp.generated.resources.count_songs
-import navic.composeapp.generated.resources.info_library_download
-import navic.composeapp.generated.resources.info_library_download_warning
-import navic.composeapp.generated.resources.info_not_available_offline
-import navic.composeapp.generated.resources.info_progress
-import navic.composeapp.generated.resources.info_status_calculating
-import navic.composeapp.generated.resources.info_status_downloading
-import navic.composeapp.generated.resources.info_sync_date_format
-import navic.composeapp.generated.resources.info_sync_hours_ago
-import navic.composeapp.generated.resources.info_sync_just_now
-import navic.composeapp.generated.resources.info_sync_mins_ago
-import navic.composeapp.generated.resources.info_sync_never
-import navic.composeapp.generated.resources.option_cover_art_quality
-import navic.composeapp.generated.resources.option_downloaded_songs
-import navic.composeapp.generated.resources.option_image_cache_size
-import navic.composeapp.generated.resources.option_last_sync
-import navic.composeapp.generated.resources.option_live_status
-import navic.composeapp.generated.resources.option_offline_mode
-import navic.composeapp.generated.resources.option_pending_actions
-import navic.composeapp.generated.resources.subtitle_offline_mode
-import navic.composeapp.generated.resources.subtitle_pending_actions
-import navic.composeapp.generated.resources.subtitle_rebuild_database
-import navic.composeapp.generated.resources.subtitle_trigger_sync
-import navic.composeapp.generated.resources.title_cache_management
-import navic.composeapp.generated.resources.title_danger_zone
-import navic.composeapp.generated.resources.title_data_storage
-import navic.composeapp.generated.resources.title_library_download
-import navic.composeapp.generated.resources.title_network
-import navic.composeapp.generated.resources.title_sync_control
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_cancel_download
+import com.flexify.app.composeapp.generated.resources.action_clear_downloads
+import com.flexify.app.composeapp.generated.resources.action_clear_image_cache
+import com.flexify.app.composeapp.generated.resources.action_clear_pending_actions
+import com.flexify.app.composeapp.generated.resources.action_rebuild_database
+import com.flexify.app.composeapp.generated.resources.action_trigger_sync
+import com.flexify.app.composeapp.generated.resources.count_songs
+import com.flexify.app.composeapp.generated.resources.info_library_download
+import com.flexify.app.composeapp.generated.resources.info_library_download_warning
+import com.flexify.app.composeapp.generated.resources.info_not_available_offline
+import com.flexify.app.composeapp.generated.resources.info_progress
+import com.flexify.app.composeapp.generated.resources.info_status_calculating
+import com.flexify.app.composeapp.generated.resources.info_status_downloading
+import com.flexify.app.composeapp.generated.resources.info_sync_date_format
+import com.flexify.app.composeapp.generated.resources.info_sync_hours_ago
+import com.flexify.app.composeapp.generated.resources.info_sync_just_now
+import com.flexify.app.composeapp.generated.resources.info_sync_mins_ago
+import com.flexify.app.composeapp.generated.resources.info_sync_never
+import com.flexify.app.composeapp.generated.resources.option_cover_art_quality
+import com.flexify.app.composeapp.generated.resources.option_downloaded_songs
+import com.flexify.app.composeapp.generated.resources.option_image_cache_size
+import com.flexify.app.composeapp.generated.resources.option_last_sync
+import com.flexify.app.composeapp.generated.resources.option_live_status
+import com.flexify.app.composeapp.generated.resources.option_offline_mode
+import com.flexify.app.composeapp.generated.resources.option_pending_actions
+import com.flexify.app.composeapp.generated.resources.subtitle_offline_mode
+import com.flexify.app.composeapp.generated.resources.subtitle_pending_actions
+import com.flexify.app.composeapp.generated.resources.subtitle_rebuild_database
+import com.flexify.app.composeapp.generated.resources.subtitle_trigger_sync
+import com.flexify.app.composeapp.generated.resources.title_cache_management
+import com.flexify.app.composeapp.generated.resources.title_danger_zone
+import com.flexify.app.composeapp.generated.resources.title_data_storage
+import com.flexify.app.composeapp.generated.resources.title_library_download
+import com.flexify.app.composeapp.generated.resources.title_network
+import com.flexify.app.composeapp.generated.resources.title_sync_control
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
@@ -126,7 +126,7 @@ fun SettingsDataStorageScreen() {
 
 	val isOnline by viewModel.isOnline.collectAsStateWithLifecycle()
 
-	val calculating = stringResource(Res.string.info_status_calculating)
+	val calculating = stringResource(com.flexify.app.generated.resources.Res.string.info_status_calculating)
 	var imageCacheSizeMb by remember { mutableStateOf(calculating) }
 
 	val downloadsSizeMb = remember(downloadSize) {
@@ -157,7 +157,7 @@ fun SettingsDataStorageScreen() {
 		if (!isOnline) {
 			Icon(
 				Icons.Outlined.Offline,
-				stringResource(Res.string.info_not_available_offline),
+				stringResource(com.flexify.app.generated.resources.Res.string.info_not_available_offline),
 				modifier = Modifier.size(20.dp)
 			)
 		}
@@ -171,8 +171,8 @@ fun SettingsDataStorageScreen() {
 	}
 
 	BulkDownloadDialog(
-		title = stringResource(Res.string.title_library_download),
-		message = stringResource(Res.string.info_library_download_warning),
+		title = stringResource(com.flexify.app.generated.resources.Res.string.title_library_download),
+		message = stringResource(com.flexify.app.generated.resources.Res.string.info_library_download_warning),
 		showDialog = showLibraryDownloadDialog,
 		onDismissRequest = { showLibraryDownloadDialog = false },
 		onConfirm = {
@@ -184,7 +184,7 @@ fun SettingsDataStorageScreen() {
 	Scaffold(
 		topBar = {
 			NestedTopBar(
-				title = { Text(stringResource(Res.string.title_data_storage)) },
+				title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.title_data_storage)) },
 				hideBack = platformContext.sizeClass.widthSizeClass >= WindowWidthSizeClass.Medium
 			)
 		},
@@ -197,18 +197,18 @@ fun SettingsDataStorageScreen() {
 					.verticalScroll(rememberScrollState())
 					.padding(top = 16.dp, end = 16.dp, start = 16.dp, bottom = 32.dp)
 			) {
-				FormTitle(stringResource(Res.string.title_network))
+				FormTitle(stringResource(com.flexify.app.generated.resources.Res.string.title_network))
 				Form {
 					SettingSelectionRow(
-						title = { Text(stringResource(Res.string.option_offline_mode)) },
+						title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_offline_mode)) },
 						items = OfflineMode.entries.toImmutableList(),
 						label = { stringResource(it.displayName) },
-						description = stringResource(Res.string.subtitle_offline_mode),
+						description = stringResource(com.flexify.app.generated.resources.Res.string.subtitle_offline_mode),
 						selection = preferenceManager.offlineMode,
 						onSelect = { preferenceManager.offlineMode = it }
 					)
 					SettingSelectionRow(
-						title = { Text(stringResource(Res.string.option_cover_art_quality)) },
+						title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_cover_art_quality)) },
 						items = CoverArtQuality.entries.toImmutableList(),
 						label = { stringResource(it.displayName) },
 						selection = preferenceManager.coverArtQuality,
@@ -223,12 +223,12 @@ fun SettingsDataStorageScreen() {
 					)
 				}
 
-				FormTitle(stringResource(Res.string.title_sync_control))
+				FormTitle(stringResource(com.flexify.app.generated.resources.Res.string.title_sync_control))
 				Form {
 					FormRow {
 						Column(Modifier.fillMaxWidth()) {
 							Column {
-								Text(stringResource(Res.string.option_live_status))
+								Text(stringResource(com.flexify.app.generated.resources.Res.string.option_live_status))
 								Text(
 									text = stringResource(syncState.message),
 									style = MaterialTheme.typography.bodyMedium,
@@ -259,9 +259,9 @@ fun SettingsDataStorageScreen() {
 						} else null
 					) {
 						Column(Modifier.weight(1f)) {
-							Text(stringResource(Res.string.action_trigger_sync))
+							Text(stringResource(com.flexify.app.generated.resources.Res.string.action_trigger_sync))
 							Text(
-								stringResource(Res.string.subtitle_trigger_sync),
+								stringResource(com.flexify.app.generated.resources.Res.string.subtitle_trigger_sync),
 								style = MaterialTheme.typography.bodyMedium,
 								color = MaterialTheme.colorScheme.onSurfaceVariant
 							)
@@ -271,18 +271,18 @@ fun SettingsDataStorageScreen() {
 
 					FormRow {
 						Column(Modifier.weight(1f)) {
-							Text(stringResource(Res.string.option_last_sync))
+							Text(stringResource(com.flexify.app.generated.resources.Res.string.option_last_sync))
 							Text(
 								text = if (preferenceManager.lastFullSyncTime == 0L) {
-									stringResource(Res.string.info_sync_never)
+									stringResource(com.flexify.app.generated.resources.Res.string.info_sync_never)
 								} else {
 									Instant.fromEpochMilliseconds(
 										preferenceManager.lastFullSyncTime
 									).toRelativeString(
-										justNow = stringResource(Res.string.info_sync_just_now),
-										minsAgo = stringResource(Res.string.info_sync_mins_ago),
-										hoursAgo = stringResource(Res.string.info_sync_hours_ago),
-										dateFormat = stringResource(Res.string.info_sync_date_format)
+										justNow = stringResource(com.flexify.app.generated.resources.Res.string.info_sync_just_now),
+										minsAgo = stringResource(com.flexify.app.generated.resources.Res.string.info_sync_mins_ago),
+										hoursAgo = stringResource(com.flexify.app.generated.resources.Res.string.info_sync_hours_ago),
+										dateFormat = stringResource(com.flexify.app.generated.resources.Res.string.info_sync_date_format)
 									)
 								},
 								style = MaterialTheme.typography.bodyMedium,
@@ -292,14 +292,14 @@ fun SettingsDataStorageScreen() {
 					}
 				}
 
-				FormTitle(stringResource(Res.string.title_cache_management))
+				FormTitle(stringResource(com.flexify.app.generated.resources.Res.string.title_cache_management))
 				Form {
 					FormRow {
 						Column(Modifier.weight(1f)) {
-							Text(stringResource(Res.string.option_pending_actions))
+							Text(stringResource(com.flexify.app.generated.resources.Res.string.option_pending_actions))
 							Text(
 								stringResource(
-									Res.string.subtitle_pending_actions,
+									com.flexify.app.generated.resources.Res.string.subtitle_pending_actions,
 									pendingActionCount
 								),
 								style = MaterialTheme.typography.bodyMedium,
@@ -310,10 +310,10 @@ fun SettingsDataStorageScreen() {
 
 					FormRow {
 						Column(Modifier.weight(1f)) {
-							Text(stringResource(Res.string.option_downloaded_songs))
+							Text(stringResource(com.flexify.app.generated.resources.Res.string.option_downloaded_songs))
 							Text(
 								pluralStringResource(
-									Res.plurals.count_songs,
+									com.flexify.app.generated.resources.Res.plurals.count_songs,
 									downloadCount,
 									downloadCount
 								)
@@ -326,7 +326,7 @@ fun SettingsDataStorageScreen() {
 
 					FormRow {
 						Column(Modifier.weight(1f)) {
-							Text(stringResource(Res.string.option_image_cache_size))
+							Text(stringResource(com.flexify.app.generated.resources.Res.string.option_image_cache_size))
 							Text(
 								imageCacheSizeMb,
 								style = MaterialTheme.typography.bodyMedium,
@@ -342,9 +342,9 @@ fun SettingsDataStorageScreen() {
 						} else null
 					) {
 						Column(Modifier.weight(1f)) {
-							Text(stringResource(Res.string.title_library_download))
+							Text(stringResource(com.flexify.app.generated.resources.Res.string.title_library_download))
 							Text(
-								text = stringResource(if (isDownloadingLibrary) Res.string.info_status_downloading else Res.string.info_library_download),
+								text = stringResource(if (isDownloadingLibrary) com.flexify.app.generated.resources.Res.string.info_status_downloading else com.flexify.app.generated.resources.Res.string.info_library_download),
 								style = MaterialTheme.typography.bodyMedium,
 								color = MaterialTheme.colorScheme.onSurfaceVariant
 							)
@@ -361,7 +361,7 @@ fun SettingsDataStorageScreen() {
 										verticalAlignment = Alignment.CenterVertically
 									) {
 										Text(
-											text = stringResource(Res.string.info_progress),
+											text = stringResource(com.flexify.app.generated.resources.Res.string.info_progress),
 											style = MaterialTheme.typography.labelMedium,
 											color = MaterialTheme.colorScheme.primary
 										)
@@ -376,7 +376,7 @@ fun SettingsDataStorageScreen() {
 												modifier = Modifier.padding(end = 8.dp)
 											) {
 												Text(
-													stringResource(Res.string.action_cancel_download),
+													stringResource(com.flexify.app.generated.resources.Res.string.action_cancel_download),
 													style = MaterialTheme.typography.labelLarge,
 													color = MaterialTheme.colorScheme.error
 												)
@@ -401,7 +401,7 @@ fun SettingsDataStorageScreen() {
 					}
 				}
 
-				FormTitle(stringResource(Res.string.title_danger_zone))
+				FormTitle(stringResource(com.flexify.app.generated.resources.Res.string.title_danger_zone))
 				Form {
 					FormRow(
 						onClick = {
@@ -413,7 +413,7 @@ fun SettingsDataStorageScreen() {
 						}
 					) {
 						Text(
-							stringResource(Res.string.action_clear_image_cache),
+							stringResource(com.flexify.app.generated.resources.Res.string.action_clear_image_cache),
 							color = MaterialTheme.colorScheme.error,
 							modifier = Modifier.weight(1f)
 						)
@@ -421,14 +421,14 @@ fun SettingsDataStorageScreen() {
 
 					FormRow(onClick = { viewModel.removeAllActions() }) {
 						Text(
-							stringResource(Res.string.action_clear_pending_actions),
+							stringResource(com.flexify.app.generated.resources.Res.string.action_clear_pending_actions),
 							color = MaterialTheme.colorScheme.error
 						)
 					}
 
 					FormRow(onClick = { viewModel.clearAllDownloads() }) {
 						Text(
-							stringResource(Res.string.action_clear_downloads),
+							stringResource(com.flexify.app.generated.resources.Res.string.action_clear_downloads),
 							color = MaterialTheme.colorScheme.error
 						)
 					}
@@ -441,11 +441,11 @@ fun SettingsDataStorageScreen() {
 					) {
 						Column(Modifier.weight(1f)) {
 							Text(
-								stringResource(Res.string.action_rebuild_database),
+								stringResource(com.flexify.app.generated.resources.Res.string.action_rebuild_database),
 								color = MaterialTheme.colorScheme.error
 							)
 							Text(
-								stringResource(Res.string.subtitle_rebuild_database),
+								stringResource(com.flexify.app.generated.resources.Res.string.subtitle_rebuild_database),
 								style = MaterialTheme.typography.bodyMedium,
 								color = MaterialTheme.colorScheme.error.copy(alpha = 0.8f)
 							)

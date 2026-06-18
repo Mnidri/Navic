@@ -1,11 +1,11 @@
 package com.flexify.app.domain.models.settings
 
 import androidx.compose.runtime.Composable
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.option_quality_high
-import navic.composeapp.generated.resources.option_quality_lossless
-import navic.composeapp.generated.resources.option_quality_low
-import navic.composeapp.generated.resources.option_quality_medium
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.option_quality_high
+import com.flexify.app.composeapp.generated.resources.option_quality_lossless
+import com.flexify.app.composeapp.generated.resources.option_quality_low
+import com.flexify.app.composeapp.generated.resources.option_quality_medium
 import org.jetbrains.compose.resources.StringResource
 import com.flexify.app.LocalPlatformContext
 import com.flexify.app.util.core.PlatformType
@@ -18,28 +18,28 @@ enum class StreamingQuality(
 	val containerIos: String?
 ) {
 	Low(
-		displayName = Res.string.option_quality_low,
+		displayName = com.flexify.app.generated.resources.Res.string.option_quality_low,
 		bitrateAndroid = 80,
 		bitrateIos = 96,
 		containerAndroid = "opus",
 		containerIos = "aac"
 	),
 	Medium(
-		displayName = Res.string.option_quality_medium,
+		displayName = com.flexify.app.generated.resources.Res.string.option_quality_medium,
 		bitrateAndroid = 128,
 		bitrateIos = 160,
 		containerAndroid = "opus",
 		containerIos = "aac"
 	),
 	High(
-		displayName = Res.string.option_quality_high,
+		displayName = com.flexify.app.generated.resources.Res.string.option_quality_high,
 		bitrateAndroid = 192,
 		bitrateIos = 256,
 		containerAndroid = "opus",
 		containerIos = "aac"
 	),
 	Lossless(
-		displayName = Res.string.option_quality_lossless,
+		displayName = com.flexify.app.generated.resources.Res.string.option_quality_lossless,
 		bitrateAndroid = 0,
 		bitrateIos = 0,
 		containerAndroid = null,

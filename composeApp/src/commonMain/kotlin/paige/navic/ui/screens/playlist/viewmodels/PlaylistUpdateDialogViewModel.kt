@@ -10,9 +10,9 @@ import kotlinx.coroutines.launch
 import com.flexify.app.domain.manager.SessionManager
 import com.flexify.app.domain.models.DomainSong
 import com.flexify.app.ui.core.UiState
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.notice_added_to_multiple_playlists
-import navic.composeapp.generated.resources.notice_added_to_playlist
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.notice_added_to_multiple_playlists
+import com.flexify.app.composeapp.generated.resources.notice_added_to_playlist
 import com.flexify.app.domain.manager.SnackBarManager
 import dev.zt64.subsonic.api.model.Playlist as ApiPlaylist
 
@@ -74,9 +74,9 @@ class PlaylistUpdateDialogViewModel(
 				}
 				_confirmState.value = UiState.Success(null)
 				if (selected.size == 1) {
-					snackBarManager.notify(Res.string.notice_added_to_playlist, selected.first().name)
+					snackBarManager.notify(com.flexify.app.generated.resources.Res.string.notice_added_to_playlist, selected.first().name)
 				} else if (selected.size > 1) {
-					snackBarManager.notify(Res.string.notice_added_to_multiple_playlists)
+					snackBarManager.notify(com.flexify.app.generated.resources.Res.string.notice_added_to_multiple_playlists)
 				}
 				_events.send(Event.Dismiss)
 			} catch (e: Exception) {

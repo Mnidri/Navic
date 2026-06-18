@@ -38,12 +38,12 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.compose.dropUnlessResumed
 import com.kyant.capsule.ContinuousCapsule
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_log_in
-import navic.composeapp.generated.resources.info_login_description_end
-import navic.composeapp.generated.resources.info_login_description_middle
-import navic.composeapp.generated.resources.info_login_description_start
-import navic.composeapp.generated.resources.option_custom_headers
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_log_in
+import com.flexify.app.composeapp.generated.resources.info_login_description_end
+import com.flexify.app.composeapp.generated.resources.info_login_description_middle
+import com.flexify.app.composeapp.generated.resources.info_login_description_start
+import com.flexify.app.composeapp.generated.resources.option_custom_headers
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
 import com.flexify.app.LocalPlatformContext
@@ -65,9 +65,9 @@ fun LoginScreenContent(innerPadding: PaddingValues) {
 	val isBusy = loginState is LoginUiState.Loading || loginState is LoginUiState.Syncing
 
 	val linkColor = MaterialTheme.colorScheme.primary
-	val startText = stringResource(Res.string.info_login_description_start)
-	val middleText = stringResource(Res.string.info_login_description_middle)
-	val endText = stringResource(Res.string.info_login_description_end)
+	val startText = stringResource(com.flexify.app.generated.resources.Res.string.info_login_description_start)
+	val middleText = stringResource(com.flexify.app.generated.resources.Res.string.info_login_description_middle)
+	val endText = stringResource(com.flexify.app.generated.resources.Res.string.info_login_description_end)
 	val noticeText = remember {
 		buildAnnotatedString {
 			append("$startText ")
@@ -136,7 +136,7 @@ fun LoginScreenContent(innerPadding: PaddingValues) {
 				Spacer(Modifier.weight(1f))
 
 				Text(
-					text = stringResource(Res.string.action_log_in),
+					text = stringResource(com.flexify.app.generated.resources.Res.string.action_log_in),
 					style = MaterialTheme.typography.headlineMedium,
 					fontFamily = defaultFont(round = 100f),
 					modifier = Modifier.padding(horizontal = 16.dp)
@@ -170,7 +170,7 @@ fun LoginScreenContent(innerPadding: PaddingValues) {
 				Spacer(Modifier.height(12.dp))
 
 				Text(
-					text = stringResource(Res.string.option_custom_headers),
+					text = stringResource(com.flexify.app.generated.resources.Res.string.option_custom_headers),
 					color = MaterialTheme.colorScheme.primary,
 					textDecoration = TextDecoration.Underline,
 					modifier = Modifier
@@ -206,7 +206,7 @@ fun LoginScreenContent(innerPadding: PaddingValues) {
 					shape = ContinuousCapsule
 				) {
 					Text(
-						text = stringResource(Res.string.action_log_in),
+						text = stringResource(com.flexify.app.generated.resources.Res.string.action_log_in),
 						fontFamily = defaultFont(100)
 					)
 				}

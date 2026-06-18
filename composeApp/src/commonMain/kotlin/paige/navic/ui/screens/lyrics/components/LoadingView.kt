@@ -14,8 +14,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.notice_loading_lyrics
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.notice_loading_lyrics
 import org.jetbrains.compose.resources.stringResource
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
@@ -30,7 +30,7 @@ fun LyricsScreenLoadingView() {
 			Modifier.size(80.dp)
 		)
 		Text(
-			stringResource(Res.string.notice_loading_lyrics),
+			stringResource(com.flexify.app.generated.resources.Res.string.notice_loading_lyrics),
 			textAlign = TextAlign.Center,
 			fontWeight = FontWeight(600),
 			color = MaterialTheme.colorScheme.onSurfaceVariant

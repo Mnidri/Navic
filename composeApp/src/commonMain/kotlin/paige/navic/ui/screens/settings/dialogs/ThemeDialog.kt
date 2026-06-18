@@ -23,9 +23,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_ok
-import navic.composeapp.generated.resources.option_choose_theme
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_ok
+import com.flexify.app.composeapp.generated.resources.option_choose_theme
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import com.flexify.app.LocalPlatformContext
@@ -46,7 +46,7 @@ fun ThemeDialog(
 
 	AlertDialog(
 		title = {
-			Text(stringResource(Res.string.option_choose_theme))
+			Text(stringResource(com.flexify.app.generated.resources.Res.string.option_choose_theme))
 		},
 		text = {
 			Column(
@@ -93,7 +93,7 @@ fun ThemeDialog(
 				platformContext.clickSound()
 				onDismissRequest()
 			}) {
-				Text(stringResource(Res.string.action_ok))
+				Text(stringResource(com.flexify.app.generated.resources.Res.string.action_ok))
 			}
 		}
 	)

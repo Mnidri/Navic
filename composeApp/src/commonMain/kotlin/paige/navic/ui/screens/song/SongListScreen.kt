@@ -21,8 +21,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.title_songs
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.title_songs
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
@@ -87,13 +87,13 @@ fun SongListScreen(
 		topBar = {
 			if (!nested) {
 				RootTopBar(
-					title = { Text(artistName ?: stringResource(Res.string.title_songs)) },
+					title = { Text(artistName ?: stringResource(com.flexify.app.generated.resources.Res.string.title_songs)) },
 					scrollBehavior = scrollBehavior,
 					actions = actions
 				)
 			} else {
 				NestedTopBar(
-					title = { Text(artistName ?: stringResource(Res.string.title_songs)) },
+					title = { Text(artistName ?: stringResource(com.flexify.app.generated.resources.Res.string.title_songs)) },
 					actions = actions
 				)
 			}

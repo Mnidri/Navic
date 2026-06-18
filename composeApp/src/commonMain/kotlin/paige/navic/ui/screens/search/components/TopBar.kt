@@ -26,10 +26,10 @@ import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_clear_search
-import navic.composeapp.generated.resources.action_navigate_back
-import navic.composeapp.generated.resources.title_search
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_clear_search
+import com.flexify.app.composeapp.generated.resources.action_navigate_back
+import com.flexify.app.composeapp.generated.resources.title_search
 import org.jetbrains.compose.resources.stringResource
 import com.flexify.app.LocalPlatformContext
 import com.flexify.app.LocalNavStack
@@ -71,7 +71,7 @@ fun SearchScreenTopBar(
 				) {
 					Icon(
 						Icons.Outlined.ArrowBack,
-						contentDescription = stringResource(Res.string.action_navigate_back),
+						contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.action_navigate_back),
 						tint = MaterialTheme.colorScheme.onSurfaceVariant
 					)
 				}
@@ -98,7 +98,7 @@ fun SearchScreenTopBar(
 				Box(contentAlignment = Alignment.CenterStart) {
 					if (query.text.isEmpty()) {
 						Text(
-							text = stringResource(Res.string.title_search),
+							text = stringResource(com.flexify.app.generated.resources.Res.string.title_search),
 							color = MaterialTheme.colorScheme.onSurfaceVariant
 						)
 					}
@@ -120,7 +120,7 @@ fun SearchScreenTopBar(
 				) {
 					Icon(
 						Icons.Outlined.Close,
-						contentDescription = stringResource(Res.string.action_clear_search)
+						contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.action_clear_search)
 					)
 				}
 			}

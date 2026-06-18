@@ -28,9 +28,9 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_delete
-import navic.composeapp.generated.resources.title_logs
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_delete
+import com.flexify.app.composeapp.generated.resources.title_logs
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import com.flexify.app.domain.manager.LogManager
@@ -62,13 +62,13 @@ fun SettingsLogsScreen() {
 	Scaffold(
 		topBar = {
 			NestedTopBar(
-				title = { Text(stringResource(Res.string.title_logs)) },
+				title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.title_logs)) },
 				actions = {
 					TopBarButton(
 						onClick = { logManager.clearLogs() },
 						enabled = logs.isNotEmpty()
 					) {
-						Icon(Icons.Outlined.Delete, stringResource(Res.string.action_delete))
+						Icon(Icons.Outlined.Delete, stringResource(com.flexify.app.generated.resources.Res.string.action_delete))
 					}
 				}
 			)

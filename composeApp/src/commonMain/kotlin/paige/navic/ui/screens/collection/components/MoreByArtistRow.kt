@@ -11,8 +11,8 @@ import androidx.lifecycle.compose.dropUnlessResumed
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.collections.immutable.toPersistentList
 import kotlinx.coroutines.launch
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.title_more_by_artist
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.title_more_by_artist
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import com.flexify.app.LocalNavStack
@@ -49,7 +49,7 @@ fun LazyListScope.collectionDetailScreenMoreByArtistRow(
 		val downloadManager = koinInject<DownloadManager>()
 
 		ArtCarousel(
-			title = stringResource(Res.string.title_more_by_artist, artistName),
+			title = stringResource(com.flexify.app.generated.resources.Res.string.title_more_by_artist, artistName),
 			items = artistAlbums.sortedByDescending { it.playCount }.toImmutableList()
 		) { album ->
 			val downloadStatus by downloadManager

@@ -48,13 +48,13 @@ import androidx.navigationevent.compose.rememberNavigationEventState
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_navigate_back
-import navic.composeapp.generated.resources.action_share_lyrics
-import navic.composeapp.generated.resources.count_lines
-import navic.composeapp.generated.resources.info_lyrics_provider
-import navic.composeapp.generated.resources.info_no_lyrics
-import navic.composeapp.generated.resources.title_select_lyrics
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_navigate_back
+import com.flexify.app.composeapp.generated.resources.action_share_lyrics
+import com.flexify.app.composeapp.generated.resources.count_lines
+import com.flexify.app.composeapp.generated.resources.info_lyrics_provider
+import com.flexify.app.composeapp.generated.resources.info_no_lyrics
+import com.flexify.app.composeapp.generated.resources.title_select_lyrics
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
@@ -120,7 +120,7 @@ fun LyricsScreen(
 			modifier = Modifier.fillMaxSize(),
 			icon = Icons.Outlined.Lyrics,
 			color = contentColor,
-			label = stringResource(Res.string.info_no_lyrics)
+			label = stringResource(com.flexify.app.generated.resources.Res.string.info_no_lyrics)
 		)
 	}
 
@@ -170,7 +170,7 @@ fun LyricsScreen(
 								imageVector = if (!isSelectionMode)
 									Icons.Outlined.KeyboardArrowDown
 								else Icons.Outlined.ArrowBack,
-								contentDescription = stringResource(Res.string.action_navigate_back)
+								contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.action_navigate_back)
 							)
 						}
 					)
@@ -195,7 +195,7 @@ fun LyricsScreen(
 							imageVector = if (!isSelectionMode)
 								Icons.Outlined.Share
 							else Icons.Outlined.Check,
-							contentDescription = stringResource(Res.string.action_share_lyrics),
+							contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.action_share_lyrics),
 							modifier = Modifier.size(26.dp)
 						)
 					}
@@ -204,11 +204,11 @@ fun LyricsScreen(
 					if (isSelectionMode) {
 						Column {
 							Text(
-								stringResource(Res.string.title_select_lyrics),
+								stringResource(com.flexify.app.generated.resources.Res.string.title_select_lyrics),
 								fontWeight = FontWeight.SemiBold
 							)
 							Text(pluralStringResource(
-								Res.plurals.count_lines,
+								com.flexify.app.generated.resources.Res.plurals.count_lines,
 								selectedIndices.count(),
 								selectedIndices.count()
 							))
@@ -444,7 +444,7 @@ fun LyricsScreen(
 								item {
 									Text(
 										stringResource(
-											Res.string.info_lyrics_provider,
+											com.flexify.app.generated.resources.Res.string.info_lyrics_provider,
 											provider.displayName
 										),
 										textAlign = TextAlign.Center,

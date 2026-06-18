@@ -25,10 +25,10 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.option_account_navidrome_instance
-import navic.composeapp.generated.resources.option_account_password
-import navic.composeapp.generated.resources.option_account_username
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.option_account_navidrome_instance
+import com.flexify.app.composeapp.generated.resources.option_account_password
+import com.flexify.app.composeapp.generated.resources.option_account_username
 import org.jetbrains.compose.resources.stringResource
 
 @Composable
@@ -63,7 +63,7 @@ fun LoginScreenFields(
 			},
 		state = instanceState,
 		isError = instanceError,
-		label = { Text(stringResource(Res.string.option_account_navidrome_instance)) },
+		label = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_account_navidrome_instance)) },
 		lineLimits = TextFieldLineLimits.SingleLine,
 		enabled = !isBusy,
 		keyboardOptions = KeyboardOptions(
@@ -97,7 +97,7 @@ fun LoginScreenFields(
 			},
 		state = usernameState,
 		isError = usernameError,
-		label = { Text(stringResource(Res.string.option_account_username)) },
+		label = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_account_username)) },
 		lineLimits = TextFieldLineLimits.SingleLine,
 		enabled = !isBusy,
 		keyboardOptions = KeyboardOptions(
@@ -128,7 +128,7 @@ fun LoginScreenFields(
 			},
 		state = passwordState,
 		isError = passwordError,
-		label = { Text(stringResource(Res.string.option_account_password)) },
+		label = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_account_password)) },
 		enabled = !isBusy,
 		keyboardOptions = KeyboardOptions(
 			autoCorrectEnabled = false,

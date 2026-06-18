@@ -42,16 +42,16 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.compose.dropUnlessResumed
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_add_to_queue
-import navic.composeapp.generated.resources.action_remove_from_history
-import navic.composeapp.generated.resources.action_search_history
-import navic.composeapp.generated.resources.info_no_search_results
-import navic.composeapp.generated.resources.info_not_available_offline
-import navic.composeapp.generated.resources.title_albums
-import navic.composeapp.generated.resources.title_all
-import navic.composeapp.generated.resources.title_artists
-import navic.composeapp.generated.resources.title_songs
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_add_to_queue
+import com.flexify.app.composeapp.generated.resources.action_remove_from_history
+import com.flexify.app.composeapp.generated.resources.action_search_history
+import com.flexify.app.composeapp.generated.resources.info_no_search_results
+import com.flexify.app.composeapp.generated.resources.info_not_available_offline
+import com.flexify.app.composeapp.generated.resources.title_albums
+import com.flexify.app.composeapp.generated.resources.title_all
+import com.flexify.app.composeapp.generated.resources.title_artists
+import com.flexify.app.composeapp.generated.resources.title_songs
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
@@ -97,10 +97,10 @@ import com.flexify.app.ui.screens.search.components.SearchScreenTopBar
 import com.flexify.app.ui.screens.search.viewmodels.SearchViewModel
 
 enum class SearchCategory(val res: StringResource) {
-	ALL(Res.string.title_all),
-	SONGS(Res.string.title_songs),
-	ALBUMS(Res.string.title_albums),
-	ARTISTS(Res.string.title_artists)
+	ALL(com.flexify.app.generated.resources.Res.string.title_all),
+	SONGS(com.flexify.app.generated.resources.Res.string.title_songs),
+	ALBUMS(com.flexify.app.generated.resources.Res.string.title_albums),
+	ARTISTS(com.flexify.app.generated.resources.Res.string.title_artists)
 }
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class, ExperimentalMaterial3Api::class)
@@ -191,7 +191,7 @@ fun SearchScreen(
 					if (query.text.isNotBlank() && albums.isEmpty() && artists.isEmpty() && songs.isEmpty()) {
 						ContentUnavailable(
 							icon = Icons.Outlined.NoSearchResults,
-							label = stringResource(Res.string.info_no_search_results)
+							label = stringResource(com.flexify.app.generated.resources.Res.string.info_no_search_results)
 						)
 					}
 
@@ -206,7 +206,7 @@ fun SearchScreen(
 							if (songs.isNotEmpty()) {
 								item(span = { GridItemSpan(maxLineSpan) }) {
 									Text(
-										stringResource(Res.string.title_songs),
+										stringResource(com.flexify.app.generated.resources.Res.string.title_songs),
 										style = MaterialTheme.typography.headlineSmall,
 										modifier = Modifier.padding(
 											horizontal = 16.dp,
@@ -261,7 +261,7 @@ fun SearchScreen(
 											) {
 												Icon(
 													imageVector = Icons.Outlined.Queue,
-													contentDescription = stringResource(Res.string.action_add_to_queue),
+													contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.action_add_to_queue),
 													tint = iconColor
 												)
 											}
@@ -292,7 +292,7 @@ fun SearchScreen(
 												if (!canPlay) {
 													Icon(
 														Icons.Outlined.Offline,
-														stringResource(Res.string.info_not_available_offline),
+														stringResource(com.flexify.app.generated.resources.Res.string.info_not_available_offline),
 														modifier = Modifier.size(20.dp)
 													)
 												}
@@ -344,7 +344,7 @@ fun SearchScreen(
 							}
 
 							horizontalSection(
-								title = Res.string.title_albums,
+								title = com.flexify.app.generated.resources.Res.string.title_albums,
 								destination = Screen.AlbumList(true),
 								state = UiState.Success(albums),
 								key = { it.id },
@@ -369,7 +369,7 @@ fun SearchScreen(
 							}
 
 							horizontalSection(
-								title = Res.string.title_artists,
+								title = com.flexify.app.generated.resources.Res.string.title_artists,
 								destination = Screen.ArtistList(true),
 								state = UiState.Success(artists),
 								key = { it.id },
@@ -394,7 +394,7 @@ fun SearchScreen(
 							if (searchHistory.isNotEmpty()) {
 								item(span = { GridItemSpan(maxLineSpan) }) {
 									Text(
-										text = stringResource(Res.string.action_search_history),
+										text = stringResource(com.flexify.app.generated.resources.Res.string.action_search_history),
 										style = MaterialTheme.typography.titleMedium,
 										color = MaterialTheme.colorScheme.primary,
 										modifier = Modifier.padding(
@@ -428,7 +428,7 @@ fun SearchScreen(
 											}) {
 												Icon(
 													imageVector = Icons.Outlined.Close,
-													contentDescription = stringResource(Res.string.action_remove_from_history),
+													contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.action_remove_from_history),
 													tint = MaterialTheme.colorScheme.onSurfaceVariant
 												)
 											}

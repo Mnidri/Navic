@@ -39,12 +39,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import kotlinx.coroutines.launch
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_add_to_queue
-import navic.composeapp.generated.resources.action_play_next
-import navic.composeapp.generated.resources.info_download_failed
-import navic.composeapp.generated.resources.info_downloaded
-import navic.composeapp.generated.resources.info_not_available_offline
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_add_to_queue
+import com.flexify.app.composeapp.generated.resources.action_play_next
+import com.flexify.app.composeapp.generated.resources.info_download_failed
+import com.flexify.app.composeapp.generated.resources.info_downloaded
+import com.flexify.app.composeapp.generated.resources.info_not_available_offline
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import com.flexify.app.data.database.entities.DownloadEntity
@@ -132,7 +132,7 @@ fun CollectionDetailScreenSongRow(
 					SwipeToDismissBoxValue.StartToEnd -> {
 						Icon(
 							imageVector = Icons.Outlined.Queue,
-							contentDescription = stringResource(Res.string.action_add_to_queue),
+							contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.action_add_to_queue),
 							tint = MaterialTheme.colorScheme.onPrimaryContainer,
 							modifier = Modifier.align(Alignment.CenterStart)
 						)
@@ -140,7 +140,7 @@ fun CollectionDetailScreenSongRow(
 					SwipeToDismissBoxValue.EndToStart -> {
 						Icon(
 							imageVector = Icons.Outlined.QueuePlayNext,
-							contentDescription = stringResource(Res.string.action_play_next),
+							contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.action_play_next),
 							tint = MaterialTheme.colorScheme.onPrimaryContainer,
 							modifier = Modifier.align(Alignment.CenterEnd)
 						)
@@ -209,7 +209,7 @@ fun CollectionDetailScreenSongRow(
 					if (!canPlay) {
 						Icon(
 							Icons.Outlined.Offline,
-							stringResource(Res.string.info_not_available_offline),
+							stringResource(com.flexify.app.generated.resources.Res.string.info_not_available_offline),
 							modifier = Modifier.size(20.dp)
 						)
 						Spacer(Modifier.width(6.dp))
@@ -228,7 +228,7 @@ fun CollectionDetailScreenSongRow(
 							DownloadStatus.DOWNLOADED -> {
 								Icon(
 									Icons.Outlined.Check,
-									contentDescription = stringResource(Res.string.info_downloaded),
+									contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.info_downloaded),
 									modifier = Modifier.size(16.dp),
 									tint = MaterialTheme.colorScheme.primary
 								)
@@ -238,7 +238,7 @@ fun CollectionDetailScreenSongRow(
 							DownloadStatus.FAILED -> {
 								Icon(
 									Icons.Outlined.DownloadOff,
-									contentDescription = stringResource(Res.string.info_download_failed),
+									contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.info_download_failed),
 									modifier = Modifier.size(16.dp),
 									tint = MaterialTheme.colorScheme.error
 								)

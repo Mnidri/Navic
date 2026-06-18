@@ -19,8 +19,8 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalUriHandler
 import kotlinx.collections.immutable.toPersistentList
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_more
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_more
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import com.flexify.app.icons.Icons
@@ -72,7 +72,7 @@ fun ArtistDetailScreenTopBar(
 					}) {
 						Icon(
 							Icons.Outlined.MoreVert,
-							stringResource(Res.string.action_more)
+							stringResource(com.flexify.app.generated.resources.Res.string.action_more)
 						)
 					}
 					if (expanded) {

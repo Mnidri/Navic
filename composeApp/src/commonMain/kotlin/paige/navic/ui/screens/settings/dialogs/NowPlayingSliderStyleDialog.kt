@@ -38,9 +38,9 @@ import ir.mahozad.multiplatform.wavyslider.material3.Track
 import ir.mahozad.multiplatform.wavyslider.material3.WaveAnimationSpecs
 import ir.mahozad.multiplatform.wavyslider.material3.WaveLength
 import ir.mahozad.multiplatform.wavyslider.material3.WavySlider
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_ok
-import navic.composeapp.generated.resources.option_now_playing_slider_style
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_ok
+import com.flexify.app.composeapp.generated.resources.option_now_playing_slider_style
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import com.flexify.app.LocalPlatformContext
@@ -62,7 +62,7 @@ fun NowPlayingSliderStyleDialog(
 
 	AlertDialog(
 		title = {
-			Text(stringResource(Res.string.option_now_playing_slider_style))
+			Text(stringResource(com.flexify.app.generated.resources.Res.string.option_now_playing_slider_style))
 		},
 		text = {
 			LazyVerticalGrid(
@@ -154,7 +154,7 @@ fun NowPlayingSliderStyleDialog(
 				platformContext.clickSound()
 				onDismissRequest()
 			}) {
-				Text(stringResource(Res.string.action_ok))
+				Text(stringResource(com.flexify.app.generated.resources.Res.string.action_ok))
 			}
 		}
 	)

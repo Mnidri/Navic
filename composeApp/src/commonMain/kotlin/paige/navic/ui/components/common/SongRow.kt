@@ -25,12 +25,12 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.compose.dropUnlessResumed
 import kotlinx.collections.immutable.persistentListOf
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.info_download_failed
-import navic.composeapp.generated.resources.info_downloaded
-import navic.composeapp.generated.resources.info_not_available_offline
-import navic.composeapp.generated.resources.info_unknown_album
-import navic.composeapp.generated.resources.info_unknown_year
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.info_download_failed
+import com.flexify.app.composeapp.generated.resources.info_downloaded
+import com.flexify.app.composeapp.generated.resources.info_not_available_offline
+import com.flexify.app.composeapp.generated.resources.info_unknown_album
+import com.flexify.app.composeapp.generated.resources.info_unknown_year
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import com.flexify.app.LocalNavStack
@@ -109,11 +109,11 @@ fun SongRow(
 		supportingContent = {
 			MarqueeText(
 				text = buildString {
-					append(song.albumTitle ?: stringResource(Res.string.info_unknown_album))
+					append(song.albumTitle ?: stringResource(com.flexify.app.generated.resources.Res.string.info_unknown_album))
 					append(" • ")
 					append(song.artistName)
 					append(" • ")
-					append(song.year ?: stringResource(Res.string.info_unknown_year))
+					append(song.year ?: stringResource(com.flexify.app.generated.resources.Res.string.info_unknown_year))
 				}
 			)
 		},
@@ -137,7 +137,7 @@ fun SongRow(
 				if (!canPlay) {
 					Icon(
 						Icons.Outlined.Offline,
-						stringResource(Res.string.info_not_available_offline),
+						stringResource(com.flexify.app.generated.resources.Res.string.info_not_available_offline),
 						modifier = Modifier.size(20.dp)
 					)
 					Spacer(Modifier.width(6.dp))
@@ -156,7 +156,7 @@ fun SongRow(
 						DownloadStatus.DOWNLOADED -> {
 							Icon(
 								Icons.Outlined.Check,
-								contentDescription = stringResource(Res.string.info_downloaded),
+								contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.info_downloaded),
 								modifier = Modifier.size(16.dp),
 								tint = MaterialTheme.colorScheme.primary
 							)
@@ -166,7 +166,7 @@ fun SongRow(
 						DownloadStatus.FAILED -> {
 							Icon(
 								Icons.Outlined.DownloadOff,
-								contentDescription = stringResource(Res.string.info_download_failed),
+								contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.info_download_failed),
 								modifier = Modifier.size(16.dp),
 								tint = MaterialTheme.colorScheme.error
 							)

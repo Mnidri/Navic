@@ -10,12 +10,12 @@ import androidx.compose.ui.text.LinkAnnotation
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withLink
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_ok
-import navic.composeapp.generated.resources.sideloading_warning_description
-import navic.composeapp.generated.resources.sideloading_warning_link_mask
-import navic.composeapp.generated.resources.sideloading_warning_subtitle
-import navic.composeapp.generated.resources.sideloading_warning_title
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_ok
+import com.flexify.app.composeapp.generated.resources.sideloading_warning_description
+import com.flexify.app.composeapp.generated.resources.sideloading_warning_link_mask
+import com.flexify.app.composeapp.generated.resources.sideloading_warning_subtitle
+import com.flexify.app.composeapp.generated.resources.sideloading_warning_title
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import com.flexify.app.LocalPlatformContext
@@ -26,19 +26,19 @@ fun SideloadingDialog() {
 	val platformContext = LocalPlatformContext.current
 	val preferenceManager = koinInject<PreferenceManager>()
 	AlertDialog(
-		title = { Text(stringResource(Res.string.sideloading_warning_title)) },
+		title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.sideloading_warning_title)) },
 		text = {
 			Column {
 				Text(
-					stringResource(Res.string.sideloading_warning_subtitle),
+					stringResource(com.flexify.app.generated.resources.Res.string.sideloading_warning_subtitle),
 					fontWeight = FontWeight(600),
 					color = MaterialTheme.colorScheme.onSurface
 				)
 				Text(buildAnnotatedString {
-					append(stringResource(Res.string.sideloading_warning_description))
+					append(stringResource(com.flexify.app.generated.resources.Res.string.sideloading_warning_description))
 					append(" ")
 					withLink(LinkAnnotation.Url("https://keepandroidopen.org/")) {
-						append(stringResource(Res.string.sideloading_warning_link_mask))
+						append(stringResource(com.flexify.app.generated.resources.Res.string.sideloading_warning_link_mask))
 					}
 				})
 			}
@@ -49,7 +49,7 @@ fun SideloadingDialog() {
 				platformContext.clickSound()
 				preferenceManager.showedSideloadingWarning = true
 			}) {
-				Text(stringResource(Res.string.action_ok))
+				Text(stringResource(com.flexify.app.generated.resources.Res.string.action_ok))
 			}
 		}
 	)

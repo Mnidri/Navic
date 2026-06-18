@@ -52,16 +52,16 @@ import androidx.lifecycle.compose.dropUnlessResumed
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.collections.immutable.toPersistentList
 import kotlinx.coroutines.launch
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_see_all
-import navic.composeapp.generated.resources.count_albums
-import navic.composeapp.generated.resources.info_bulk_download_warning
-import navic.composeapp.generated.resources.notice_deleted_download
-import navic.composeapp.generated.resources.notice_download_started
-import navic.composeapp.generated.resources.option_sort_frequent
-import navic.composeapp.generated.resources.title_albums
-import navic.composeapp.generated.resources.title_bulk_download
-import navic.composeapp.generated.resources.title_similar_artists
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_see_all
+import com.flexify.app.composeapp.generated.resources.count_albums
+import com.flexify.app.composeapp.generated.resources.info_bulk_download_warning
+import com.flexify.app.composeapp.generated.resources.notice_deleted_download
+import com.flexify.app.composeapp.generated.resources.notice_download_started
+import com.flexify.app.composeapp.generated.resources.option_sort_frequent
+import com.flexify.app.composeapp.generated.resources.title_albums
+import com.flexify.app.composeapp.generated.resources.title_bulk_download
+import com.flexify.app.composeapp.generated.resources.title_similar_artists
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
@@ -193,8 +193,8 @@ fun ArtistDetailScreen(
 				is UiState.Success -> {
 					val state = artistState.data
 					BulkDownloadDialog(
-						title = stringResource(Res.string.title_bulk_download),
-						message = stringResource(Res.string.info_bulk_download_warning, state.artist.name),
+						title = stringResource(com.flexify.app.generated.resources.Res.string.title_bulk_download),
+						message = stringResource(com.flexify.app.generated.resources.Res.string.info_bulk_download_warning, state.artist.name),
 						showDialog = showDownloadDialog,
 						onDismissRequest = { showDownloadDialog = false },
 						onConfirm = {
@@ -202,7 +202,7 @@ fun ArtistDetailScreen(
 								state.albums.forEach { album ->
 									downloadManager.downloadCollection(album)
 								}
-								snackBarManager.notify(Res.string.notice_download_started)
+								snackBarManager.notify(com.flexify.app.generated.resources.Res.string.notice_download_started)
 							}
 						}
 					)
@@ -235,7 +235,7 @@ fun ArtistDetailScreen(
 								state.albums.forEach { album ->
 									downloadManager.deleteDownloadedCollection(album)
 								}
-								snackBarManager.notify(Res.string.notice_deleted_download)
+								snackBarManager.notify(com.flexify.app.generated.resources.Res.string.notice_deleted_download)
 							},
 							downloadStatus = downloadStatus,
 							playEnabled = state.albums.isNotEmpty(),
@@ -269,12 +269,12 @@ fun ArtistDetailScreen(
 										horizontalArrangement = Arrangement.SpaceBetween
 									) {
 										Text(
-											stringResource(Res.string.option_sort_frequent),
+											stringResource(com.flexify.app.generated.resources.Res.string.option_sort_frequent),
 											style = MaterialTheme.typography.titleMediumEmphasized,
 											fontWeight = FontWeight(600)
 										)
 										Text(
-											stringResource(Res.string.action_see_all),
+											stringResource(com.flexify.app.generated.resources.Res.string.action_see_all),
 											style = MaterialTheme.typography.labelLarge,
 											color = MaterialTheme.colorScheme.primary,
 											modifier = Modifier.clickable(onClick = dropUnlessResumed {
@@ -330,7 +330,7 @@ fun ArtistDetailScreen(
 									}
 								}
 							ArtCarousel(
-								stringResource(Res.string.title_albums),
+								stringResource(com.flexify.app.generated.resources.Res.string.title_albums),
 								state.albums.sortedByDescending { album -> album.playCount }
 									.toImmutableList()
 							) { album ->
@@ -360,7 +360,7 @@ fun ArtistDetailScreen(
 										onDownloadAll = { 
 											scope.launch {
 												downloadManager.downloadCollection(album)
-												snackBarManager.notify(Res.string.notice_download_started)
+												snackBarManager.notify(com.flexify.app.generated.resources.Res.string.notice_download_started)
 											}
 										},
 										onCancelDownloadAll = {
@@ -371,7 +371,7 @@ fun ArtistDetailScreen(
 										onDeleteDownloadAll = {
 											scope.launch {
 												downloadManager.deleteDownloadedCollection(album)
-												snackBarManager.notify(Res.string.notice_deleted_download)
+												snackBarManager.notify(com.flexify.app.generated.resources.Res.string.notice_deleted_download)
 											}
 										},
 										rating = selectedAlbumRating,
@@ -381,14 +381,14 @@ fun ArtistDetailScreen(
 							}
 							if (state.similarArtists.isEmpty()) return@Column
 							ArtCarousel(
-								stringResource(Res.string.title_similar_artists),
+								stringResource(com.flexify.app.generated.resources.Res.string.title_similar_artists),
 								state.similarArtists.toImmutableList()
 							) { artist ->
 								ArtCarouselItem(
 									coverArtId = artist.coverArtId, 
 									title = artist.name, 
 									subtitle = pluralStringResource(
-										Res.plurals.count_albums,
+										com.flexify.app.generated.resources.Res.plurals.count_albums,
 										artist.albumCount,
 										artist.albumCount
 									),

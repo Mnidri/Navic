@@ -18,22 +18,22 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import kotlinx.collections.immutable.toImmutableList
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_lyrics
-import navic.composeapp.generated.resources.option_lyrics_autoscroll
-import navic.composeapp.generated.resources.option_lyrics_beat_by_beat
-import navic.composeapp.generated.resources.option_lyrics_blur
-import navic.composeapp.generated.resources.option_lyrics_bright_inactive
-import navic.composeapp.generated.resources.option_lyrics_keep_alive
-import navic.composeapp.generated.resources.option_lyrics_priority
-import navic.composeapp.generated.resources.option_now_playing_background_style
-import navic.composeapp.generated.resources.option_now_playing_slider_style
-import navic.composeapp.generated.resources.option_now_playing_song_info
-import navic.composeapp.generated.resources.option_now_playing_toolbar_position
-import navic.composeapp.generated.resources.option_swipe_to_skip
-import navic.composeapp.generated.resources.subtitle_now_playing_background_style
-import navic.composeapp.generated.resources.title_layout
-import navic.composeapp.generated.resources.title_now_playing
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_lyrics
+import com.flexify.app.composeapp.generated.resources.option_lyrics_autoscroll
+import com.flexify.app.composeapp.generated.resources.option_lyrics_beat_by_beat
+import com.flexify.app.composeapp.generated.resources.option_lyrics_blur
+import com.flexify.app.composeapp.generated.resources.option_lyrics_bright_inactive
+import com.flexify.app.composeapp.generated.resources.option_lyrics_keep_alive
+import com.flexify.app.composeapp.generated.resources.option_lyrics_priority
+import com.flexify.app.composeapp.generated.resources.option_now_playing_background_style
+import com.flexify.app.composeapp.generated.resources.option_now_playing_slider_style
+import com.flexify.app.composeapp.generated.resources.option_now_playing_song_info
+import com.flexify.app.composeapp.generated.resources.option_now_playing_toolbar_position
+import com.flexify.app.composeapp.generated.resources.option_swipe_to_skip
+import com.flexify.app.composeapp.generated.resources.subtitle_now_playing_background_style
+import com.flexify.app.composeapp.generated.resources.title_layout
+import com.flexify.app.composeapp.generated.resources.title_now_playing
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import com.flexify.app.LocalPlatformContext
@@ -58,7 +58,7 @@ fun SettingsNowPlayingScreen() {
 	Scaffold(
 		topBar = {
 			NestedTopBar(
-				{ Text(stringResource(Res.string.title_now_playing)) },
+				{ Text(stringResource(com.flexify.app.generated.resources.Res.string.title_now_playing)) },
 				hideBack = platformContext.sizeClass.widthSizeClass >= WindowWidthSizeClass.Medium
 			)
 		}
@@ -74,7 +74,7 @@ fun SettingsNowPlayingScreen() {
 			) {
 				Form {
 					SettingSwitchRow(
-						title = { Text(stringResource(Res.string.option_swipe_to_skip)) },
+						title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_swipe_to_skip)) },
 						value = preferenceManager.swipeToSkip,
 						onSetValue = { preferenceManager.swipeToSkip = it }
 					)
@@ -84,8 +84,8 @@ fun SettingsNowPlayingScreen() {
 						label = { stringResource(it.displayName) },
 						selection = preferenceManager.nowPlayingBackgroundStyle,
 						onSelect = { preferenceManager.nowPlayingBackgroundStyle = it },
-						description = stringResource(Res.string.subtitle_now_playing_background_style),
-						title = { Text(stringResource(Res.string.option_now_playing_background_style)) }
+						description = stringResource(com.flexify.app.generated.resources.Res.string.subtitle_now_playing_background_style),
+						title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_now_playing_background_style)) }
 					)
 
 					var showSliderStyleDialog by rememberSaveable { mutableStateOf(false) }
@@ -95,7 +95,7 @@ fun SettingsNowPlayingScreen() {
 						}
 					) {
 						Column(Modifier.weight(1f)) {
-							Text(stringResource(Res.string.option_now_playing_slider_style))
+							Text(stringResource(com.flexify.app.generated.resources.Res.string.option_now_playing_slider_style))
 							Text(
 								stringResource(preferenceManager.nowPlayingSliderStyle.displayName),
 								style = MaterialTheme.typography.bodyMedium,
@@ -110,34 +110,34 @@ fun SettingsNowPlayingScreen() {
 					)
 				}
 
-				FormTitle(stringResource(Res.string.action_lyrics))
+				FormTitle(stringResource(com.flexify.app.generated.resources.Res.string.action_lyrics))
 				Form {
 					SettingSwitchRow(
-						title = { Text(stringResource(Res.string.option_lyrics_autoscroll)) },
+						title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_lyrics_autoscroll)) },
 						value = preferenceManager.lyricsAutoscroll,
 						onSetValue = { preferenceManager.lyricsAutoscroll = it }
 					)
 
 					SettingSwitchRow(
-						title = { Text(stringResource(Res.string.option_lyrics_beat_by_beat)) },
+						title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_lyrics_beat_by_beat)) },
 						value = preferenceManager.lyricsBeatByBeat,
 						onSetValue = { preferenceManager.lyricsBeatByBeat = it }
 					)
 
 					SettingSwitchRow(
-						title = { Text(stringResource(Res.string.option_lyrics_keep_alive)) },
+						title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_lyrics_keep_alive)) },
 						value = preferenceManager.lyricsKeepAlive,
 						onSetValue = { preferenceManager.lyricsKeepAlive = it }
 					)
 
 					SettingSwitchRow(
-						title = { Text(stringResource(Res.string.option_lyrics_blur)) },
+						title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_lyrics_blur)) },
 						value = preferenceManager.lyricsBlur,
 						onSetValue = { preferenceManager.lyricsBlur = it }
 					)
 
 					SettingSwitchRow(
-						title = { Text(stringResource(Res.string.option_lyrics_bright_inactive)) },
+						title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_lyrics_bright_inactive)) },
 						value = preferenceManager.lyricsBrightInactive,
 						onSetValue = { preferenceManager.lyricsBrightInactive = it }
 					)
@@ -145,14 +145,14 @@ fun SettingsNowPlayingScreen() {
 					FormRow(
 						onClick = { showLyricsPriorityDialog = true }
 					) {
-						Text(stringResource(Res.string.option_lyrics_priority))
+						Text(stringResource(com.flexify.app.generated.resources.Res.string.option_lyrics_priority))
 					}
 				}
 
-				FormTitle(stringResource(Res.string.title_layout))
+				FormTitle(stringResource(com.flexify.app.generated.resources.Res.string.title_layout))
 				Form {
 					SettingSwitchRow(
-						title = { Text(stringResource(Res.string.option_now_playing_song_info)) },
+						title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_now_playing_song_info)) },
 						value = preferenceManager.nowPlayingSongInfo,
 						onSetValue = { preferenceManager.nowPlayingSongInfo = it }
 					)
@@ -162,7 +162,7 @@ fun SettingsNowPlayingScreen() {
 						label = { stringResource(it.displayName) },
 						selection = preferenceManager.nowPlayingToolbarPosition,
 						onSelect = { preferenceManager.nowPlayingToolbarPosition = it },
-						title = { Text(stringResource(Res.string.option_now_playing_toolbar_position)) }
+						title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_now_playing_toolbar_position)) }
 					)
 				}
 			}

@@ -13,8 +13,8 @@ import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.info_status_idle
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.info_status_idle
 import org.jetbrains.compose.resources.StringResource
 import com.flexify.app.data.database.dao.AlbumDao
 import com.flexify.app.data.database.dao.SyncActionDao
@@ -30,7 +30,7 @@ import kotlin.time.Instant
 data class SyncState(
 	val isSyncing: Boolean = false,
 	val progress: Float = 0f,
-	val message: StringResource = Res.string.info_status_idle
+	val message: StringResource = com.flexify.app.generated.resources.Res.string.info_status_idle
 )
 
 class SyncManager(
@@ -125,7 +125,7 @@ class SyncManager(
 				}
 
 				_syncState.update {
-					it.copy(isSyncing = false, message = Res.string.info_status_idle)
+					it.copy(isSyncing = false, message = com.flexify.app.generated.resources.Res.string.info_status_idle)
 				}
 			}
 		}

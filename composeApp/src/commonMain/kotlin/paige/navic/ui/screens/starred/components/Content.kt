@@ -40,13 +40,13 @@ import androidx.lifecycle.compose.dropUnlessResumed
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.coroutines.launch
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_see_all
-import navic.composeapp.generated.resources.count_albums
-import navic.composeapp.generated.resources.info_no_starred
-import navic.composeapp.generated.resources.title_albums
-import navic.composeapp.generated.resources.title_artists
-import navic.composeapp.generated.resources.title_songs
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_see_all
+import com.flexify.app.composeapp.generated.resources.count_albums
+import com.flexify.app.composeapp.generated.resources.info_no_starred
+import com.flexify.app.composeapp.generated.resources.title_albums
+import com.flexify.app.composeapp.generated.resources.title_artists
+import com.flexify.app.composeapp.generated.resources.title_songs
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
@@ -150,7 +150,7 @@ fun StarredScreenContent(
 		if (albums.isEmpty() && songs.isEmpty() && artists.isEmpty()) {
 			ContentUnavailable(
 				icon = Icons.Outlined.PlaylistRemove,
-				label = stringResource(Res.string.info_no_starred)
+				label = stringResource(com.flexify.app.generated.resources.Res.string.info_no_starred)
 			)
 			return@Column
 		}
@@ -183,12 +183,12 @@ fun StarredScreenContent(
 					horizontalArrangement = Arrangement.SpaceBetween
 				) {
 					Text(
-						stringResource(Res.string.title_songs),
+						stringResource(com.flexify.app.generated.resources.Res.string.title_songs),
 						style = MaterialTheme.typography.titleMediumEmphasized,
 						fontWeight = FontWeight(600)
 					)
 					Text(
-						stringResource(Res.string.action_see_all),
+						stringResource(com.flexify.app.generated.resources.Res.string.action_see_all),
 						style = MaterialTheme.typography.labelLarge,
 						color = MaterialTheme.colorScheme.primary,
 						modifier = Modifier.clickable(onClick = dropUnlessResumed {
@@ -245,7 +245,7 @@ fun StarredScreenContent(
 				}
 			}
 			ArtCarousel(
-				stringResource(Res.string.title_albums),
+				stringResource(com.flexify.app.generated.resources.Res.string.title_albums),
 				albums.toImmutableList(),
 				Screen.AlbumList(true, DomainAlbumListType.Starred)
 			) { album ->
@@ -297,7 +297,7 @@ fun StarredScreenContent(
 			}
 			if (artists.isEmpty()) return@Column
 			ArtCarousel(
-				stringResource(Res.string.title_artists),
+				stringResource(com.flexify.app.generated.resources.Res.string.title_artists),
 				artists.toImmutableList(),
 				Screen.ArtistList(true, DomainArtistListType.Starred)
 			) { artist ->
@@ -305,7 +305,7 @@ fun StarredScreenContent(
 					coverArtId = artist.coverArtId, 
 					title = artist.name, 
 					subtitle = pluralStringResource(
-						Res.plurals.count_albums,
+						com.flexify.app.generated.resources.Res.plurals.count_albums,
 						artist.albumCount,
 						artist.albumCount
 					),

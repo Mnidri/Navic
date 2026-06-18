@@ -31,26 +31,26 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.dropUnlessResumed
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_add_to_another_playlist
-import navic.composeapp.generated.resources.action_add_to_playlist
-import navic.composeapp.generated.resources.action_add_to_queue
-import navic.composeapp.generated.resources.action_cancel_download
-import navic.composeapp.generated.resources.action_delete_download
-import navic.composeapp.generated.resources.action_download
-import navic.composeapp.generated.resources.action_play_next
-import navic.composeapp.generated.resources.action_remove_from_playlist
-import navic.composeapp.generated.resources.action_remove_star
-import navic.composeapp.generated.resources.action_share
-import navic.composeapp.generated.resources.action_sleep_timer
-import navic.composeapp.generated.resources.action_sleep_timer_enabled
-import navic.composeapp.generated.resources.action_star
-import navic.composeapp.generated.resources.action_track_info
-import navic.composeapp.generated.resources.action_view_album
-import navic.composeapp.generated.resources.action_view_artist
-import navic.composeapp.generated.resources.info_click_to_retry
-import navic.composeapp.generated.resources.info_download_failed
-import navic.composeapp.generated.resources.option_playback_speed
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_add_to_another_playlist
+import com.flexify.app.composeapp.generated.resources.action_add_to_playlist
+import com.flexify.app.composeapp.generated.resources.action_add_to_queue
+import com.flexify.app.composeapp.generated.resources.action_cancel_download
+import com.flexify.app.composeapp.generated.resources.action_delete_download
+import com.flexify.app.composeapp.generated.resources.action_download
+import com.flexify.app.composeapp.generated.resources.action_play_next
+import com.flexify.app.composeapp.generated.resources.action_remove_from_playlist
+import com.flexify.app.composeapp.generated.resources.action_remove_star
+import com.flexify.app.composeapp.generated.resources.action_share
+import com.flexify.app.composeapp.generated.resources.action_sleep_timer
+import com.flexify.app.composeapp.generated.resources.action_sleep_timer_enabled
+import com.flexify.app.composeapp.generated.resources.action_star
+import com.flexify.app.composeapp.generated.resources.action_track_info
+import com.flexify.app.composeapp.generated.resources.action_view_album
+import com.flexify.app.composeapp.generated.resources.action_view_artist
+import com.flexify.app.composeapp.generated.resources.info_click_to_retry
+import com.flexify.app.composeapp.generated.resources.info_download_failed
+import com.flexify.app.composeapp.generated.resources.option_playback_speed
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import com.flexify.app.LocalNavStack
@@ -181,7 +181,7 @@ fun SongSheet(
 		Column(Modifier.verticalScroll(rememberScrollState())) {
 			if (onShare != null) {
 				ListItem(
-					content = { Text(stringResource(Res.string.action_share)) },
+					content = { Text(stringResource(com.flexify.app.generated.resources.Res.string.action_share)) },
 					leadingContent = { Icon(Icons.Outlined.Share, null) },
 					onClick = {
 						platformContext.clickSound()
@@ -196,7 +196,7 @@ fun SongSheet(
 			if (starred != null && onSetStarred != null) {
 				ListItem(
 					content = {
-						Text(stringResource(if (starred) Res.string.action_remove_star else Res.string.action_star))
+						Text(stringResource(if (starred) com.flexify.app.generated.resources.Res.string.action_remove_star else com.flexify.app.generated.resources.Res.string.action_star))
 					},
 					leadingContent = {
 						Icon(if (starred) Icons.Filled.Star else Icons.Outlined.Star, null)
@@ -215,7 +215,7 @@ fun SongSheet(
 				when (downloadStatus) {
 					DownloadStatus.DOWNLOADING -> {
 						ListItem(
-							content = { Text(stringResource(Res.string.action_cancel_download)) },
+							content = { Text(stringResource(com.flexify.app.generated.resources.Res.string.action_cancel_download)) },
 							leadingContent = { Icon(Icons.Outlined.Close, null) },
 							onClick = {
 								platformContext.clickSound()
@@ -229,7 +229,7 @@ fun SongSheet(
 
 					DownloadStatus.DOWNLOADED -> {
 						ListItem(
-							content = { Text(stringResource(Res.string.action_delete_download)) },
+							content = { Text(stringResource(com.flexify.app.generated.resources.Res.string.action_delete_download)) },
 							leadingContent = { Icon(Icons.Outlined.Delete, null) },
 							onClick = {
 								platformContext.clickSound()
@@ -245,13 +245,13 @@ fun SongSheet(
 						ListItem(
 							content = {
 								Text(
-									text = stringResource(Res.string.info_download_failed),
+									text = stringResource(com.flexify.app.generated.resources.Res.string.info_download_failed),
 									color = MaterialTheme.colorScheme.error
 								)
 							},
 							supportingContent = {
 								Text(
-									text = stringResource(Res.string.info_click_to_retry),
+									text = stringResource(com.flexify.app.generated.resources.Res.string.info_click_to_retry),
 									color = MaterialTheme.colorScheme.error,
 									style = MaterialTheme.typography.labelSmall
 								)
@@ -275,7 +275,7 @@ fun SongSheet(
 
 					else -> {
 						ListItem(
-							content = { Text(stringResource(Res.string.action_download)) },
+							content = { Text(stringResource(com.flexify.app.generated.resources.Res.string.action_download)) },
 							leadingContent = { Icon(Icons.Outlined.Download, null) },
 							onClick = {
 								platformContext.clickSound()
@@ -289,7 +289,7 @@ fun SongSheet(
 				}
 			} else if (onDownload != null) {
 				ListItem(
-					content = { Text(stringResource(Res.string.action_download)) },
+					content = { Text(stringResource(com.flexify.app.generated.resources.Res.string.action_download)) },
 					leadingContent = { Icon(Icons.Outlined.Download, null) },
 					onClick = {
 						platformContext.clickSound()
@@ -303,7 +303,7 @@ fun SongSheet(
 
 			if (onPlayNext != null) {
 				ListItem(
-					content = { Text(stringResource(Res.string.action_play_next)) },
+					content = { Text(stringResource(com.flexify.app.generated.resources.Res.string.action_play_next)) },
 					leadingContent = { Icon(Icons.Outlined.QueuePlayNext, null) },
 					onClick = {
 						platformContext.clickSound()
@@ -317,7 +317,7 @@ fun SongSheet(
 
 			if (onAddToQueue != null) {
 				ListItem(
-					content = { Text(stringResource(Res.string.action_add_to_queue)) },
+					content = { Text(stringResource(com.flexify.app.generated.resources.Res.string.action_add_to_queue)) },
 					leadingContent = { Icon(Icons.Outlined.Queue, null) },
 					onClick = {
 						platformContext.clickSound()
@@ -335,8 +335,8 @@ fun SongSheet(
 						Text(
 							stringResource(
 								if (collection != null && collection !is DomainAlbum)
-									Res.string.action_add_to_another_playlist
-								else Res.string.action_add_to_playlist
+									com.flexify.app.generated.resources.Res.string.action_add_to_another_playlist
+								else com.flexify.app.generated.resources.Res.string.action_add_to_playlist
 							)
 						)
 					},
@@ -353,7 +353,7 @@ fun SongSheet(
 
 			if (onRemoveFromPlaylist != null && collection != null && collection !is DomainAlbum) {
 				ListItem(
-					content = { Text(stringResource(Res.string.action_remove_from_playlist)) },
+					content = { Text(stringResource(com.flexify.app.generated.resources.Res.string.action_remove_from_playlist)) },
 					leadingContent = { Icon(Icons.Outlined.PlaylistRemove, null) },
 					onClick = {
 						platformContext.clickSound()
@@ -368,7 +368,7 @@ fun SongSheet(
 			if (onViewAlbum != null) {
 				ListItem(
 					content = {
-						Text(stringResource(Res.string.action_view_album))
+						Text(stringResource(com.flexify.app.generated.resources.Res.string.action_view_album))
 					},
 					leadingContent = { Icon(Icons.Outlined.Album, null) },
 					onClick = {
@@ -383,7 +383,7 @@ fun SongSheet(
 
 			if (onViewArtist != null) {
 				ListItem(
-					content = { Text(stringResource(Res.string.action_view_artist)) },
+					content = { Text(stringResource(com.flexify.app.generated.resources.Res.string.action_view_artist)) },
 					leadingContent = { Icon(Icons.Outlined.Artist, null) },
 					onClick = {
 						platformContext.clickSound()
@@ -401,7 +401,7 @@ fun SongSheet(
 						content = {
 							Text(
 								stringResource(
-									Res.string.action_sleep_timer_enabled,
+									com.flexify.app.generated.resources.Res.string.action_sleep_timer_enabled,
 									sleepTimerLeft.label()
 								),
 								color = MaterialTheme.colorScheme.positive
@@ -425,7 +425,7 @@ fun SongSheet(
 					ListItem(
 						content = {
 							Text(
-								stringResource(Res.string.action_sleep_timer)
+								stringResource(com.flexify.app.generated.resources.Res.string.action_sleep_timer)
 							)
 						},
 						leadingContent = {
@@ -448,7 +448,7 @@ fun SongSheet(
 				ListItem(
 					content = {
 						Text(
-							stringResource(Res.string.option_playback_speed)
+							stringResource(com.flexify.app.generated.resources.Res.string.option_playback_speed)
 						)
 					},
 					leadingContent = {
@@ -468,7 +468,7 @@ fun SongSheet(
 
 			if (onTrackInfo != null) {
 				ListItem(
-					content = { Text(stringResource(Res.string.action_track_info)) },
+					content = { Text(stringResource(com.flexify.app.generated.resources.Res.string.action_track_info)) },
 					leadingContent = { Icon(Icons.Outlined.Info, null) },
 					onClick = {
 						platformContext.clickSound()

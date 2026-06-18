@@ -11,17 +11,17 @@ import androidx.compose.ui.graphics.Color
 import com.materialkolor.dynamiccolor.ColorSpec
 import com.materialkolor.rememberDynamicColorScheme
 import dev.zt64.compose.pipette.HsvColor
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.theme_apple_music
-import navic.composeapp.generated.resources.theme_dynamic
-import navic.composeapp.generated.resources.theme_ios
-import navic.composeapp.generated.resources.theme_seeded
-import navic.composeapp.generated.resources.theme_spotify
-import navic.composeapp.generated.resources.theme_subtitle_apple_music
-import navic.composeapp.generated.resources.theme_subtitle_dynamic
-import navic.composeapp.generated.resources.theme_subtitle_ios
-import navic.composeapp.generated.resources.theme_subtitle_seeded
-import navic.composeapp.generated.resources.theme_subtitle_spotify
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.theme_apple_music
+import com.flexify.app.composeapp.generated.resources.theme_dynamic
+import com.flexify.app.composeapp.generated.resources.theme_ios
+import com.flexify.app.composeapp.generated.resources.theme_seeded
+import com.flexify.app.composeapp.generated.resources.theme_spotify
+import com.flexify.app.composeapp.generated.resources.theme_subtitle_apple_music
+import com.flexify.app.composeapp.generated.resources.theme_subtitle_dynamic
+import com.flexify.app.composeapp.generated.resources.theme_subtitle_ios
+import com.flexify.app.composeapp.generated.resources.theme_subtitle_seeded
+import com.flexify.app.composeapp.generated.resources.theme_subtitle_spotify
 import org.jetbrains.compose.resources.StringResource
 import org.koin.compose.koinInject
 import com.flexify.app.LocalPlatformContext
@@ -40,7 +40,7 @@ enum class Theme(
 	 * The app will be themed based on whatever the user
 	 * chose in system settings. Android only.
 	 */
-	Dynamic(Res.string.theme_dynamic, Res.string.theme_subtitle_dynamic),
+	Dynamic(com.flexify.app.generated.resources.Res.string.theme_dynamic, com.flexify.app.generated.resources.Res.string.theme_subtitle_dynamic),
 
 	/**
 	 * The app will be themed based on a "seed" colour.
@@ -48,24 +48,24 @@ enum class Theme(
 	 * When this is selected, `accentColor(H/S/V)` settings
 	 * will be exposed in the UI as a colour picker.
 	 */
-	Seeded(Res.string.theme_seeded, Res.string.theme_subtitle_seeded),
+	Seeded(com.flexify.app.generated.resources.Res.string.theme_seeded, com.flexify.app.generated.resources.Res.string.theme_subtitle_seeded),
 
 	/**
 	 * The app will be themed according to Apple's HIG.
 	 * TODO: this should pull from UIColor
 	 */
 	@Suppress("EnumEntryName")
-	iOS(Res.string.theme_ios, Res.string.theme_subtitle_ios),
+	iOS(com.flexify.app.generated.resources.Res.string.theme_ios, com.flexify.app.generated.resources.Res.string.theme_subtitle_ios),
 
 	/**
 	 * The same as iOS, but with a pink-ish accent.
 	 */
-	AppleMusic(Res.string.theme_apple_music, Res.string.theme_subtitle_apple_music),
+	AppleMusic(com.flexify.app.generated.resources.Res.string.theme_apple_music, com.flexify.app.generated.resources.Res.string.theme_subtitle_apple_music),
 
 	/**
 	 * The same as iOS, but with a green accent.
 	 */
-	Spotify(Res.string.theme_spotify, Res.string.theme_subtitle_spotify);
+	Spotify(com.flexify.app.generated.resources.Res.string.theme_spotify, com.flexify.app.generated.resources.Res.string.theme_subtitle_spotify);
 
 	@OptIn(ExperimentalMaterial3ExpressiveApi::class)
 	@Composable

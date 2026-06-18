@@ -15,8 +15,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.unit.dp
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.title_genres
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.title_genres
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
 import com.flexify.app.LocalBottomBarScrollManager
@@ -44,11 +44,11 @@ fun GenreListScreen(
 		topBar = {
 			if (!nested) {
 				RootTopBar(
-					{ Text(stringResource(Res.string.title_genres)) },
+					{ Text(stringResource(com.flexify.app.generated.resources.Res.string.title_genres)) },
 					scrollBehavior
 				)
 			} else {
-				NestedTopBar({ Text(stringResource(Res.string.title_genres)) })
+				NestedTopBar({ Text(stringResource(com.flexify.app.generated.resources.Res.string.title_genres)) })
 			}
 		},
 		bottomBar = {

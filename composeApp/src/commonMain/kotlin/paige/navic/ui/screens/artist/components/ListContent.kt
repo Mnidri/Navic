@@ -22,9 +22,9 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.unit.dp
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.count_artists
-import navic.composeapp.generated.resources.info_no_artists
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.count_artists
+import com.flexify.app.composeapp.generated.resources.info_no_artists
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 import com.flexify.app.domain.models.DomainAlbum
@@ -94,7 +94,7 @@ fun ArtistListScreenContent(
 				) {
 					Text(
 						pluralStringResource(
-							Res.plurals.count_artists,
+							com.flexify.app.generated.resources.Res.plurals.count_artists,
 							totalArtistCount,
 							totalArtistCount
 						),
@@ -137,7 +137,7 @@ fun ArtistListScreenContent(
 				item(span = { GridItemSpan(maxLineSpan) }) {
 					ContentUnavailable(
 						icon = Icons.Outlined.Artist,
-						label = stringResource(Res.string.info_no_artists)
+						label = stringResource(com.flexify.app.generated.resources.Res.string.info_no_artists)
 					)
 				}
 			}

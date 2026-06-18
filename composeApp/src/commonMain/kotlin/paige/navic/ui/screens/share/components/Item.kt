@@ -27,13 +27,13 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_delete
-import navic.composeapp.generated.resources.action_share
-import navic.composeapp.generated.resources.info_error
-import navic.composeapp.generated.resources.info_share_expired
-import navic.composeapp.generated.resources.info_share_expires_in
-import navic.composeapp.generated.resources.info_shared_by
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_delete
+import com.flexify.app.composeapp.generated.resources.action_share
+import com.flexify.app.composeapp.generated.resources.info_error
+import com.flexify.app.composeapp.generated.resources.info_share_expired
+import com.flexify.app.composeapp.generated.resources.info_share_expires_in
+import com.flexify.app.composeapp.generated.resources.info_shared_by
 import org.jetbrains.compose.resources.getString
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
@@ -116,7 +116,7 @@ fun ShareListScreenItem(
 						Text(share.description)
 					},
 					supportingContent = {
-						Text(stringResource(Res.string.info_shared_by, share.username))
+						Text(stringResource(com.flexify.app.generated.resources.Res.string.info_shared_by, share.username))
 					},
 					overlineContent = {
 						val expires = share.expiresAt
@@ -124,12 +124,12 @@ fun ShareListScreenItem(
 						if (remaining.isPositive()) {
 							Text(
 								stringResource(
-									Res.string.info_share_expires_in,
+									com.flexify.app.generated.resources.Res.string.info_share_expires_in,
 									remaining.toHoursMinutesSeconds()
 								)
 							)
 						} else {
-							Text(stringResource(Res.string.info_share_expired))
+							Text(stringResource(com.flexify.app.generated.resources.Res.string.info_share_expired))
 						}
 					},
 					onClick = {
@@ -152,13 +152,13 @@ fun ShareListScreenItem(
 									shareManager.shareString(share.url)
 								} catch (e: Exception) {
 									snackbarState.showSnackbar(
-										e.message ?: getString(Res.string.info_error)
+										e.message ?: getString(com.flexify.app.generated.resources.Res.string.info_error)
 									)
 								}
 							}
 						},
 						leadingIcon = { Icon(Icons.Outlined.Share, null) },
-						text = { Text(stringResource(Res.string.action_share)) }
+						text = { Text(stringResource(com.flexify.app.generated.resources.Res.string.action_share)) }
 					)
 					DropdownItem(
 						onClick = {
@@ -166,7 +166,7 @@ fun ShareListScreenItem(
 							onSetDeletionId(share.id)
 						},
 						leadingIcon = { Icon(Icons.Outlined.Delete, null) },
-						text = { Text(stringResource(Res.string.action_delete)) }
+						text = { Text(stringResource(com.flexify.app.generated.resources.Res.string.action_delete)) }
 					)
 				}
 			}

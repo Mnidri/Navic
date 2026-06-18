@@ -20,9 +20,9 @@ import androidx.compose.ui.platform.LocalUriHandler
 import androidx.lifecycle.compose.dropUnlessResumed
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toPersistentList
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.count_albums
-import navic.composeapp.generated.resources.title_artists
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.count_albums
+import com.flexify.app.composeapp.generated.resources.title_artists
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
@@ -73,9 +73,9 @@ fun ArtistListScreen(
 	Scaffold(
 		topBar = {
 			if (!nested) {
-				RootTopBar({ Text(stringResource(Res.string.title_artists)) }, scrollBehavior)
+				RootTopBar({ Text(stringResource(com.flexify.app.generated.resources.Res.string.title_artists)) }, scrollBehavior)
 			} else {
-				NestedTopBar({ Text(stringResource(Res.string.title_artists)) })
+				NestedTopBar({ Text(stringResource(com.flexify.app.generated.resources.Res.string.title_artists)) })
 			}
 		},
 		bottomBar = {
@@ -147,7 +147,7 @@ fun ArtistsScreenItem(
 			coverArtId = artist.coverArtId,
 			title = artist.name,
 			subtitle = pluralStringResource(
-				Res.plurals.count_albums,
+				com.flexify.app.generated.resources.Res.plurals.count_albums,
 				artist.albumCount,
 				artist.albumCount
 			),

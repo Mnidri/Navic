@@ -24,11 +24,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
 import kotlinx.collections.immutable.ImmutableList
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.option_sort_ascending
-import navic.composeapp.generated.resources.option_sort_descending
-import navic.composeapp.generated.resources.title_direction
-import navic.composeapp.generated.resources.title_sort_by
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.option_sort_ascending
+import com.flexify.app.composeapp.generated.resources.option_sort_descending
+import com.flexify.app.composeapp.generated.resources.title_direction
+import com.flexify.app.composeapp.generated.resources.title_sort_by
 import org.jetbrains.compose.resources.stringResource
 import com.flexify.app.LocalPlatformContext
 
@@ -53,7 +53,7 @@ fun <T> SortSheet(
 			verticalArrangement = Arrangement.spacedBy(8.dp)
 		) {
 			Text(
-				text = stringResource(Res.string.title_sort_by),
+				text = stringResource(com.flexify.app.generated.resources.Res.string.title_sort_by),
 				style = MaterialTheme.typography.titleLarge,
 				modifier = Modifier.padding(horizontal = 16.dp)
 			)
@@ -89,7 +89,7 @@ fun <T> SortSheet(
 			}
 
 			Text(
-				text = stringResource(Res.string.title_direction),
+				text = stringResource(com.flexify.app.generated.resources.Res.string.title_direction),
 				style = MaterialTheme.typography.titleMedium,
 				modifier = Modifier.padding(horizontal = 16.dp)
 			)
@@ -109,7 +109,7 @@ fun <T> SortSheet(
 						onSetReversed(false)
 					},
 					selected = !selectedReversed,
-					label = { Text(stringResource(Res.string.option_sort_ascending)) }
+					label = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_sort_ascending)) }
 				)
 				SegmentedButton(
 					shape = SegmentedButtonDefaults.itemShape(
@@ -121,7 +121,7 @@ fun <T> SortSheet(
 						onSetReversed(true)
 					},
 					selected = selectedReversed,
-					label = { Text(stringResource(Res.string.option_sort_descending)) }
+					label = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_sort_descending)) }
 				)
 			}
 		}

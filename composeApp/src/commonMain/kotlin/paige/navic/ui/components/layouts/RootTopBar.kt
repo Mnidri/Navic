@@ -20,11 +20,11 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.compose.dropUnlessResumed
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_log_out
-import navic.composeapp.generated.resources.action_sleep_timer
-import navic.composeapp.generated.resources.action_sleep_timer_enabled
-import navic.composeapp.generated.resources.action_view_shares
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_log_out
+import com.flexify.app.composeapp.generated.resources.action_sleep_timer
+import com.flexify.app.composeapp.generated.resources.action_sleep_timer_enabled
+import com.flexify.app.composeapp.generated.resources.action_view_shares
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
@@ -152,7 +152,7 @@ private fun Actions(
 			onDismissRequest = { expanded = false }
 		) {
 			DropdownItem(
-				text = { Text(stringResource(Res.string.action_view_shares)) },
+				text = { Text(stringResource(com.flexify.app.generated.resources.Res.string.action_view_shares)) },
 				onClick = dropUnlessResumed {
 					expanded = false
 					backStack.add(Screen.ShareList)
@@ -162,7 +162,7 @@ private fun Actions(
 
 			if (sleepTimerLeft != null) {
 				DropdownItem(
-					text = { Text(stringResource(Res.string.action_sleep_timer_enabled, sleepTimerLeft.label()), color = MaterialTheme.colorScheme.positive) },
+					text = { Text(stringResource(com.flexify.app.generated.resources.Res.string.action_sleep_timer_enabled, sleepTimerLeft.label()), color = MaterialTheme.colorScheme.positive) },
 					onClick = {
 						expanded = false
 						sleepTimerSheetOpen = true
@@ -171,7 +171,7 @@ private fun Actions(
 				)
 			} else {
 				DropdownItem(
-					text = { Text(stringResource(Res.string.action_sleep_timer)) },
+					text = { Text(stringResource(com.flexify.app.generated.resources.Res.string.action_sleep_timer)) },
 					onClick = {
 						expanded = false
 						sleepTimerSheetOpen = true
@@ -181,7 +181,7 @@ private fun Actions(
 			}
 
 			DropdownItem(
-				text = { Text(stringResource(Res.string.action_log_out)) },
+				text = { Text(stringResource(com.flexify.app.generated.resources.Res.string.action_log_out)) },
 				onClick = {
 					expanded = false
 					onLogOut()

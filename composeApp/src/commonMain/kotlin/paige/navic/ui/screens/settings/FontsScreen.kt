@@ -25,10 +25,10 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.title_choose_font
-import navic.composeapp.generated.resources.title_fonts_external
-import navic.composeapp.generated.resources.title_fonts_inbuilt
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.title_choose_font
+import com.flexify.app.composeapp.generated.resources.title_fonts_external
+import com.flexify.app.composeapp.generated.resources.title_fonts_inbuilt
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
@@ -44,7 +44,7 @@ import com.flexify.app.ui.theme.googleSans
 fun FontsScreen() {
 	val preferenceManager = koinInject<PreferenceManager>()
 	Scaffold(
-		topBar = { NestedTopBar({ Text(stringResource(Res.string.title_choose_font)) }) }
+		topBar = { NestedTopBar({ Text(stringResource(com.flexify.app.generated.resources.Res.string.title_choose_font)) }) }
 	) { contentPadding ->
 		CompositionLocalProvider(
 			LocalMinimumInteractiveComponentSize provides 0.dp
@@ -80,7 +80,7 @@ private fun LazyListScope.inbuiltFonts(
 	onSelectFont: (FontOption) -> Unit,
 	selectedFont: FontOption
 ) {
-	heading(Res.string.title_fonts_inbuilt)
+	heading(com.flexify.app.generated.resources.Res.string.title_fonts_inbuilt)
 	item {
 		FontRow(
 			fontName = "System",
@@ -105,7 +105,7 @@ private fun LazyListScope.inbuiltFonts(
 }
 
 private fun LazyListScope.externalFonts() {
-	heading(Res.string.title_fonts_external)
+	heading(com.flexify.app.generated.resources.Res.string.title_fonts_external)
 }
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)

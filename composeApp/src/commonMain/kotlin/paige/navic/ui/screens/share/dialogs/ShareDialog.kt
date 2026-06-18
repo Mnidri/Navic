@@ -20,13 +20,13 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_cancel
-import navic.composeapp.generated.resources.action_share
-import navic.composeapp.generated.resources.notice_copied
-import navic.composeapp.generated.resources.notice_expiry
-import navic.composeapp.generated.resources.option_share_expires
-import navic.composeapp.generated.resources.title_create_share
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_cancel
+import com.flexify.app.composeapp.generated.resources.action_share
+import com.flexify.app.composeapp.generated.resources.notice_copied
+import com.flexify.app.composeapp.generated.resources.notice_expiry
+import com.flexify.app.composeapp.generated.resources.option_share_expires
+import com.flexify.app.composeapp.generated.resources.title_create_share
 import org.jetbrains.compose.resources.getString
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
@@ -71,11 +71,11 @@ fun ShareDialog(
 				clipboard.setText(AnnotatedString(link))
 				snackbarState.showSnackbar(
 					message = buildString {
-						append(getString(Res.string.notice_copied))
+						append(getString(com.flexify.app.generated.resources.Res.string.notice_copied))
 						expiry?.let {
 							append(
 								"\n" + getString(
-									Res.string.notice_expiry, expiry.toString()
+									com.flexify.app.generated.resources.Res.string.notice_expiry, expiry.toString()
 								)
 							)
 						}
@@ -88,7 +88,7 @@ fun ShareDialog(
 	id?.let {
 		FormDialog(
 			icon = { Icon(Icons.Outlined.Share, null) },
-			title = { Text(stringResource(Res.string.title_create_share)) },
+			title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.title_create_share)) },
 			buttons = {
 				FormButton(
 					onClick = { viewModel.share(id, expiry) },
@@ -97,10 +97,10 @@ fun ShareDialog(
 					if (state is UiState.Loading) {
 						CircularProgressIndicator(Modifier.size(20.dp))
 					}
-					Text(stringResource(Res.string.action_share))
+					Text(stringResource(com.flexify.app.generated.resources.Res.string.action_share))
 				}
 				FormButton(onClick = onIdClear) {
-					Text(stringResource(Res.string.action_cancel))
+					Text(stringResource(com.flexify.app.generated.resources.Res.string.action_cancel))
 				}
 			},
 			onDismissRequest = {
@@ -117,7 +117,7 @@ fun ShareDialog(
 			}
 			Form(bottomPadding = 0.dp) {
 				SettingSwitchRow(
-					title = { Text(stringResource(Res.string.option_share_expires)) },
+					title = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_share_expires)) },
 					enabled = state !is UiState.Loading,
 					value = expiry != null,
 					onSetValue = {

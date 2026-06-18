@@ -5,9 +5,9 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_cancel
-import navic.composeapp.generated.resources.action_download
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_cancel
+import com.flexify.app.composeapp.generated.resources.action_download
 import org.jetbrains.compose.resources.stringResource
 import com.flexify.app.icons.Icons
 import com.flexify.app.icons.outlined.Download
@@ -35,10 +35,10 @@ fun BulkDownloadDialog(
 					},
 					color = MaterialTheme.colorScheme.primary
 				) {
-					Text(stringResource(Res.string.action_download))
+					Text(stringResource(com.flexify.app.generated.resources.Res.string.action_download))
 				}
 				FormButton(onClick = onDismissRequest) {
-					Text(stringResource(Res.string.action_cancel))
+					Text(stringResource(com.flexify.app.generated.resources.Res.string.action_cancel))
 				}
 			},
 			content = {

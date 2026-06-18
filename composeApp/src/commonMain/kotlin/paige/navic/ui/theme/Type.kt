@@ -1,94 +1,100 @@
 package com.flexify.app.ui.theme
 
-import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.Typography
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
-import androidx.compose.ui.text.ExperimentalTextApi
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontVariation
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.google_sans
-import org.jetbrains.compose.resources.Font
-import org.koin.compose.koinInject
-import com.flexify.app.domain.manager.PreferenceManager
-import com.flexify.app.domain.models.settings.FontOption
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
 
-private val defaultTypography = Typography()
-
-@Composable
-fun googleSans(
-	grade: Int = 0,
-	width: Float = 100f,
-	round: Float = 0f
-): FontFamily {
-	val font = Font(
-		Res.font.google_sans,
-		variationSettings = FontVariation.Settings(
-			FontVariation.grade(grade),
-			FontVariation.width(width),
-			FontVariation.Setting("ROND", round)
-		)
-	)
-	return remember { FontFamily(font) }
-}
-
-@OptIn(ExperimentalTextApi::class)
-@Composable
-fun defaultFont(
-	grade: Int = 0,
-	width: Float = 100f,
-	round: Float = 0f
-): FontFamily {
-	val preferenceManager = koinInject<PreferenceManager>()
-	val googleSans = googleSans(grade, width, round)
-	return remember(preferenceManager.font, preferenceManager.fontPath) {
-		when (preferenceManager.font) {
-			FontOption.System -> FontFamily.Default
-			FontOption.GoogleSans -> googleSans
-			FontOption.Custom -> FontFamily.Default
-		}
-	}
-}
-
-@OptIn(ExperimentalMaterial3ExpressiveApi::class)
-@Composable
-fun typography(): Typography {
-	val fontFamily = defaultFont()
-	return Typography(
-		displayLarge = defaultTypography.displayLarge.copy(fontFamily = fontFamily),
-		displayLargeEmphasized = defaultTypography.displayLargeEmphasized.copy(fontFamily = fontFamily),
-		displayMedium = defaultTypography.displayMedium.copy(fontFamily = fontFamily),
-		displayMediumEmphasized = defaultTypography.displayMediumEmphasized.copy(fontFamily = fontFamily),
-		displaySmall = defaultTypography.displaySmall.copy(fontFamily = fontFamily),
-		displaySmallEmphasized = defaultTypography.displaySmallEmphasized.copy(fontFamily = fontFamily),
-
-		headlineLarge = defaultTypography.headlineLarge.copy(fontFamily = fontFamily),
-		headlineLargeEmphasized = defaultTypography.headlineLargeEmphasized.copy(fontFamily = fontFamily),
-		headlineMedium = defaultTypography.headlineMedium.copy(fontFamily = fontFamily),
-		headlineMediumEmphasized = defaultTypography.headlineMediumEmphasized.copy(fontFamily = fontFamily),
-		headlineSmall = defaultTypography.headlineSmall.copy(fontFamily = fontFamily),
-		headlineSmallEmphasized = defaultTypography.headlineSmallEmphasized.copy(fontFamily = fontFamily),
-
-		titleLarge = defaultTypography.titleLarge.copy(fontFamily = fontFamily),
-		titleLargeEmphasized = defaultTypography.titleLargeEmphasized.copy(fontFamily = fontFamily),
-		titleMedium = defaultTypography.titleMedium.copy(fontFamily = fontFamily),
-		titleMediumEmphasized = defaultTypography.titleMediumEmphasized.copy(fontFamily = fontFamily),
-		titleSmall = defaultTypography.titleSmall.copy(fontFamily = fontFamily),
-		titleSmallEmphasized = defaultTypography.titleSmallEmphasized.copy(fontFamily = fontFamily),
-
-		bodyLarge = defaultTypography.bodyLarge.copy(fontFamily = fontFamily),
-		bodyLargeEmphasized = defaultTypography.bodyLargeEmphasized.copy(fontFamily = fontFamily),
-		bodyMedium = defaultTypography.bodyMedium.copy(fontFamily = fontFamily),
-		bodyMediumEmphasized = defaultTypography.bodyMediumEmphasized.copy(fontFamily = fontFamily),
-		bodySmall = defaultTypography.bodySmall.copy(fontFamily = fontFamily),
-		bodySmallEmphasized = defaultTypography.bodySmallEmphasized.copy(fontFamily = fontFamily),
-
-		labelLarge = defaultTypography.labelLarge.copy(fontFamily = fontFamily),
-		labelLargeEmphasized = defaultTypography.labelLargeEmphasized.copy(fontFamily = fontFamily),
-		labelMedium = defaultTypography.labelMedium.copy(fontFamily = fontFamily),
-		labelMediumEmphasized = defaultTypography.labelMediumEmphasized.copy(fontFamily = fontFamily),
-		labelSmall = defaultTypography.labelSmall.copy(fontFamily = fontFamily),
-		labelSmallEmphasized = defaultTypography.labelSmallEmphasized.copy(fontFamily = fontFamily)
-	)
-}
+val Typography = Typography(
+    displayLarge = TextStyle(
+        fontWeight = FontWeight.Normal,
+        fontSize = 57.sp,
+        lineHeight = 64.sp,
+        letterSpacing = (-0.25).sp
+    ),
+    displayMedium = TextStyle(
+        fontWeight = FontWeight.Normal,
+        fontSize = 45.sp,
+        lineHeight = 52.sp,
+        letterSpacing = 0.sp
+    ),
+    displaySmall = TextStyle(
+        fontWeight = FontWeight.Normal,
+        fontSize = 36.sp,
+        lineHeight = 44.sp,
+        letterSpacing = 0.sp
+    ),
+    headlineLarge = TextStyle(
+        fontWeight = FontWeight.Normal,
+        fontSize = 32.sp,
+        lineHeight = 40.sp,
+        letterSpacing = 0.sp
+    ),
+    headlineMedium = TextStyle(
+        fontWeight = FontWeight.Normal,
+        fontSize = 28.sp,
+        lineHeight = 36.sp,
+        letterSpacing = 0.sp
+    ),
+    headlineSmall = TextStyle(
+        fontWeight = FontWeight.Normal,
+        fontSize = 24.sp,
+        lineHeight = 32.sp,
+        letterSpacing = 0.sp
+    ),
+    titleLarge = TextStyle(
+        fontWeight = FontWeight.Normal,
+        fontSize = 22.sp,
+        lineHeight = 28.sp,
+        letterSpacing = 0.sp
+    ),
+    titleMedium = TextStyle(
+        fontWeight = FontWeight.Medium,
+        fontSize = 16.sp,
+        lineHeight = 24.sp,
+        letterSpacing = 0.15.sp
+    ),
+    titleSmall = TextStyle(
+        fontWeight = FontWeight.Medium,
+        fontSize = 14.sp,
+        lineHeight = 20.sp,
+        letterSpacing = 0.1.sp
+    ),
+    labelLarge = TextStyle(
+        fontWeight = FontWeight.Medium,
+        fontSize = 14.sp,
+        lineHeight = 20.sp,
+        letterSpacing = 0.1.sp
+    ),
+    labelMedium = TextStyle(
+        fontWeight = FontWeight.Medium,
+        fontSize = 12.sp,
+        lineHeight = 16.sp,
+        letterSpacing = 0.5.sp
+    ),
+    labelSmall = TextStyle(
+        fontWeight = FontWeight.Medium,
+        fontSize = 11.sp,
+        lineHeight = 16.sp,
+        letterSpacing = 0.5.sp
+    ),
+    bodyLarge = TextStyle(
+        fontWeight = FontWeight.Normal,
+        fontSize = 16.sp,
+        lineHeight = 24.sp,
+        letterSpacing = 0.5.sp
+    ),
+    bodyMedium = TextStyle(
+        fontWeight = FontWeight.Normal,
+        fontSize = 14.sp,
+        lineHeight = 20.sp,
+        letterSpacing = 0.25.sp
+    ),
+    bodySmall = TextStyle(
+        fontWeight = FontWeight.Normal,
+        fontSize = 12.sp,
+        lineHeight = 16.sp,
+        letterSpacing = 0.4.sp
+    )
+)

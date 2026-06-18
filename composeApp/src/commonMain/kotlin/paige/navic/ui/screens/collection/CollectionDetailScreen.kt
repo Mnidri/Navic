@@ -30,9 +30,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.info_no_songs
-import navic.composeapp.generated.resources.title_disc_number
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.info_no_songs
+import com.flexify.app.composeapp.generated.resources.title_disc_number
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
@@ -204,7 +204,7 @@ fun CollectionDetailScreen(
 
 										Text(
 											text = stringResource(
-												Res.string.title_disc_number,
+												com.flexify.app.generated.resources.Res.string.title_disc_number,
 												group.key as Int
 											),
 											style = MaterialTheme.typography.titleMediumEmphasized,
@@ -321,7 +321,7 @@ fun CollectionDetailScreen(
 					item {
 						ContentUnavailable(
 							icon = Icons.Outlined.Note,
-							label = stringResource(Res.string.info_no_songs)
+							label = stringResource(com.flexify.app.generated.resources.Res.string.info_no_songs)
 						)
 					}
 				}

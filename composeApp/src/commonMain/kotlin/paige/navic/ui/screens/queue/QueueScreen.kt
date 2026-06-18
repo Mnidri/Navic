@@ -25,10 +25,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.kyant.capsule.ContinuousRoundedRectangle
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_clear_queue
-import navic.composeapp.generated.resources.count_songs
-import navic.composeapp.generated.resources.info_no_queue
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_clear_queue
+import com.flexify.app.composeapp.generated.resources.count_songs
+import com.flexify.app.composeapp.generated.resources.info_no_queue
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
@@ -95,7 +95,7 @@ fun QueueScreen() {
 	}
 
 	val songsText = pluralStringResource(
-		Res.plurals.count_songs,
+		com.flexify.app.generated.resources.Res.plurals.count_songs,
 		queue.size,
 		queue.size
 	)
@@ -124,7 +124,7 @@ fun QueueScreen() {
 						player.clearQueue()
 					}
 				) {
-					Text(stringResource(Res.string.action_clear_queue))
+					Text(stringResource(com.flexify.app.generated.resources.Res.string.action_clear_queue))
 				}
 			}
 		}
@@ -171,7 +171,7 @@ fun QueueScreen() {
 				item {
 					ContentUnavailable(
 						icon = Icons.Outlined.PlaylistRemove,
-						label = stringResource(Res.string.info_no_queue)
+						label = stringResource(com.flexify.app.generated.resources.Res.string.info_no_queue)
 					)
 				}
 			}

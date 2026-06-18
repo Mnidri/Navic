@@ -20,9 +20,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_disable_sleep_timer
-import navic.composeapp.generated.resources.action_sleep_timer
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_disable_sleep_timer
+import com.flexify.app.composeapp.generated.resources.action_sleep_timer
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import com.flexify.app.LocalPlatformContext
@@ -67,7 +67,7 @@ fun SleepTimerSheet(
 			verticalArrangement = Arrangement.spacedBy(8.dp)
 		) {
 			Text(
-				text = stringResource(Res.string.action_sleep_timer),
+				text = stringResource(com.flexify.app.generated.resources.Res.string.action_sleep_timer),
 				style = MaterialTheme.typography.titleLarge,
 				modifier = Modifier.padding(horizontal = 16.dp)
 			)
@@ -87,7 +87,7 @@ fun SleepTimerSheet(
 
 			sleepTimerManager.endTimeStamp?.let {
 				ListItem(
-					content = { Text(stringResource(Res.string.action_disable_sleep_timer), color = MaterialTheme.colorScheme.error) },
+					content = { Text(stringResource(com.flexify.app.generated.resources.Res.string.action_disable_sleep_timer), color = MaterialTheme.colorScheme.error) },
 					onClick = {
 						platformContext.clickSound()
 						sleepTimerManager.stopTimer()

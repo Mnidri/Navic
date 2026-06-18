@@ -32,9 +32,9 @@ import androidx.compose.ui.graphics.TransformOrigin
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.title_create_playlist
-import navic.composeapp.generated.resources.title_radios
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.title_create_playlist
+import com.flexify.app.composeapp.generated.resources.title_radios
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
@@ -77,11 +77,11 @@ fun RadioListScreen(
 		topBar = {
 			if (!nested) {
 				RootTopBar(
-					{ Text(stringResource(Res.string.title_radios)) },
+					{ Text(stringResource(com.flexify.app.generated.resources.Res.string.title_radios)) },
 					scrollBehavior
 				)
 			} else {
-				NestedTopBar({ Text(stringResource(Res.string.title_radios)) })
+				NestedTopBar({ Text(stringResource(com.flexify.app.generated.resources.Res.string.title_radios)) })
 			}
 		},
 		floatingActionButton = {
@@ -110,7 +110,7 @@ fun RadioListScreen(
 					) {
 						Icon(
 							imageVector = Icons.Outlined.Add,
-							contentDescription = stringResource(Res.string.title_create_playlist),
+							contentDescription = stringResource(com.flexify.app.generated.resources.Res.string.title_create_playlist),
 							modifier = Modifier.size(26.dp)
 						)
 					}

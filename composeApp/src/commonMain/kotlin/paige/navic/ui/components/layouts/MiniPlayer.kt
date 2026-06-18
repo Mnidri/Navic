@@ -54,8 +54,8 @@ import coil3.compose.AsyncImage
 import coil3.request.CachePolicy
 import coil3.request.ImageRequest
 import com.kyant.capsule.ContinuousRoundedRectangle
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.info_not_playing
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.info_not_playing
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
@@ -305,7 +305,7 @@ fun MiniPlayer(
 					if (song != null) {
 						MarqueeText(song.artistName)
 					} else {
-						MarqueeText(stringResource(Res.string.info_not_playing))
+						MarqueeText(stringResource(com.flexify.app.generated.resources.Res.string.info_not_playing))
 					}
 				},
 				enabled = enabled

@@ -66,9 +66,9 @@ import dev.zt64.compose.pipette.CircularColorPicker
 import dev.zt64.compose.pipette.HsvColor
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.coroutines.launch
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.action_share_lyrics
-import navic.composeapp.generated.resources.app_name
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.action_share_lyrics
+import com.flexify.app.composeapp.generated.resources.app_name
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import com.flexify.app.LocalPlatformContext
@@ -158,7 +158,7 @@ fun LyricsShareSheet(
 			horizontalAlignment = Alignment.CenterHorizontally
 		) {
 			Text(
-				stringResource(Res.string.action_share_lyrics),
+				stringResource(com.flexify.app.generated.resources.Res.string.action_share_lyrics),
 				style = MaterialTheme.typography.titleMedium,
 				modifier = Modifier.padding(top = 24.dp, bottom = 16.dp)
 			)
@@ -234,7 +234,7 @@ fun LyricsShareSheet(
 						)
 						Spacer(modifier = Modifier.size(8.dp))
 						Text(
-							text = stringResource(Res.string.app_name),
+							text = stringResource(com.flexify.app.generated.resources.Res.string.app_name),
 							style = MaterialTheme.typography.titleSmall,
 							fontWeight = FontWeight.Bold
 						)
@@ -328,7 +328,7 @@ fun LyricsShareSheet(
 				Icon(Icons.Outlined.Share, null)
 				Spacer(modifier = Modifier.size(8.dp))
 				Text(
-					stringResource(Res.string.action_share_lyrics),
+					stringResource(com.flexify.app.generated.resources.Res.string.action_share_lyrics),
 					style = MaterialTheme.typography.titleMedium
 				)
 			}

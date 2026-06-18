@@ -38,18 +38,18 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import navic.composeapp.generated.resources.Res
-import navic.composeapp.generated.resources.info_bitrate_default_zero
-import navic.composeapp.generated.resources.info_in_use
-import navic.composeapp.generated.resources.info_streaming_quality
-import navic.composeapp.generated.resources.option_enable_custom_bitrates
-import navic.composeapp.generated.resources.option_max_bitrate_cellular
-import navic.composeapp.generated.resources.option_max_bitrate_wifi
-import navic.composeapp.generated.resources.subtitle_max_bitrates
-import navic.composeapp.generated.resources.title_advanced
-import navic.composeapp.generated.resources.title_cellular
-import navic.composeapp.generated.resources.title_streaming_quality
-import navic.composeapp.generated.resources.title_wifi
+import com.flexify.app.composeapp.generated.resources.Res
+import com.flexify.app.composeapp.generated.resources.info_bitrate_default_zero
+import com.flexify.app.composeapp.generated.resources.info_in_use
+import com.flexify.app.composeapp.generated.resources.info_streaming_quality
+import com.flexify.app.composeapp.generated.resources.option_enable_custom_bitrates
+import com.flexify.app.composeapp.generated.resources.option_max_bitrate_cellular
+import com.flexify.app.composeapp.generated.resources.option_max_bitrate_wifi
+import com.flexify.app.composeapp.generated.resources.subtitle_max_bitrates
+import com.flexify.app.composeapp.generated.resources.title_advanced
+import com.flexify.app.composeapp.generated.resources.title_cellular
+import com.flexify.app.composeapp.generated.resources.title_streaming_quality
+import com.flexify.app.composeapp.generated.resources.title_wifi
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import com.flexify.app.LocalPlatformContext
@@ -77,7 +77,7 @@ fun SettingsStreamingQualityScreen() {
 	Scaffold(
 		topBar = {
 			NestedTopBar(
-				{ Text(stringResource(Res.string.title_streaming_quality)) },
+				{ Text(stringResource(com.flexify.app.generated.resources.Res.string.title_streaming_quality)) },
 				hideBack = platformContext.sizeClass.widthSizeClass >= WindowWidthSizeClass.Medium
 			)
 		},
@@ -95,9 +95,9 @@ fun SettingsStreamingQualityScreen() {
 				AnimatedVisibility(visible = !isAdvancedActive) {
 					Column {
 						FormTitle(buildString {
-							append(stringResource(Res.string.title_wifi))
+							append(stringResource(com.flexify.app.generated.resources.Res.string.title_wifi))
 							if (isOnline && !isCellular) {
-								append(' ' + stringResource(Res.string.info_in_use))
+								append(' ' + stringResource(com.flexify.app.generated.resources.Res.string.info_in_use))
 							}
 						})
 						Form(Modifier.selectableGroup()) {
@@ -108,9 +108,9 @@ fun SettingsStreamingQualityScreen() {
 						}
 
 						FormTitle(buildString {
-							append(stringResource(Res.string.title_cellular))
+							append(stringResource(com.flexify.app.generated.resources.Res.string.title_cellular))
 							if (isOnline && isCellular) {
-								append(' ' + stringResource(Res.string.info_in_use))
+								append(' ' + stringResource(com.flexify.app.generated.resources.Res.string.info_in_use))
 							}
 						})
 						Form(Modifier.selectableGroup()) {
@@ -123,7 +123,7 @@ fun SettingsStreamingQualityScreen() {
 				}
 
 				Spacer(Modifier.height(16.dp))
-				FormTitle(stringResource(Res.string.title_advanced))
+				FormTitle(stringResource(com.flexify.app.generated.resources.Res.string.title_advanced))
 
 				Form {
 					val interactionSource = remember { MutableInteractionSource() }
@@ -140,7 +140,7 @@ fun SettingsStreamingQualityScreen() {
 						contentPadding = PaddingValues(16.dp)
 					) {
 						Text(
-							text = stringResource(Res.string.option_enable_custom_bitrates),
+							text = stringResource(com.flexify.app.generated.resources.Res.string.option_enable_custom_bitrates),
 							style = MaterialTheme.typography.bodyLarge
 						)
 						Switch(
@@ -155,7 +155,7 @@ fun SettingsStreamingQualityScreen() {
 					AnimatedVisibility(visible = isAdvancedActive) {
 						Column(Modifier.padding(16.dp)) {
 							Text(
-								text = stringResource(Res.string.subtitle_max_bitrates),
+								text = stringResource(com.flexify.app.generated.resources.Res.string.subtitle_max_bitrates),
 								style = MaterialTheme.typography.bodyMedium,
 								color = MaterialTheme.colorScheme.onSurfaceVariant
 							)
@@ -175,10 +175,10 @@ fun SettingsStreamingQualityScreen() {
 										preferenceManager.customMaxBitrateWifi = newValue.toIntOrNull() ?: 0
 									}
 								},
-								label = { Text(stringResource(Res.string.option_max_bitrate_wifi)) },
+								label = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_max_bitrate_wifi)) },
 								placeholder = { Text("0") },
 								supportingText = {
-									Text(stringResource(Res.string.info_bitrate_default_zero))
+									Text(stringResource(com.flexify.app.generated.resources.Res.string.info_bitrate_default_zero))
 								},
 								keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.NumberPassword),
 								modifier = Modifier.fillMaxWidth(),
@@ -200,10 +200,10 @@ fun SettingsStreamingQualityScreen() {
 										preferenceManager.customMaxBitrateCellular = newValue.toIntOrNull() ?: 0
 									}
 								},
-								label = { Text(stringResource(Res.string.option_max_bitrate_cellular)) },
+								label = { Text(stringResource(com.flexify.app.generated.resources.Res.string.option_max_bitrate_cellular)) },
 								placeholder = { Text("0") },
 								supportingText = {
-									Text(stringResource(Res.string.info_bitrate_default_zero))
+									Text(stringResource(com.flexify.app.generated.resources.Res.string.info_bitrate_default_zero))
 								},
 								keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.NumberPassword),
 								modifier = Modifier.fillMaxWidth(),
@@ -224,7 +224,7 @@ fun SettingsStreamingQualityScreen() {
 						tint = MaterialTheme.colorScheme.onSurfaceVariant
 					)
 					Text(
-						stringResource(Res.string.info_streaming_quality),
+						stringResource(com.flexify.app.generated.resources.Res.string.info_streaming_quality),
 						color = MaterialTheme.colorScheme.onSurfaceVariant,
 						style = MaterialTheme.typography.bodyMedium
 					)
