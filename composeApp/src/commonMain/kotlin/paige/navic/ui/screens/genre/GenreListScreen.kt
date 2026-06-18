@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.genre
+package com.flexify.app.ui.screens.genre
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -19,17 +19,17 @@ import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.title_genres
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
-import paige.navic.LocalBottomBarScrollManager
-import paige.navic.ui.components.snackbars.ErrorSnackbar
-import paige.navic.ui.components.layouts.ArtGrid
-import paige.navic.ui.components.layouts.NestedTopBar
-import paige.navic.ui.components.layouts.PullToRefreshBox
-import paige.navic.ui.components.layouts.RootBottomBar
-import paige.navic.ui.components.layouts.RootTopBar
-import paige.navic.ui.screens.genre.components.genreListScreenContent
-import paige.navic.ui.screens.genre.viewmodels.GenreListViewModel
-import paige.navic.ui.core.UiState
-import paige.navic.util.ui.withoutTop
+import com.flexify.app.LocalBottomBarScrollManager
+import com.flexify.app.ui.components.snackbars.ErrorSnackbar
+import com.flexify.app.ui.components.layouts.ArtGrid
+import com.flexify.app.ui.components.layouts.NestedTopBar
+import com.flexify.app.ui.components.layouts.PullToRefreshBox
+import com.flexify.app.ui.components.layouts.RootBottomBar
+import com.flexify.app.ui.components.layouts.RootTopBar
+import com.flexify.app.ui.screens.genre.components.genreListScreenContent
+import com.flexify.app.ui.screens.genre.viewmodels.GenreListViewModel
+import com.flexify.app.ui.core.UiState
+import com.flexify.app.util.ui.withoutTop
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
 @Composable

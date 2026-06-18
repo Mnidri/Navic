@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.settings
+package com.flexify.app.ui.screens.settings
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -32,13 +32,13 @@ import navic.composeapp.generated.resources.title_fonts_inbuilt
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import paige.navic.LocalPlatformContext
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.models.settings.FontOption
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.Check
-import paige.navic.ui.components.layouts.NestedTopBar
-import paige.navic.ui.theme.googleSans
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.models.settings.FontOption
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.Check
+import com.flexify.app.ui.components.layouts.NestedTopBar
+import com.flexify.app.ui.theme.googleSans
 
 @Composable
 fun FontsScreen() {

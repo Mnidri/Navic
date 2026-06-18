@@ -1,4 +1,4 @@
-package paige.navic.domain.models.settings
+package com.flexify.app.domain.models.settings
 
 import androidx.compose.runtime.Immutable
 import kotlinx.serialization.Serializable

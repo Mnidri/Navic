@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.radio.components
+package com.flexify.app.ui.screens.radio.components
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
@@ -7,7 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
-import paige.navic.util.ui.shimmerLoading
+import com.flexify.app.util.ui.shimmerLoading
 
 @Composable
 fun RadioListScreenCardPlaceholder() {

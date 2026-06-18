@@ -1,4 +1,4 @@
-package paige.navic.domain.manager
+package com.flexify.app.domain.manager
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -11,7 +11,7 @@ import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.notice_added_to_queue
 import navic.composeapp.generated.resources.notice_play_next
 import org.jetbrains.compose.resources.StringResource
-import paige.navic.domain.models.snackbars.PlayerEvent
+import com.flexify.app.domain.models.snackbars.PlayerEvent
 
 class SnackBarManager {
 	private val _events = MutableSharedFlow<PlayerEvent>()

@@ -1,4 +1,4 @@
-package paige.navic.domain.manager
+package com.flexify.app.domain.manager
 
 import kotlinx.cinterop.ExperimentalForeignApi
 import kotlinx.coroutines.CoroutineScope

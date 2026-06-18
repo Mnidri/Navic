@@ -1,4 +1,4 @@
-package paige.navic.domain.repositories
+package com.flexify.app.domain.repositories
 
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
@@ -7,10 +7,10 @@ import kotlinx.coroutines.IO
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
-import paige.navic.data.database.dao.RadioDao
-import paige.navic.data.database.mappers.toDomainModel
-import paige.navic.domain.models.DomainRadio
-import paige.navic.ui.core.UiState
+import com.flexify.app.data.database.dao.RadioDao
+import com.flexify.app.data.database.mappers.toDomainModel
+import com.flexify.app.domain.models.DomainRadio
+import com.flexify.app.ui.core.UiState
 
 class RadioRepository(
 	private val radioDao: RadioDao,

@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.login.pages
+package com.flexify.app.ui.screens.login.pages
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height

@@ -1,4 +1,4 @@
-package paige.navic.ui.components.snackbars
+package com.flexify.app.ui.components.snackbars
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Snackbar

@@ -47,7 +47,7 @@
 			android:theme="@style/Theme.Navic" />
 
 		<service
-			android:name="paige.navic.shared.PlaybackService"
+			android:name="com.flexify.app.shared.PlaybackService"
 			android:enabled="true"
 			android:exported="true"
 			android:foregroundServiceType="mediaPlayback"

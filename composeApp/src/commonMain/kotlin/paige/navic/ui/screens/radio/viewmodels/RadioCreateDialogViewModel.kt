@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.radio.viewmodels
+package com.flexify.app.ui.screens.radio.viewmodels
 
 import androidx.compose.foundation.text.input.TextFieldState
 import androidx.lifecycle.ViewModel
@@ -8,11 +8,11 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
-import paige.navic.domain.manager.SessionManager
-import paige.navic.ui.core.UiState
+import com.flexify.app.domain.manager.SessionManager
+import com.flexify.app.ui.core.UiState
 import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.notice_created_radio
-import paige.navic.domain.manager.SnackBarManager
+import com.flexify.app.domain.manager.SnackBarManager
 
 class RadioCreateDialogViewModel(
 	private val sessionManager: SessionManager,

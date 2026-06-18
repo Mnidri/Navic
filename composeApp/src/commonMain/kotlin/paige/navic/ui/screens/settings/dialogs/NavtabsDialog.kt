@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.settings.dialogs
+package com.flexify.app.ui.screens.settings.dialogs
 
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.foundation.layout.Arrangement
@@ -30,17 +30,17 @@ import navic.composeapp.generated.resources.action_reorder
 import navic.composeapp.generated.resources.option_navigation_bar_tabs
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
-import paige.navic.LocalPlatformContext
-import paige.navic.domain.models.settings.NavbarTab
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.DragHandle
-import paige.navic.ui.components.common.ErrorBox
-import paige.navic.ui.screens.settings.viewmodels.NavtabsViewModel
-import paige.navic.util.ui.DraggableListState
-import paige.navic.ui.core.UiState
-import paige.navic.util.ui.dragHandle
-import paige.navic.util.ui.draggableItems
-import paige.navic.util.ui.rememberDraggableListState
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.domain.models.settings.NavbarTab
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.DragHandle
+import com.flexify.app.ui.components.common.ErrorBox
+import com.flexify.app.ui.screens.settings.viewmodels.NavtabsViewModel
+import com.flexify.app.util.ui.DraggableListState
+import com.flexify.app.ui.core.UiState
+import com.flexify.app.util.ui.dragHandle
+import com.flexify.app.util.ui.draggableItems
+import com.flexify.app.util.ui.rememberDraggableListState
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable

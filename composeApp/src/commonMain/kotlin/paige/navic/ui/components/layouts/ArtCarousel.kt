@@ -1,4 +1,4 @@
-package paige.navic.ui.components.layouts
+package com.flexify.app.ui.components.layouts
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -30,9 +30,9 @@ import org.jetbrains.compose.resources.stringResource
 import kotlinx.collections.immutable.ImmutableList
 import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.action_see_all
-import paige.navic.LocalPlatformContext
-import paige.navic.LocalNavStack
-import paige.navic.ui.components.common.CoverArt
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.LocalNavStack
+import com.flexify.app.ui.components.common.CoverArt
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
 @Composable

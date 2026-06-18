@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.settings.viewmodels
+package com.flexify.app.ui.screens.settings.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -9,12 +9,12 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
-import paige.navic.domain.manager.SyncManager
-import paige.navic.data.database.dao.SyncActionDao
-import paige.navic.domain.repositories.DbRepository
-import paige.navic.domain.repositories.SongRepository
-import paige.navic.domain.manager.ConnectivityManager
-import paige.navic.domain.manager.DownloadManager
+import com.flexify.app.domain.manager.SyncManager
+import com.flexify.app.data.database.dao.SyncActionDao
+import com.flexify.app.domain.repositories.DbRepository
+import com.flexify.app.domain.repositories.SongRepository
+import com.flexify.app.domain.manager.ConnectivityManager
+import com.flexify.app.domain.manager.DownloadManager
 
 class SettingsDataStorageViewModel(
 	private val syncManager: SyncManager,

@@ -1,4 +1,4 @@
-package paige.navic.ui.components.common
+package com.flexify.app.ui.components.common
 
 import androidx.compose.animation.graphics.res.animatedVectorResource
 import androidx.compose.animation.graphics.res.rememberAnimatedVectorPainter
@@ -9,8 +9,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.painter.Painter
 import org.koin.compose.koinInject
-import paige.navic.ui.navigation.Screen
-import paige.navic.util.core.ResourceProvider
+import com.flexify.app.ui.navigation.Screen
+import com.flexify.app.util.core.ResourceProvider
 
 @Composable
 actual fun animatedTabIconPainter(destination: Screen): Painter? {

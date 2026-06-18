@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.settings
+package com.flexify.app.ui.screens.settings
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.EaseOut
@@ -88,19 +88,19 @@ import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
-import paige.navic.LocalPlatformContext
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.models.settings.CoverArtQuality
-import paige.navic.domain.models.settings.OfflineMode
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.Offline
-import paige.navic.ui.components.common.Form
-import paige.navic.ui.components.common.FormRow
-import paige.navic.ui.components.common.FormTitle
-import paige.navic.ui.components.dialogs.BulkDownloadDialog
-import paige.navic.ui.components.layouts.NestedTopBar
-import paige.navic.ui.screens.settings.components.SettingSelectionRow
-import paige.navic.ui.screens.settings.viewmodels.SettingsDataStorageViewModel
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.models.settings.CoverArtQuality
+import com.flexify.app.domain.models.settings.OfflineMode
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.Offline
+import com.flexify.app.ui.components.common.Form
+import com.flexify.app.ui.components.common.FormRow
+import com.flexify.app.ui.components.common.FormTitle
+import com.flexify.app.ui.components.dialogs.BulkDownloadDialog
+import com.flexify.app.ui.components.layouts.NestedTopBar
+import com.flexify.app.ui.screens.settings.components.SettingSelectionRow
+import com.flexify.app.ui.screens.settings.viewmodels.SettingsDataStorageViewModel
 import kotlin.time.Clock
 import kotlin.time.Instant
 import coil3.compose.LocalPlatformContext as LocalCoilPlatformContext

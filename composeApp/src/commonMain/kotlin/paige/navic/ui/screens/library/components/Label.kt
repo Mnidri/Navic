@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.library.components
+package com.flexify.app.ui.screens.library.components
 
 import androidx.compose.runtime.Composable
 import navic.composeapp.generated.resources.Res
@@ -13,7 +13,7 @@ import navic.composeapp.generated.resources.option_sort_rating
 import navic.composeapp.generated.resources.option_sort_recent
 import navic.composeapp.generated.resources.option_sort_starred
 import org.jetbrains.compose.resources.stringResource
-import paige.navic.domain.models.DomainAlbumListType
+import com.flexify.app.domain.models.DomainAlbumListType
 
 @Composable
 fun DomainAlbumListType.label() =

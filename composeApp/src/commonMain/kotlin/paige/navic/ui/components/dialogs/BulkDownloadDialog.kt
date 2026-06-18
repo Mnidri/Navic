@@ -1,4 +1,4 @@
-package paige.navic.ui.components.dialogs
+package com.flexify.app.ui.components.dialogs
 
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -9,9 +9,9 @@ import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.action_cancel
 import navic.composeapp.generated.resources.action_download
 import org.jetbrains.compose.resources.stringResource
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.Download
-import paige.navic.ui.components.common.FormButton
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.Download
+import com.flexify.app.ui.components.common.FormButton
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

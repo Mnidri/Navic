@@ -24,7 +24,7 @@ configurations.all {
 }
 
 extensions.configure<ValkyrieExtension> {
-	packageName = "paige.navic.icons"
+	packageName = "com.flexify.app.icons"
 	generateAtSync = true
 	outputDirectory = layout.buildDirectory.dir("generated/sources/valkyrie")
 
@@ -112,7 +112,7 @@ extensions.configure<KotlinMultiplatformExtension> {
 	}
 
 	extensions.configure<KotlinMultiplatformAndroidLibraryExtension> {
-		namespace = "paige.navic"
+		namespace = "com.flexify.app"
 		compileSdk = libs.versions.android.compileSdk.get().toInt()
 		minSdk = libs.versions.android.minSdk.get().toInt()
 

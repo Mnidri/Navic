@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.nowPlaying.components.rows
+package com.flexify.app.ui.screens.nowPlaying.components.rows
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -13,8 +13,8 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.unit.dp
 import org.koin.compose.koinInject
-import paige.navic.shared.MediaPlayerViewModel
-import paige.navic.util.core.toHoursMinutesSeconds
+import com.flexify.app.shared.MediaPlayerViewModel
+import com.flexify.app.util.core.toHoursMinutesSeconds
 import kotlin.time.Duration.Companion.seconds
 
 @Composable

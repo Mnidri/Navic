@@ -1,13 +1,13 @@
-package paige.navic.domain.parser
+package com.flexify.app.domain.parser
 
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.contentOrNull
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
-import paige.navic.domain.models.lyrics.LyricsLine
-import paige.navic.domain.models.lyrics.LyricsWord
-import paige.navic.util.core.Logger
+import com.flexify.app.domain.models.lyrics.LyricsLine
+import com.flexify.app.domain.models.lyrics.LyricsWord
+import com.flexify.app.util.core.Logger
 import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.Duration.Companion.minutes
 import kotlin.time.Duration.Companion.seconds

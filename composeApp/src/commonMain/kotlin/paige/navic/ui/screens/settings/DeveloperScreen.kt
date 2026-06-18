@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.settings
+package com.flexify.app.ui.screens.settings
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
@@ -32,19 +32,19 @@ import navic.composeapp.generated.resources.title_developer
 import navic.composeapp.generated.resources.title_logs
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import paige.navic.LocalNavStack
-import paige.navic.LocalPlatformContext
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.ChevronForward
-import paige.navic.ui.components.common.Form
-import paige.navic.ui.components.common.FormButton
-import paige.navic.ui.components.common.FormRow
-import paige.navic.ui.components.dialogs.FormDialog
-import paige.navic.ui.components.layouts.NestedTopBar
-import paige.navic.ui.navigation.Screen
-import paige.navic.ui.screens.settings.components.SettingSwitchRow
-import paige.navic.util.core.PlatformType
+import com.flexify.app.LocalNavStack
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.ChevronForward
+import com.flexify.app.ui.components.common.Form
+import com.flexify.app.ui.components.common.FormButton
+import com.flexify.app.ui.components.common.FormRow
+import com.flexify.app.ui.components.dialogs.FormDialog
+import com.flexify.app.ui.components.layouts.NestedTopBar
+import com.flexify.app.ui.navigation.Screen
+import com.flexify.app.ui.screens.settings.components.SettingSwitchRow
+import com.flexify.app.util.core.PlatformType
 
 @Composable
 fun SettingsDeveloperScreen() {

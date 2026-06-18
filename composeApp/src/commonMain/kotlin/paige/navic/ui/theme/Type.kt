@@ -1,4 +1,4 @@
-package paige.navic.ui.theme
+package com.flexify.app.ui.theme
 
 import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.Typography
@@ -11,8 +11,8 @@ import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.google_sans
 import org.jetbrains.compose.resources.Font
 import org.koin.compose.koinInject
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.models.settings.FontOption
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.models.settings.FontOption
 
 private val defaultTypography = Typography()
 

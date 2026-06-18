@@ -1,4 +1,4 @@
-package paige.navic.domain.manager
+package com.flexify.app.domain.manager
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -13,7 +13,7 @@ import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.mapLatest
 import kotlinx.coroutines.flow.stateIn
-import paige.navic.domain.models.settings.OfflineMode
+import com.flexify.app.domain.models.settings.OfflineMode
 import platform.Network.nw_interface_type_cellular
 import platform.Network.nw_path_get_status
 import platform.Network.nw_path_monitor_cancel

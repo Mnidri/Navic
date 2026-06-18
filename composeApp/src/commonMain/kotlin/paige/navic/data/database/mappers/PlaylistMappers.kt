@@ -1,8 +1,8 @@
-package paige.navic.data.database.mappers
+package com.flexify.app.data.database.mappers
 
-import paige.navic.data.database.entities.PlaylistEntity
-import paige.navic.data.database.relations.PlaylistWithSongs
-import paige.navic.domain.models.DomainPlaylist
+import com.flexify.app.data.database.entities.PlaylistEntity
+import com.flexify.app.data.database.relations.PlaylistWithSongs
+import com.flexify.app.domain.models.DomainPlaylist
 import dev.zt64.subsonic.api.model.Playlist as ApiPlaylist
 
 fun ApiPlaylist.toEntity() = PlaylistEntity(

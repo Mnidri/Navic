@@ -1,4 +1,4 @@
-package paige.navic.androidApp.widgets.turntable
+package com.flexify.app.androidApp.widgets.turntable
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -25,8 +25,8 @@ import androidx.glance.layout.fillMaxSize
 import androidx.glance.layout.padding
 import androidx.glance.layout.size
 import androidx.glance.state.PreferencesGlanceStateDefinition
-import paige.navic.androidApp.R
-import paige.navic.androidApp.widgets.nowplaying.NowPlayingWidget
+import com.flexify.app.androidApp.R
+import com.flexify.app.androidApp.widgets.nowplaying.NowPlayingWidget
 
 class TurnTableWidget : NowPlayingWidget() {
 

@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.settings.components
+package com.flexify.app.ui.screens.settings.components
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -12,8 +12,8 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import org.koin.compose.koinInject
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.ui.components.common.FormRow
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.ui.components.common.FormRow
 
 @Composable
 fun SettingSwitchRow(

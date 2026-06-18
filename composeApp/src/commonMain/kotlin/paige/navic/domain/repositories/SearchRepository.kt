@@ -1,15 +1,15 @@
-package paige.navic.domain.repositories
+package com.flexify.app.domain.repositories
 
 import kotlinx.coroutines.CancellationException
-import paige.navic.data.database.dao.AlbumDao
-import paige.navic.data.database.dao.ArtistDao
-import paige.navic.data.database.dao.PlaylistDao
-import paige.navic.data.database.dao.SongDao
-import paige.navic.data.database.mappers.toDomainModel
-import paige.navic.data.database.mappers.toEntity
-import paige.navic.domain.manager.SessionManager
-import paige.navic.domain.manager.ConnectivityManager
-import paige.navic.util.core.Logger
+import com.flexify.app.data.database.dao.AlbumDao
+import com.flexify.app.data.database.dao.ArtistDao
+import com.flexify.app.data.database.dao.PlaylistDao
+import com.flexify.app.data.database.dao.SongDao
+import com.flexify.app.data.database.mappers.toDomainModel
+import com.flexify.app.data.database.mappers.toEntity
+import com.flexify.app.domain.manager.SessionManager
+import com.flexify.app.domain.manager.ConnectivityManager
+import com.flexify.app.util.core.Logger
 
 class SearchRepository(
 	private val albumDao: AlbumDao,

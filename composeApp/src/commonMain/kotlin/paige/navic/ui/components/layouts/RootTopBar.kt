@@ -1,4 +1,4 @@
-package paige.navic.ui.components.layouts
+package com.flexify.app.ui.components.layouts
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.RowScope
@@ -28,27 +28,27 @@ import navic.composeapp.generated.resources.action_view_shares
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
-import paige.navic.LocalPlatformContext
-import paige.navic.LocalNavStack
-import paige.navic.domain.models.settings.NavbarConfig
-import paige.navic.domain.models.settings.NavbarTab
-import paige.navic.ui.navigation.Screen
-import paige.navic.icons.Icons
-import paige.navic.icons.filled.Settings
-import paige.navic.icons.outlined.AccountCircle
-import paige.navic.icons.outlined.Bedtime
-import paige.navic.icons.outlined.Logout
-import paige.navic.icons.outlined.Search
-import paige.navic.icons.outlined.Share
-import paige.navic.domain.manager.SleepTimerManager
-import paige.navic.ui.components.common.Dropdown
-import paige.navic.ui.components.common.DropdownItem
-import paige.navic.ui.components.sheets.SleepTimerSheet
-import paige.navic.ui.screens.login.viewmodels.LoginViewModel
-import paige.navic.ui.screens.settings.viewmodels.NavtabsViewModel
-import paige.navic.ui.theme.positive
-import paige.navic.ui.core.UiState
-import paige.navic.util.core.label
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.LocalNavStack
+import com.flexify.app.domain.models.settings.NavbarConfig
+import com.flexify.app.domain.models.settings.NavbarTab
+import com.flexify.app.ui.navigation.Screen
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.filled.Settings
+import com.flexify.app.icons.outlined.AccountCircle
+import com.flexify.app.icons.outlined.Bedtime
+import com.flexify.app.icons.outlined.Logout
+import com.flexify.app.icons.outlined.Search
+import com.flexify.app.icons.outlined.Share
+import com.flexify.app.domain.manager.SleepTimerManager
+import com.flexify.app.ui.components.common.Dropdown
+import com.flexify.app.ui.components.common.DropdownItem
+import com.flexify.app.ui.components.sheets.SleepTimerSheet
+import com.flexify.app.ui.screens.login.viewmodels.LoginViewModel
+import com.flexify.app.ui.screens.settings.viewmodels.NavtabsViewModel
+import com.flexify.app.ui.theme.positive
+import com.flexify.app.ui.core.UiState
+import com.flexify.app.util.core.label
 
 @OptIn(
 	ExperimentalMaterial3Api::class,

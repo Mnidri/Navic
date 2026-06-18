@@ -1,10 +1,10 @@
-package paige.navic.data.database.dao
+package com.flexify.app.data.database.dao
 
 import androidx.room3.Dao
 import androidx.room3.Insert
 import androidx.room3.Query
 import androidx.room3.Transaction
-import paige.navic.data.database.entities.SyncActionEntity
+import com.flexify.app.data.database.entities.SyncActionEntity
 
 @Dao
 interface SyncActionDao {

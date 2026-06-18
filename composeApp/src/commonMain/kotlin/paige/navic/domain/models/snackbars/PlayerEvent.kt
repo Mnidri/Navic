@@ -1,4 +1,4 @@
-package paige.navic.domain.models.snackbars
+package com.flexify.app.domain.models.snackbars
 
 import org.jetbrains.compose.resources.StringResource
 

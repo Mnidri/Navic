@@ -1,4 +1,4 @@
-package paige.navic.domain.manager
+package com.flexify.app.domain.manager
 
 import com.russhwolf.settings.Settings
 import com.russhwolf.settings.set

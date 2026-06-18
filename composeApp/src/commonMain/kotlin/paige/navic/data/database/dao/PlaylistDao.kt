@@ -1,4 +1,4 @@
-package paige.navic.data.database.dao
+package com.flexify.app.data.database.dao
 
 import androidx.room3.Dao
 import androidx.room3.Insert
@@ -6,10 +6,10 @@ import androidx.room3.OnConflictStrategy
 import androidx.room3.Query
 import androidx.room3.Transaction
 import kotlinx.coroutines.flow.Flow
-import paige.navic.data.database.entities.PlaylistEntity
-import paige.navic.data.database.entities.PlaylistSongCrossRef
-import paige.navic.data.database.relations.PlaylistWithSongs
-import paige.navic.util.core.Logger
+import com.flexify.app.data.database.entities.PlaylistEntity
+import com.flexify.app.data.database.entities.PlaylistSongCrossRef
+import com.flexify.app.data.database.relations.PlaylistWithSongs
+import com.flexify.app.util.core.Logger
 
 @Dao
 interface PlaylistDao {

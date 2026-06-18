@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.settings
+package com.flexify.app.ui.screens.settings
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.clickable
@@ -52,17 +52,17 @@ import navic.composeapp.generated.resources.title_streaming_quality
 import navic.composeapp.generated.resources.title_wifi
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import paige.navic.LocalPlatformContext
-import paige.navic.domain.manager.ConnectivityManager
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.models.settings.StreamingQuality
-import paige.navic.domain.models.settings.description
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.Info
-import paige.navic.ui.components.common.Form
-import paige.navic.ui.components.common.FormRow
-import paige.navic.ui.components.common.FormTitle
-import paige.navic.ui.components.layouts.NestedTopBar
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.domain.manager.ConnectivityManager
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.models.settings.StreamingQuality
+import com.flexify.app.domain.models.settings.description
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.Info
+import com.flexify.app.ui.components.common.Form
+import com.flexify.app.ui.components.common.FormRow
+import com.flexify.app.ui.components.common.FormTitle
+import com.flexify.app.ui.components.layouts.NestedTopBar
 
 @Composable
 fun SettingsStreamingQualityScreen() {

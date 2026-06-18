@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.song.components
+package com.flexify.app.ui.screens.song.components
 
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.items
@@ -7,12 +7,12 @@ import kotlinx.collections.immutable.ImmutableList
 import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.info_no_songs
 import org.jetbrains.compose.resources.stringResource
-import paige.navic.data.database.entities.DownloadEntity
-import paige.navic.domain.models.DomainSong
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.Note
-import paige.navic.ui.components.common.ContentUnavailable
-import paige.navic.ui.core.UiState
+import com.flexify.app.data.database.entities.DownloadEntity
+import com.flexify.app.domain.models.DomainSong
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.Note
+import com.flexify.app.ui.components.common.ContentUnavailable
+import com.flexify.app.ui.core.UiState
 
 fun LazyListScope.songListScreenContent(
 	state: UiState<ImmutableList<DomainSong>>,

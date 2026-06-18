@@ -1,5 +1,5 @@
-package paige.navic.androidApp.widgets.turntable
+package com.flexify.app.androidApp.widgets.turntable
 
-import paige.navic.androidApp.widgets.nowplaying.NowPlayingReceiver
+import com.flexify.app.androidApp.widgets.nowplaying.NowPlayingReceiver
 
 class TurnTableReceiver : NowPlayingReceiver(TurnTableWidget::class.java)

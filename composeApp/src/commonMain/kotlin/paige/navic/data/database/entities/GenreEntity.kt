@@ -1,4 +1,4 @@
-package paige.navic.data.database.entities
+package com.flexify.app.data.database.entities
 
 import androidx.room3.Entity
 import androidx.room3.PrimaryKey

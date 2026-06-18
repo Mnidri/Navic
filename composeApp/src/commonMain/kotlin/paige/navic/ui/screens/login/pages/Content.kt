@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.login.pages
+package com.flexify.app.ui.screens.login.pages
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -46,12 +46,12 @@ import navic.composeapp.generated.resources.info_login_description_start
 import navic.composeapp.generated.resources.option_custom_headers
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
-import paige.navic.LocalPlatformContext
-import paige.navic.LocalNavStack
-import paige.navic.ui.navigation.Screen
-import paige.navic.ui.screens.login.viewmodels.LoginViewModel
-import paige.navic.ui.theme.defaultFont
-import paige.navic.ui.core.LoginUiState
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.LocalNavStack
+import com.flexify.app.ui.navigation.Screen
+import com.flexify.app.ui.screens.login.viewmodels.LoginViewModel
+import com.flexify.app.ui.theme.defaultFont
+import com.flexify.app.ui.core.LoginUiState
 
 @Composable
 fun LoginScreenContent(innerPadding: PaddingValues) {

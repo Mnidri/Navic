@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.settings
+package com.flexify.app.ui.screens.settings
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Scaffold
@@ -12,8 +12,8 @@ import com.mikepenz.aboutlibraries.ui.compose.produceLibraries
 import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.title_acknowledgements
 import org.jetbrains.compose.resources.stringResource
-import paige.navic.LocalPlatformContext
-import paige.navic.ui.components.layouts.NestedTopBar
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.ui.components.layouts.NestedTopBar
 
 @Composable
 fun SettingsAcknowledgementsScreen() {

@@ -1,8 +1,8 @@
-package paige.navic.domain.parser
+package com.flexify.app.domain.parser
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
-import paige.navic.ui.theme.warning
+import com.flexify.app.ui.theme.warning
 
 data class LogLine(
 	val type: LogLineType,

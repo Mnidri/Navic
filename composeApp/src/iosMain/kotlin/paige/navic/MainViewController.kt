@@ -1,4 +1,4 @@
-package paige.navic
+package com.flexify.app
 
 import androidx.compose.ui.window.ComposeUIViewController
 

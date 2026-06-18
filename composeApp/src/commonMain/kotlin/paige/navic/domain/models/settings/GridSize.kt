@@ -1,4 +1,4 @@
-package paige.navic.domain.models.settings
+package com.flexify.app.domain.models.settings
 
 /**
  * Different grid sizes which the user can choose from.

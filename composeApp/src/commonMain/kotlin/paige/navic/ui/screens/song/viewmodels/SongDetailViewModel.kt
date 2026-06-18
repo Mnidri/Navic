@@ -1,13 +1,13 @@
-package paige.navic.ui.screens.song.viewmodels
+package com.flexify.app.ui.screens.song.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import paige.navic.domain.models.DomainSong
-import paige.navic.domain.repositories.CollectionRepository
-import paige.navic.ui.core.UiState
+import com.flexify.app.domain.models.DomainSong
+import com.flexify.app.domain.repositories.CollectionRepository
+import com.flexify.app.ui.core.UiState
 
 class SongDetailViewModel(
 	songId: String,

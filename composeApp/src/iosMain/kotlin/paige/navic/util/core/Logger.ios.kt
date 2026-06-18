@@ -1,4 +1,4 @@
-package paige.navic.util.core
+package com.flexify.app.util.core
 
 actual object Logger {
 	private fun log(tag: String, msg: String, tr: Throwable?) {

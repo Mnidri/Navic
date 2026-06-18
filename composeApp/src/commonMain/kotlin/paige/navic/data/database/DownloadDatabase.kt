@@ -1,11 +1,11 @@
-package paige.navic.data.database
+package com.flexify.app.data.database
 
 import androidx.room3.ConstructedBy
 import androidx.room3.Database
 import androidx.room3.RoomDatabase
 import androidx.room3.RoomDatabaseConstructor
-import paige.navic.data.database.dao.DownloadDao
-import paige.navic.data.database.entities.DownloadEntity
+import com.flexify.app.data.database.dao.DownloadDao
+import com.flexify.app.data.database.entities.DownloadEntity
 
 @Database(
 	version = 3,

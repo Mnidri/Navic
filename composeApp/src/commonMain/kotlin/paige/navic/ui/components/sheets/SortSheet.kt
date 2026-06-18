@@ -1,4 +1,4 @@
-package paige.navic.ui.components.sheets
+package com.flexify.app.ui.components.sheets
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -30,7 +30,7 @@ import navic.composeapp.generated.resources.option_sort_descending
 import navic.composeapp.generated.resources.title_direction
 import navic.composeapp.generated.resources.title_sort_by
 import org.jetbrains.compose.resources.stringResource
-import paige.navic.LocalPlatformContext
+import com.flexify.app.LocalPlatformContext
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

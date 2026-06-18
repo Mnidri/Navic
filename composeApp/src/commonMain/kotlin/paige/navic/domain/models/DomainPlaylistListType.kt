@@ -1,4 +1,4 @@
-package paige.navic.domain.models
+package com.flexify.app.domain.models
 
 import androidx.compose.runtime.Immutable
 import navic.composeapp.generated.resources.Res

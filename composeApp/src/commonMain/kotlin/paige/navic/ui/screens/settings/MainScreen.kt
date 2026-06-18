@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.settings
+package com.flexify.app.ui.screens.settings
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -41,22 +41,22 @@ import navic.composeapp.generated.resources.title_settings
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import paige.navic.LocalNavStack
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.icons.Icons
-import paige.navic.icons.filled.BottomNavigation
-import paige.navic.icons.filled.Info
-import paige.navic.icons.filled.Palette
-import paige.navic.icons.filled.Play
-import paige.navic.icons.outlined.ChevronForward
-import paige.navic.icons.outlined.Code
-import paige.navic.icons.outlined.DataTable
-import paige.navic.icons.outlined.Note
-import paige.navic.ui.components.common.Form
-import paige.navic.ui.components.common.FormRow
-import paige.navic.ui.components.layouts.NestedTopBar
-import paige.navic.ui.navigation.Screen
-import paige.navic.ui.theme.defaultFont
+import com.flexify.app.LocalNavStack
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.filled.BottomNavigation
+import com.flexify.app.icons.filled.Info
+import com.flexify.app.icons.filled.Palette
+import com.flexify.app.icons.filled.Play
+import com.flexify.app.icons.outlined.ChevronForward
+import com.flexify.app.icons.outlined.Code
+import com.flexify.app.icons.outlined.DataTable
+import com.flexify.app.icons.outlined.Note
+import com.flexify.app.ui.components.common.Form
+import com.flexify.app.ui.components.common.FormRow
+import com.flexify.app.ui.components.layouts.NestedTopBar
+import com.flexify.app.ui.navigation.Screen
+import com.flexify.app.ui.theme.defaultFont
 
 @Composable
 fun SettingsScreen() {

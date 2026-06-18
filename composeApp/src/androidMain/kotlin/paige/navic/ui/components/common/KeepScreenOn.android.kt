@@ -1,9 +1,9 @@
-package paige.navic.ui.components.common
+package com.flexify.app.ui.components.common
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.ui.platform.LocalView
-import paige.navic.util.core.Logger
+import com.flexify.app.util.core.Logger
 
 @Composable
 actual fun KeepScreenOn() {

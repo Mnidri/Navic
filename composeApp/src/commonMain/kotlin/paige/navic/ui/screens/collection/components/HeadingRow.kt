@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.collection.components
+package com.flexify.app.ui.screens.collection.components
 
 import androidx.compose.animation.BoundsTransform
 import androidx.compose.animation.core.tween
@@ -22,16 +22,16 @@ import navic.composeapp.generated.resources.info_unknown_genre
 import navic.composeapp.generated.resources.info_unknown_year
 import navic.composeapp.generated.resources.subtitle_playlist
 import org.jetbrains.compose.resources.stringResource
-import paige.navic.LocalPlatformContext
-import paige.navic.LocalNavStack
-import paige.navic.LocalSharedTransitionScope
-import paige.navic.ui.navigation.Screen
-import paige.navic.domain.models.DomainAlbum
-import paige.navic.domain.models.DomainPlaylist
-import paige.navic.domain.models.DomainSongCollection
-import paige.navic.ui.components.common.CoverArt
-import paige.navic.ui.theme.defaultFont
-import paige.navic.util.ui.EmphasizedDecelerateEasing
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.LocalNavStack
+import com.flexify.app.LocalSharedTransitionScope
+import com.flexify.app.ui.navigation.Screen
+import com.flexify.app.domain.models.DomainAlbum
+import com.flexify.app.domain.models.DomainPlaylist
+import com.flexify.app.domain.models.DomainSongCollection
+import com.flexify.app.ui.components.common.CoverArt
+import com.flexify.app.ui.theme.defaultFont
+import com.flexify.app.util.ui.EmphasizedDecelerateEasing
 
 @Composable
 fun CollectionDetailScreenHeadingRow(

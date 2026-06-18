@@ -1,4 +1,4 @@
-package paige.navic.di
+package com.flexify.app.di
 
 import coil3.ImageLoader
 import coil3.disk.DiskCache

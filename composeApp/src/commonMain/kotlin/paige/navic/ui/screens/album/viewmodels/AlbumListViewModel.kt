@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.album.viewmodels
+package com.flexify.app.ui.screens.album.viewmodels
 
 import androidx.compose.foundation.lazy.grid.LazyGridState
 import androidx.lifecycle.ViewModel
@@ -10,11 +10,11 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.koin.core.component.KoinComponent
-import paige.navic.domain.manager.SessionManager
-import paige.navic.domain.models.DomainAlbum
-import paige.navic.domain.models.DomainAlbumListType
-import paige.navic.domain.repositories.AlbumRepository
-import paige.navic.ui.core.UiState
+import com.flexify.app.domain.manager.SessionManager
+import com.flexify.app.domain.models.DomainAlbum
+import com.flexify.app.domain.models.DomainAlbumListType
+import com.flexify.app.domain.repositories.AlbumRepository
+import com.flexify.app.ui.core.UiState
 
 @OptIn(ExperimentalCoroutinesApi::class)
 open class AlbumListViewModel(

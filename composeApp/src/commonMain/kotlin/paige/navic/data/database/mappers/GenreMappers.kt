@@ -1,8 +1,8 @@
-package paige.navic.data.database.mappers
+package com.flexify.app.data.database.mappers
 
-import paige.navic.data.database.entities.GenreEntity
-import paige.navic.data.database.relations.GenreWithAlbums
-import paige.navic.domain.models.DomainGenre
+import com.flexify.app.data.database.entities.GenreEntity
+import com.flexify.app.data.database.relations.GenreWithAlbums
+import com.flexify.app.domain.models.DomainGenre
 import dev.zt64.subsonic.api.model.Genre as ApiGenre
 
 fun ApiGenre.toEntity() = GenreEntity(

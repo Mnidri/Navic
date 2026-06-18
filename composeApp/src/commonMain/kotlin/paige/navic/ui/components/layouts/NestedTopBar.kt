@@ -1,4 +1,4 @@
-package paige.navic.ui.components.layouts
+package com.flexify.app.ui.components.layouts
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -23,10 +23,10 @@ import androidx.lifecycle.compose.dropUnlessResumed
 import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.action_navigate_back
 import org.jetbrains.compose.resources.stringResource
-import paige.navic.LocalPlatformContext
-import paige.navic.LocalNavStack
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.ArrowBack
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.LocalNavStack
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.ArrowBack
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

@@ -1,7 +1,7 @@
-package paige.navic.data.database.mappers
+package com.flexify.app.data.database.mappers
 
-import paige.navic.data.database.entities.RadioEntity
-import paige.navic.domain.models.DomainRadio
+import com.flexify.app.data.database.entities.RadioEntity
+import com.flexify.app.domain.models.DomainRadio
 import dev.zt64.subsonic.api.model.InternetRadioStation as ApiRadio
 
 fun ApiRadio.toEntity() = RadioEntity(

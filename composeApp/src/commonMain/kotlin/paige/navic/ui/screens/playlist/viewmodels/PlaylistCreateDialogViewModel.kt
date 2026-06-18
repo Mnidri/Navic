@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.playlist.viewmodels
+package com.flexify.app.ui.screens.playlist.viewmodels
 
 import androidx.compose.foundation.text.input.TextFieldState
 import androidx.lifecycle.ViewModel
@@ -8,16 +8,16 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
-import paige.navic.data.database.dao.PlaylistDao
-import paige.navic.data.database.mappers.toDomainModel
-import paige.navic.data.database.mappers.toEntity
-import paige.navic.domain.manager.SessionManager
-import paige.navic.domain.models.DomainPlaylist
-import paige.navic.domain.models.DomainSong
-import paige.navic.ui.core.UiState
+import com.flexify.app.data.database.dao.PlaylistDao
+import com.flexify.app.data.database.mappers.toDomainModel
+import com.flexify.app.data.database.mappers.toEntity
+import com.flexify.app.domain.manager.SessionManager
+import com.flexify.app.domain.models.DomainPlaylist
+import com.flexify.app.domain.models.DomainSong
+import com.flexify.app.ui.core.UiState
 import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.notice_created_playlist
-import paige.navic.domain.manager.SnackBarManager
+import com.flexify.app.domain.manager.SnackBarManager
 
 class PlaylistCreateDialogViewModel(
 	private val songs: List<DomainSong>,

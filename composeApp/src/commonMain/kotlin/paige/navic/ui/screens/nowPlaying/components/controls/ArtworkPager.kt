@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.nowPlaying.components.controls
+package com.flexify.app.ui.screens.nowPlaying.components.controls
 
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.animateFloatAsState
@@ -23,9 +23,9 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.delay
 import org.koin.compose.koinInject
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.shared.MediaPlayerViewModel
-import paige.navic.ui.screens.nowPlaying.components.NowPlayingArtwork
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.shared.MediaPlayerViewModel
+import com.flexify.app.ui.screens.nowPlaying.components.NowPlayingArtwork
 import kotlin.time.Duration.Companion.milliseconds
 
 @Composable

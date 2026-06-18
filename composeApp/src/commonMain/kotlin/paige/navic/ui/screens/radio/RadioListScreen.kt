@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.radio
+package com.flexify.app.ui.screens.radio
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.SizeTransform
@@ -38,24 +38,24 @@ import navic.composeapp.generated.resources.title_radios
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
-import paige.navic.LocalBottomBarScrollManager
-import paige.navic.LocalPlatformContext
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.models.settings.BottomBarCollapseMode
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.Add
-import paige.navic.shared.MediaPlayerViewModel
-import paige.navic.ui.components.snackbars.ErrorSnackbar
-import paige.navic.ui.components.layouts.ArtGrid
-import paige.navic.ui.components.layouts.NestedTopBar
-import paige.navic.ui.components.layouts.PullToRefreshBox
-import paige.navic.ui.components.layouts.RootBottomBar
-import paige.navic.ui.components.layouts.RootTopBar
-import paige.navic.ui.core.UiState
-import paige.navic.ui.screens.radio.components.radioListScreenContent
-import paige.navic.ui.screens.radio.dialogs.RadioCreateDialog
-import paige.navic.ui.screens.radio.viewmodels.RadioListViewModel
-import paige.navic.util.ui.withoutTop
+import com.flexify.app.LocalBottomBarScrollManager
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.models.settings.BottomBarCollapseMode
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.Add
+import com.flexify.app.shared.MediaPlayerViewModel
+import com.flexify.app.ui.components.snackbars.ErrorSnackbar
+import com.flexify.app.ui.components.layouts.ArtGrid
+import com.flexify.app.ui.components.layouts.NestedTopBar
+import com.flexify.app.ui.components.layouts.PullToRefreshBox
+import com.flexify.app.ui.components.layouts.RootBottomBar
+import com.flexify.app.ui.components.layouts.RootTopBar
+import com.flexify.app.ui.core.UiState
+import com.flexify.app.ui.screens.radio.components.radioListScreenContent
+import com.flexify.app.ui.screens.radio.dialogs.RadioCreateDialog
+import com.flexify.app.ui.screens.radio.viewmodels.RadioListViewModel
+import com.flexify.app.util.ui.withoutTop
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
 @Composable

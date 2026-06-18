@@ -9,7 +9,7 @@ plugins {
 }
 
 extensions.configure<ApplicationExtension> {
-	namespace = "paige.navic.androidApp"
+	namespace = "com.flexify.app.androidApp"
 	compileSdk = libs.versions.android.compileSdk.get().toInt()
 
 	buildFeatures {

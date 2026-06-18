@@ -1,4 +1,4 @@
-package paige.navic.domain.repositories
+package com.flexify.app.domain.repositories
 
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
@@ -7,14 +7,14 @@ import kotlinx.coroutines.IO
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
-import paige.navic.domain.manager.SyncManager
-import paige.navic.data.database.dao.ArtistDao
-import paige.navic.data.database.entities.SyncActionType
-import paige.navic.data.database.mappers.toDomainModel
-import paige.navic.data.database.mappers.toEntity
-import paige.navic.domain.models.DomainArtist
-import paige.navic.domain.models.DomainArtistListType
-import paige.navic.ui.core.UiState
+import com.flexify.app.domain.manager.SyncManager
+import com.flexify.app.data.database.dao.ArtistDao
+import com.flexify.app.data.database.entities.SyncActionType
+import com.flexify.app.data.database.mappers.toDomainModel
+import com.flexify.app.data.database.mappers.toEntity
+import com.flexify.app.domain.models.DomainArtist
+import com.flexify.app.domain.models.DomainArtistListType
+import com.flexify.app.ui.core.UiState
 import kotlin.time.Clock
 
 class ArtistRepository(

@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.settings.dialogs
+package com.flexify.app.ui.screens.settings.dialogs
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -26,9 +26,9 @@ import navic.composeapp.generated.resources.action_ok
 import navic.composeapp.generated.resources.option_artwork_shape
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import paige.navic.LocalPlatformContext
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.models.settings.CoverArtShape
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.models.settings.CoverArtShape
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable

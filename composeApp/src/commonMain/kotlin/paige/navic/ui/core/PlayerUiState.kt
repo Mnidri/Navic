@@ -1,8 +1,8 @@
-package paige.navic.ui.core
+package com.flexify.app.ui.core
 
 import kotlinx.serialization.Serializable
-import paige.navic.domain.models.DomainSong
-import paige.navic.domain.models.DomainSongCollection
+import com.flexify.app.domain.models.DomainSong
+import com.flexify.app.domain.models.DomainSongCollection
 
 @Serializable
 data class PlayerUiState(

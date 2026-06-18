@@ -1,4 +1,4 @@
-package paige.navic.domain.models.settings
+package com.flexify.app.domain.models.settings
 
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.ui.graphics.RectangleShape

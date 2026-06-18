@@ -1,4 +1,4 @@
-package paige.navic.ui.components.common
+package com.flexify.app.ui.components.common
 
 import androidx.compose.foundation.gestures.detectDragGestures
 import androidx.compose.foundation.layout.Arrangement
@@ -27,7 +27,7 @@ import androidx.compose.ui.unit.dp
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.coroutines.launch
 import org.koin.compose.koinInject
-import paige.navic.domain.manager.PreferenceManager
+import com.flexify.app.domain.manager.PreferenceManager
 import kotlin.math.abs
 
 @Composable

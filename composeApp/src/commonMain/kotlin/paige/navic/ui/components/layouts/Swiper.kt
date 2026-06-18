@@ -1,4 +1,4 @@
-package paige.navic.ui.components.layouts
+package com.flexify.app.ui.components.layouts
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.Spring
@@ -34,10 +34,10 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.launch
 import org.koin.compose.koinInject
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.icons.Icons
-import paige.navic.icons.filled.SkipNext
-import paige.navic.icons.filled.SkipPrevious
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.filled.SkipNext
+import com.flexify.app.icons.filled.SkipPrevious
 import kotlin.math.abs
 import kotlin.math.roundToInt
 

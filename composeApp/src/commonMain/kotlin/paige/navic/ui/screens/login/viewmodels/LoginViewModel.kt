@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.login.viewmodels
+package com.flexify.app.ui.screens.login.viewmodels
 
 import androidx.compose.foundation.text.input.TextFieldState
 import androidx.compose.runtime.getValue
@@ -9,9 +9,9 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import paige.navic.domain.manager.SessionManager
-import paige.navic.domain.repositories.DbRepository
-import paige.navic.ui.core.LoginUiState
+import com.flexify.app.domain.manager.SessionManager
+import com.flexify.app.domain.repositories.DbRepository
+import com.flexify.app.ui.core.LoginUiState
 
 class LoginViewModel(
 	private val repository: DbRepository,

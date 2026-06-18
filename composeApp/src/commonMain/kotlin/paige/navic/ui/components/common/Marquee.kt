@@ -1,4 +1,4 @@
-package paige.navic.ui.components.common
+package com.flexify.app.ui.components.common
 
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.horizontalScroll
@@ -31,8 +31,8 @@ import kotlinx.collections.immutable.PersistentMap
 import kotlinx.collections.immutable.persistentMapOf
 import kotlinx.coroutines.delay
 import org.koin.compose.koinInject
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.models.settings.MarqueeSpeed
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.models.settings.MarqueeSpeed
 import kotlin.time.Duration.Companion.seconds
 
 @Composable

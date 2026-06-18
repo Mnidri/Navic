@@ -1,10 +1,10 @@
-package paige.navic.data.database.mappers
+package com.flexify.app.data.database.mappers
 
-import paige.navic.data.database.entities.SongEntity
-import paige.navic.domain.models.DomainContributor
-import paige.navic.domain.models.DomainExplicitStatus
-import paige.navic.domain.models.DomainReplayGain
-import paige.navic.domain.models.DomainSong
+import com.flexify.app.data.database.entities.SongEntity
+import com.flexify.app.domain.models.DomainContributor
+import com.flexify.app.domain.models.DomainExplicitStatus
+import com.flexify.app.domain.models.DomainReplayGain
+import com.flexify.app.domain.models.DomainSong
 import kotlin.time.Duration.Companion.seconds
 import dev.zt64.subsonic.api.model.Song as ApiSong
 

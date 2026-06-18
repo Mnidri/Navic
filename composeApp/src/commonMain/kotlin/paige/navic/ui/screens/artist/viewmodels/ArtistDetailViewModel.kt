@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.artist.viewmodels
+package com.flexify.app.ui.screens.artist.viewmodels
 
 import androidx.compose.foundation.ScrollState
 import androidx.compose.runtime.Immutable
@@ -14,26 +14,26 @@ import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
-import paige.navic.data.database.dao.AlbumDao
-import paige.navic.data.database.dao.ArtistDao
-import paige.navic.data.database.entities.DownloadStatus
-import paige.navic.data.database.mappers.toDomainModel
-import paige.navic.domain.models.DomainAlbum
-import paige.navic.domain.models.DomainArtist
-import paige.navic.domain.models.DomainSong
-import paige.navic.domain.repositories.AlbumRepository
-import paige.navic.domain.repositories.ArtistRepository
-import paige.navic.domain.repositories.DbRepository
-import paige.navic.domain.repositories.SongRepository
-import paige.navic.domain.manager.ConnectivityManager
-import paige.navic.domain.manager.DownloadManager
-import paige.navic.util.core.Logger
-import paige.navic.shared.MediaPlayerViewModel
-import paige.navic.ui.core.UiState
+import com.flexify.app.data.database.dao.AlbumDao
+import com.flexify.app.data.database.dao.ArtistDao
+import com.flexify.app.data.database.entities.DownloadStatus
+import com.flexify.app.data.database.mappers.toDomainModel
+import com.flexify.app.domain.models.DomainAlbum
+import com.flexify.app.domain.models.DomainArtist
+import com.flexify.app.domain.models.DomainSong
+import com.flexify.app.domain.repositories.AlbumRepository
+import com.flexify.app.domain.repositories.ArtistRepository
+import com.flexify.app.domain.repositories.DbRepository
+import com.flexify.app.domain.repositories.SongRepository
+import com.flexify.app.domain.manager.ConnectivityManager
+import com.flexify.app.domain.manager.DownloadManager
+import com.flexify.app.util.core.Logger
+import com.flexify.app.shared.MediaPlayerViewModel
+import com.flexify.app.ui.core.UiState
 import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.notice_download_started
 import navic.composeapp.generated.resources.notice_deleted_download
-import paige.navic.domain.manager.SnackBarManager
+import com.flexify.app.domain.manager.SnackBarManager
 
 @Immutable
 data class ArtistState(

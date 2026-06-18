@@ -1,4 +1,4 @@
-package paige.navic.ui.components.sheets
+package com.flexify.app.ui.components.sheets
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -46,12 +46,12 @@ import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
 import org.koin.core.parameter.parametersOf
-import paige.navic.LocalPlatformContext
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.util.core.Logger
-import paige.navic.util.core.PlatformContext
-import paige.navic.ui.components.common.Markdown
-import paige.navic.ui.theme.defaultFont
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.util.core.Logger
+import com.flexify.app.util.core.PlatformContext
+import com.flexify.app.ui.components.common.Markdown
+import com.flexify.app.ui.theme.defaultFont
 
 @Serializable
 data class GitHubRelease(

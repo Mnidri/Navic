@@ -1,4 +1,4 @@
-package paige.navic.domain.models.settings
+package com.flexify.app.domain.models.settings
 
 import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.theme_mode_dark

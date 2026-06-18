@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.collection.components
+package com.flexify.app.ui.screens.collection.components
 
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.runtime.collectAsState
@@ -15,15 +15,15 @@ import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.title_more_by_artist
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import paige.navic.LocalNavStack
-import paige.navic.data.database.entities.DownloadStatus
-import paige.navic.ui.navigation.Screen
-import paige.navic.domain.models.DomainAlbum
-import paige.navic.domain.manager.DownloadManager
-import paige.navic.ui.components.layouts.ArtCarousel
-import paige.navic.ui.components.layouts.ArtCarouselItem
-import paige.navic.ui.components.sheets.CollectionSheet
-import paige.navic.ui.screens.playlist.dialogs.PlaylistUpdateDialog
+import com.flexify.app.LocalNavStack
+import com.flexify.app.data.database.entities.DownloadStatus
+import com.flexify.app.ui.navigation.Screen
+import com.flexify.app.domain.models.DomainAlbum
+import com.flexify.app.domain.manager.DownloadManager
+import com.flexify.app.ui.components.layouts.ArtCarousel
+import com.flexify.app.ui.components.layouts.ArtCarouselItem
+import com.flexify.app.ui.components.sheets.CollectionSheet
+import com.flexify.app.ui.screens.playlist.dialogs.PlaylistUpdateDialog
 
 fun LazyListScope.collectionDetailScreenMoreByArtistRow(
 	artistName: String,

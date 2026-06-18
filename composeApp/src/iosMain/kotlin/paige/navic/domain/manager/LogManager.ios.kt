@@ -1,6 +1,6 @@
-package paige.navic.domain.manager
+package com.flexify.app.domain.manager
 
-import paige.navic.domain.parser.LogLine
+import com.flexify.app.domain.parser.LogLine
 
 actual class LogManager {
 	actual val logs: List<LogLine>

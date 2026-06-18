@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.playlist.components
+package com.flexify.app.ui.screens.playlist.components
 
 import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.Icon
@@ -10,12 +10,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import kotlinx.collections.immutable.toImmutableList
 import org.jetbrains.compose.resources.stringResource
-import paige.navic.LocalPlatformContext
-import paige.navic.domain.models.DomainPlaylistListType
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.Sort
-import paige.navic.ui.components.layouts.TopBarButton
-import paige.navic.ui.components.sheets.SortSheet
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.domain.models.DomainPlaylistListType
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.Sort
+import com.flexify.app.ui.components.layouts.TopBarButton
+import com.flexify.app.ui.components.sheets.SortSheet
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable

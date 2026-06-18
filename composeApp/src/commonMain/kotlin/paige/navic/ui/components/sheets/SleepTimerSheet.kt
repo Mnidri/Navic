@@ -1,4 +1,4 @@
-package paige.navic.ui.components.sheets
+package com.flexify.app.ui.components.sheets
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -25,9 +25,9 @@ import navic.composeapp.generated.resources.action_disable_sleep_timer
 import navic.composeapp.generated.resources.action_sleep_timer
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import paige.navic.LocalPlatformContext
-import paige.navic.domain.manager.SleepTimerManager
-import paige.navic.util.core.label
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.domain.manager.SleepTimerManager
+import com.flexify.app.util.core.label
 import kotlin.time.Duration.Companion.hours
 import kotlin.time.Duration.Companion.minutes
 

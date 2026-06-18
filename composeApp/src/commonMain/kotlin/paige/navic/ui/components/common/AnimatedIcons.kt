@@ -1,8 +1,8 @@
-package paige.navic.ui.components.common
+package com.flexify.app.ui.components.common
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.painter.Painter
-import paige.navic.ui.navigation.Screen
+import com.flexify.app.ui.navigation.Screen
 
 @Composable
 expect fun animatedTabIconPainter(destination: Screen): Painter?

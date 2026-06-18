@@ -1,4 +1,4 @@
-package paige.navic.domain.models.lyrics
+package com.flexify.app.domain.models.lyrics
 
 import kotlinx.serialization.Serializable
 

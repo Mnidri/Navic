@@ -1,4 +1,4 @@
-package paige.navic.domain.models.settings
+package com.flexify.app.domain.models.settings
 
 import androidx.compose.runtime.Composable
 import navic.composeapp.generated.resources.Res
@@ -7,8 +7,8 @@ import navic.composeapp.generated.resources.option_quality_lossless
 import navic.composeapp.generated.resources.option_quality_low
 import navic.composeapp.generated.resources.option_quality_medium
 import org.jetbrains.compose.resources.StringResource
-import paige.navic.LocalPlatformContext
-import paige.navic.util.core.PlatformType
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.util.core.PlatformType
 
 enum class StreamingQuality(
 	val displayName: StringResource,

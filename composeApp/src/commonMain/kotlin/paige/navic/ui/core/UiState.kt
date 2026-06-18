@@ -1,4 +1,4 @@
-package paige.navic.ui.core
+package com.flexify.app.ui.core
 
 sealed class UiState<out T> {
 	abstract val data: T?

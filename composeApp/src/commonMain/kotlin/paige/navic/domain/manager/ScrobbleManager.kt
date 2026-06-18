@@ -1,4 +1,4 @@
-package paige.navic.domain.manager
+package com.flexify.app.domain.manager
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -7,7 +7,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
-import paige.navic.data.database.entities.SyncActionType
+import com.flexify.app.data.database.entities.SyncActionType
 import kotlin.time.Clock
 import kotlin.time.Duration.Companion.seconds
 

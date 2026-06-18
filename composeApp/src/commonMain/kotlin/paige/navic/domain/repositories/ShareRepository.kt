@@ -1,7 +1,7 @@
-package paige.navic.domain.repositories
+package com.flexify.app.domain.repositories
 
-import paige.navic.data.database.mappers.toDomainModel
-import paige.navic.domain.manager.SessionManager
+import com.flexify.app.data.database.mappers.toDomainModel
+import com.flexify.app.domain.manager.SessionManager
 
 class ShareRepository(
 	private val sessionManager: SessionManager

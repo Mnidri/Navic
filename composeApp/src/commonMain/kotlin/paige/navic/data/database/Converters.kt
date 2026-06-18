@@ -1,11 +1,11 @@
-package paige.navic.data.database
+package com.flexify.app.data.database
 
 import androidx.room3.TypeConverter
-import paige.navic.domain.models.DomainContributor
-import paige.navic.domain.models.DomainExplicitStatus
-import paige.navic.domain.models.DomainReplayGain
-import paige.navic.domain.models.lyrics.LyricsProvider
-import paige.navic.util.core.Logger
+import com.flexify.app.domain.models.DomainContributor
+import com.flexify.app.domain.models.DomainExplicitStatus
+import com.flexify.app.domain.models.DomainReplayGain
+import com.flexify.app.domain.models.lyrics.LyricsProvider
+import com.flexify.app.util.core.Logger
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.Instant

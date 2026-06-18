@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.share
+package com.flexify.app.ui.screens.share
 
 import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.background
@@ -29,22 +29,22 @@ import navic.composeapp.generated.resources.title_shares
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
-import paige.navic.LocalBottomBarScrollManager
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.models.settings.BottomBarVisibilityMode
-import paige.navic.icons.Icons
-import paige.navic.icons.filled.ShareOff
-import paige.navic.ui.components.common.ContentUnavailable
-import paige.navic.ui.components.dialogs.DeletionDialog
-import paige.navic.ui.components.dialogs.DeletionEndpoint
-import paige.navic.ui.components.layouts.NestedTopBar
-import paige.navic.ui.components.layouts.PullToRefreshBox
-import paige.navic.ui.components.layouts.RootBottomBar
-import paige.navic.ui.components.layouts.artGridError
-import paige.navic.ui.core.UiState
-import paige.navic.ui.screens.share.components.ShareListScreenItem
-import paige.navic.ui.screens.share.viewmodels.ShareListViewModel
-import paige.navic.util.ui.withoutTop
+import com.flexify.app.LocalBottomBarScrollManager
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.models.settings.BottomBarVisibilityMode
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.filled.ShareOff
+import com.flexify.app.ui.components.common.ContentUnavailable
+import com.flexify.app.ui.components.dialogs.DeletionDialog
+import com.flexify.app.ui.components.dialogs.DeletionEndpoint
+import com.flexify.app.ui.components.layouts.NestedTopBar
+import com.flexify.app.ui.components.layouts.PullToRefreshBox
+import com.flexify.app.ui.components.layouts.RootBottomBar
+import com.flexify.app.ui.components.layouts.artGridError
+import com.flexify.app.ui.core.UiState
+import com.flexify.app.ui.screens.share.components.ShareListScreenItem
+import com.flexify.app.ui.screens.share.viewmodels.ShareListViewModel
+import com.flexify.app.util.ui.withoutTop
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
 @Composable

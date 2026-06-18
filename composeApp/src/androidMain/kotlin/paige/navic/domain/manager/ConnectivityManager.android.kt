@@ -1,4 +1,4 @@
-package paige.navic.domain.manager
+package com.flexify.app.domain.manager
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -18,7 +18,7 @@ import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.mapLatest
 import kotlinx.coroutines.flow.stateIn
-import paige.navic.domain.models.settings.OfflineMode
+import com.flexify.app.domain.models.settings.OfflineMode
 import android.net.ConnectivityManager as AndroidConnectivityManager
 
 private data class NetworkStatus(

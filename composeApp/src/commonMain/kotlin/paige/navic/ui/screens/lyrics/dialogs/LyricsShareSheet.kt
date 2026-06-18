@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.lyrics.dialogs
+package com.flexify.app.ui.screens.lyrics.dialogs
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -71,24 +71,24 @@ import navic.composeapp.generated.resources.action_share_lyrics
 import navic.composeapp.generated.resources.app_name
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import paige.navic.LocalPlatformContext
-import paige.navic.LocalSnackbarState
-import paige.navic.domain.manager.SessionManager
-import paige.navic.domain.models.DomainSong
-import paige.navic.icons.Icons
-import paige.navic.icons.brand.Navic
-import paige.navic.icons.outlined.Check
-import paige.navic.icons.outlined.Picker
-import paige.navic.icons.outlined.Share
-import paige.navic.domain.manager.ShareManager
-import paige.navic.ui.components.common.Dropdown
-import paige.navic.ui.components.common.FormRow
-import paige.navic.ui.theme.blue
-import paige.navic.ui.theme.pink
-import paige.navic.ui.theme.positive
-import paige.navic.ui.theme.purple
-import paige.navic.ui.theme.red
-import paige.navic.ui.theme.warning
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.LocalSnackbarState
+import com.flexify.app.domain.manager.SessionManager
+import com.flexify.app.domain.models.DomainSong
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.brand.Navic
+import com.flexify.app.icons.outlined.Check
+import com.flexify.app.icons.outlined.Picker
+import com.flexify.app.icons.outlined.Share
+import com.flexify.app.domain.manager.ShareManager
+import com.flexify.app.ui.components.common.Dropdown
+import com.flexify.app.ui.components.common.FormRow
+import com.flexify.app.ui.theme.blue
+import com.flexify.app.ui.theme.pink
+import com.flexify.app.ui.theme.positive
+import com.flexify.app.ui.theme.purple
+import com.flexify.app.ui.theme.red
+import com.flexify.app.ui.theme.warning
 import coil3.compose.LocalPlatformContext as LocalCoilPlatformContext
 
 @OptIn(ExperimentalMaterial3Api::class)

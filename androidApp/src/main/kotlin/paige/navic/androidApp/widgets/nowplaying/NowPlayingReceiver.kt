@@ -1,4 +1,4 @@
-package paige.navic.androidApp.widgets.nowplaying
+package com.flexify.app.androidApp.widgets.nowplaying
 
 import android.content.Context
 import android.content.Intent

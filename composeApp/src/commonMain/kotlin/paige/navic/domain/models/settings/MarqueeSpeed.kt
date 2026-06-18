@@ -1,4 +1,4 @@
-package paige.navic.domain.models.settings
+package com.flexify.app.domain.models.settings
 
 enum class MarqueeSpeed(val value: Int) {
 	Disabled(0),

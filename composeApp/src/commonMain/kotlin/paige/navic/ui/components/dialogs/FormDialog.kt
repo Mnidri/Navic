@@ -1,4 +1,4 @@
-package paige.navic.ui.components.dialogs
+package com.flexify.app.ui.components.dialogs
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -27,8 +27,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import paige.navic.ui.components.common.Form
-import paige.navic.ui.theme.defaultFont
+import com.flexify.app.ui.components.common.Form
+import com.flexify.app.ui.theme.defaultFont
 
 @Composable
 fun FormDialog(

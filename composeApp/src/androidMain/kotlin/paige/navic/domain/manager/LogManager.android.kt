@@ -1,4 +1,4 @@
-package paige.navic.domain.manager
+package com.flexify.app.domain.manager
 
 import androidx.compose.runtime.mutableStateListOf
 import kotlinx.coroutines.CoroutineScope
@@ -7,8 +7,8 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
-import paige.navic.domain.parser.LogLine
-import paige.navic.domain.parser.LogLineParser
+import com.flexify.app.domain.parser.LogLine
+import com.flexify.app.domain.parser.LogLineParser
 import java.io.InputStreamReader
 
 private const val LOG_SIZE = 500

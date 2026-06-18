@@ -1,4 +1,4 @@
-package paige.navic.ui.components.common
+package com.flexify.app.ui.components.common
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

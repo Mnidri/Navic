@@ -1,9 +1,9 @@
-package paige.navic.data.database.relations
+package com.flexify.app.data.database.relations
 
 import androidx.room3.Embedded
 import androidx.room3.Relation
-import paige.navic.data.database.entities.AlbumEntity
-import paige.navic.data.database.entities.GenreEntity
+import com.flexify.app.data.database.entities.AlbumEntity
+import com.flexify.app.data.database.entities.GenreEntity
 
 data class GenreWithAlbums(
 	@Embedded val genre: GenreEntity,

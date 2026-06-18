@@ -1,29 +1,29 @@
-package paige.navic.data.database
+package com.flexify.app.data.database
 
 import androidx.room3.ConstructedBy
 import androidx.room3.Database
 import androidx.room3.RoomDatabase
 import androidx.room3.RoomDatabaseConstructor
 import androidx.room3.TypeConverters
-import paige.navic.data.database.dao.AlbumDao
-import paige.navic.data.database.dao.ArtistDao
-import paige.navic.data.database.dao.DownloadDao
-import paige.navic.data.database.dao.GenreDao
-import paige.navic.data.database.dao.LyricDao
-import paige.navic.data.database.dao.PlaylistDao
-import paige.navic.data.database.dao.RadioDao
-import paige.navic.data.database.dao.SongDao
-import paige.navic.data.database.dao.SyncActionDao
-import paige.navic.data.database.entities.AlbumEntity
-import paige.navic.data.database.entities.ArtistEntity
-import paige.navic.data.database.entities.DownloadEntity
-import paige.navic.data.database.entities.GenreEntity
-import paige.navic.data.database.entities.LyricEntity
-import paige.navic.data.database.entities.PlaylistEntity
-import paige.navic.data.database.entities.PlaylistSongCrossRef
-import paige.navic.data.database.entities.RadioEntity
-import paige.navic.data.database.entities.SongEntity
-import paige.navic.data.database.entities.SyncActionEntity
+import com.flexify.app.data.database.dao.AlbumDao
+import com.flexify.app.data.database.dao.ArtistDao
+import com.flexify.app.data.database.dao.DownloadDao
+import com.flexify.app.data.database.dao.GenreDao
+import com.flexify.app.data.database.dao.LyricDao
+import com.flexify.app.data.database.dao.PlaylistDao
+import com.flexify.app.data.database.dao.RadioDao
+import com.flexify.app.data.database.dao.SongDao
+import com.flexify.app.data.database.dao.SyncActionDao
+import com.flexify.app.data.database.entities.AlbumEntity
+import com.flexify.app.data.database.entities.ArtistEntity
+import com.flexify.app.data.database.entities.DownloadEntity
+import com.flexify.app.data.database.entities.GenreEntity
+import com.flexify.app.data.database.entities.LyricEntity
+import com.flexify.app.data.database.entities.PlaylistEntity
+import com.flexify.app.data.database.entities.PlaylistSongCrossRef
+import com.flexify.app.data.database.entities.RadioEntity
+import com.flexify.app.data.database.entities.SongEntity
+import com.flexify.app.data.database.entities.SyncActionEntity
 
 @Database(
 	version = 15,

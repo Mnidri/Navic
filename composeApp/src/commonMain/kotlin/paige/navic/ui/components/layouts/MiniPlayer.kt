@@ -1,4 +1,4 @@
-package paige.navic.ui.components.layouts
+package com.flexify.app.ui.components.layouts
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.animateDpAsState
@@ -59,25 +59,25 @@ import navic.composeapp.generated.resources.info_not_playing
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
-import paige.navic.LocalNavStack
-import paige.navic.LocalPlatformContext
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.manager.SessionManager
-import paige.navic.domain.models.settings.MiniPlayerProgressStyle
-import paige.navic.domain.models.settings.MiniPlayerStyle
-import paige.navic.domain.models.settings.NavbarConfig
-import paige.navic.icons.Icons
-import paige.navic.icons.filled.Note
-import paige.navic.icons.filled.Pause
-import paige.navic.icons.filled.Play
-import paige.navic.icons.filled.SkipNext
-import paige.navic.icons.outlined.Radio
-import paige.navic.shared.MediaPlayerViewModel
-import paige.navic.ui.components.common.MarqueeText
-import paige.navic.ui.components.common.playPauseIconPainter
-import paige.navic.ui.core.UiState
-import paige.navic.ui.navigation.Screen
-import paige.navic.ui.screens.settings.viewmodels.NavtabsViewModel
+import com.flexify.app.LocalNavStack
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.manager.SessionManager
+import com.flexify.app.domain.models.settings.MiniPlayerProgressStyle
+import com.flexify.app.domain.models.settings.MiniPlayerStyle
+import com.flexify.app.domain.models.settings.NavbarConfig
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.filled.Note
+import com.flexify.app.icons.filled.Pause
+import com.flexify.app.icons.filled.Play
+import com.flexify.app.icons.filled.SkipNext
+import com.flexify.app.icons.outlined.Radio
+import com.flexify.app.shared.MediaPlayerViewModel
+import com.flexify.app.ui.components.common.MarqueeText
+import com.flexify.app.ui.components.common.playPauseIconPainter
+import com.flexify.app.ui.core.UiState
+import com.flexify.app.ui.navigation.Screen
+import com.flexify.app.ui.screens.settings.viewmodels.NavtabsViewModel
 import coil3.compose.LocalPlatformContext as LocalCoilPlatformContext
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class, ExperimentalMaterial3Api::class)

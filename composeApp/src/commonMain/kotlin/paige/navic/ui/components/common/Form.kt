@@ -1,4 +1,4 @@
-package paige.navic.ui.components.common
+package com.flexify.app.ui.components.common
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -14,8 +14,8 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.kyant.capsule.ContinuousRoundedRectangle
 import org.koin.compose.koinInject
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.models.settings.Theme
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.models.settings.Theme
 
 @Composable
 fun Form(

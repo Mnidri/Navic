@@ -1,4 +1,4 @@
-package paige.navic.ui.navigation
+package com.flexify.app.ui.navigation
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.WindowInsets
@@ -33,11 +33,11 @@ import io.ktor.client.HttpClient
 import io.ktor.client.plugins.HttpTimeout
 import io.ktor.http.Url
 import org.koin.compose.koinInject
-import paige.navic.domain.manager.SessionManager
-import paige.navic.shared.MediaPlayerViewModel
-import paige.navic.ui.components.sheets.ModalBottomSheet
-import paige.navic.ui.navigation.NowPlayingSceneStrategy.Companion.bottomSheet
-import paige.navic.ui.theme.NavicTheme
+import com.flexify.app.domain.manager.SessionManager
+import com.flexify.app.shared.MediaPlayerViewModel
+import com.flexify.app.ui.components.sheets.ModalBottomSheet
+import com.flexify.app.ui.navigation.NowPlayingSceneStrategy.Companion.bottomSheet
+import com.flexify.app.ui.theme.NavicTheme
 
 /** An [OverlayScene] that renders an [entry] within a [ModalBottomSheet]. */
 @OptIn(ExperimentalMaterial3Api::class)

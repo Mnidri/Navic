@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.nowPlaying.components.rows
+package com.flexify.app.ui.screens.nowPlaying.components.rows
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.core.Animatable
@@ -35,19 +35,19 @@ import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.unit.dp
 import org.koin.compose.koinInject
-import paige.navic.LocalPlatformContext
-import paige.navic.icons.Icons
-import paige.navic.icons.filled.Pause
-import paige.navic.icons.filled.Play
-import paige.navic.icons.filled.RepeatOn
-import paige.navic.icons.filled.RepeatOneOn
-import paige.navic.icons.filled.ShuffleOn
-import paige.navic.icons.filled.SkipNext
-import paige.navic.icons.filled.SkipPrevious
-import paige.navic.icons.outlined.Repeat
-import paige.navic.icons.outlined.Shuffle
-import paige.navic.shared.MediaPlayerViewModel
-import paige.navic.ui.components.common.playPauseIconPainter
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.filled.Pause
+import com.flexify.app.icons.filled.Play
+import com.flexify.app.icons.filled.RepeatOn
+import com.flexify.app.icons.filled.RepeatOneOn
+import com.flexify.app.icons.filled.ShuffleOn
+import com.flexify.app.icons.filled.SkipNext
+import com.flexify.app.icons.filled.SkipPrevious
+import com.flexify.app.icons.outlined.Repeat
+import com.flexify.app.icons.outlined.Shuffle
+import com.flexify.app.shared.MediaPlayerViewModel
+import com.flexify.app.ui.components.common.playPauseIconPainter
 
 @Composable
 fun NowPlayingButtonsRow() {

@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.playlist.components
+package com.flexify.app.ui.screens.playlist.components
 
 import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyGridScope
@@ -7,12 +7,12 @@ import androidx.compose.ui.Modifier
 import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.info_no_playlists_short
 import org.jetbrains.compose.resources.stringResource
-import paige.navic.domain.models.DomainPlaylist
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.PlaylistRemove
-import paige.navic.ui.components.common.ContentUnavailable
-import paige.navic.ui.components.layouts.artGridPlaceholder
-import paige.navic.ui.core.UiState
+import com.flexify.app.domain.models.DomainPlaylist
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.PlaylistRemove
+import com.flexify.app.ui.components.common.ContentUnavailable
+import com.flexify.app.ui.components.layouts.artGridPlaceholder
+import com.flexify.app.ui.core.UiState
 
 fun LazyGridScope.playlistListScreenContent(
 	state: UiState<List<DomainPlaylist>>,

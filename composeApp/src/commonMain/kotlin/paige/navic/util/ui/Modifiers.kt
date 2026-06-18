@@ -1,4 +1,4 @@
-package paige.navic.util.ui
+package com.flexify.app.util.ui
 
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.RepeatMode

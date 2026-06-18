@@ -1,18 +1,18 @@
-package paige.navic.di
+package com.flexify.app.di
 
 import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.module
-import paige.navic.domain.repositories.AlbumRepository
-import paige.navic.domain.repositories.ArtistRepository
-import paige.navic.domain.repositories.CollectionRepository
-import paige.navic.domain.repositories.DbRepository
-import paige.navic.domain.repositories.GenreRepository
-import paige.navic.domain.repositories.LyricsRepository
-import paige.navic.domain.repositories.PlaylistRepository
-import paige.navic.domain.repositories.RadioRepository
-import paige.navic.domain.repositories.SearchRepository
-import paige.navic.domain.repositories.ShareRepository
-import paige.navic.domain.repositories.SongRepository
+import com.flexify.app.domain.repositories.AlbumRepository
+import com.flexify.app.domain.repositories.ArtistRepository
+import com.flexify.app.domain.repositories.CollectionRepository
+import com.flexify.app.domain.repositories.DbRepository
+import com.flexify.app.domain.repositories.GenreRepository
+import com.flexify.app.domain.repositories.LyricsRepository
+import com.flexify.app.domain.repositories.PlaylistRepository
+import com.flexify.app.domain.repositories.RadioRepository
+import com.flexify.app.domain.repositories.SearchRepository
+import com.flexify.app.domain.repositories.ShareRepository
+import com.flexify.app.domain.repositories.SongRepository
 
 val repositoryModule = module {
 	singleOf(::AlbumRepository)

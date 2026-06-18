@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.playlist.viewmodels
+package com.flexify.app.ui.screens.playlist.viewmodels
 
 import androidx.compose.foundation.lazy.grid.LazyGridState
 import androidx.lifecycle.ViewModel
@@ -8,11 +8,11 @@ import kotlinx.collections.immutable.persistentListOf
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import paige.navic.domain.manager.SessionManager
-import paige.navic.domain.models.DomainPlaylist
-import paige.navic.domain.models.DomainPlaylistListType
-import paige.navic.domain.repositories.PlaylistRepository
-import paige.navic.ui.core.UiState
+import com.flexify.app.domain.manager.SessionManager
+import com.flexify.app.domain.models.DomainPlaylist
+import com.flexify.app.domain.models.DomainPlaylistListType
+import com.flexify.app.domain.repositories.PlaylistRepository
+import com.flexify.app.ui.core.UiState
 
 class PlaylistListViewModel(
 	private val repository: PlaylistRepository,

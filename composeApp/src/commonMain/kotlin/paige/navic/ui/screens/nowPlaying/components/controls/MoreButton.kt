@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.nowPlaying.components.controls
+package com.flexify.app.ui.screens.nowPlaying.components.controls
 
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
@@ -19,16 +19,16 @@ import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.action_more
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import paige.navic.LocalPlatformContext
-import paige.navic.LocalNavStack
-import paige.navic.ui.navigation.Screen
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.MoreHoriz
-import paige.navic.shared.MediaPlayerViewModel
-import paige.navic.ui.components.sheets.SongSheet
-import paige.navic.ui.screens.playlist.dialogs.PlaylistUpdateDialog
-import paige.navic.ui.screens.share.dialogs.ShareDialog
-import paige.navic.ui.theme.NavicTheme
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.LocalNavStack
+import com.flexify.app.ui.navigation.Screen
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.MoreHoriz
+import com.flexify.app.shared.MediaPlayerViewModel
+import com.flexify.app.ui.components.sheets.SongSheet
+import com.flexify.app.ui.screens.playlist.dialogs.PlaylistUpdateDialog
+import com.flexify.app.ui.screens.share.dialogs.ShareDialog
+import com.flexify.app.ui.theme.NavicTheme
 import kotlin.time.Duration
 
 @Composable

@@ -1,4 +1,4 @@
-package paige.navic.ui.core
+package com.flexify.app.ui.core
 
 import org.jetbrains.compose.resources.StringResource
 

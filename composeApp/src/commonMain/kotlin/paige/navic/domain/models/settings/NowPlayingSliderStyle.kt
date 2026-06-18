@@ -1,4 +1,4 @@
-package paige.navic.domain.models.settings
+package com.flexify.app.domain.models.settings
 
 import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.option_now_playing_slider_style_flat

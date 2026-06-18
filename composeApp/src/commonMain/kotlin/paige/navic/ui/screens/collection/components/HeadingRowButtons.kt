@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.collection.components
+package com.flexify.app.ui.screens.collection.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -34,20 +34,20 @@ import navic.composeapp.generated.resources.notice_deleted_download
 import navic.composeapp.generated.resources.notice_download_started
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import paige.navic.LocalPlatformContext
-import paige.navic.data.database.entities.DownloadStatus
-import paige.navic.domain.models.DomainSongCollection
-import paige.navic.icons.Icons
-import paige.navic.icons.filled.Play
-import paige.navic.icons.outlined.Close
-import paige.navic.icons.outlined.Delete
-import paige.navic.icons.outlined.Download
-import paige.navic.icons.outlined.DownloadOff
-import paige.navic.icons.outlined.Shuffle
-import paige.navic.domain.manager.DownloadManager
-import paige.navic.shared.MediaPlayerViewModel
-import paige.navic.domain.manager.SnackBarManager
-import paige.navic.ui.theme.defaultFont
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.data.database.entities.DownloadStatus
+import com.flexify.app.domain.models.DomainSongCollection
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.filled.Play
+import com.flexify.app.icons.outlined.Close
+import com.flexify.app.icons.outlined.Delete
+import com.flexify.app.icons.outlined.Download
+import com.flexify.app.icons.outlined.DownloadOff
+import com.flexify.app.icons.outlined.Shuffle
+import com.flexify.app.domain.manager.DownloadManager
+import com.flexify.app.shared.MediaPlayerViewModel
+import com.flexify.app.domain.manager.SnackBarManager
+import com.flexify.app.ui.theme.defaultFont
 
 @Composable
 fun CollectionDetailScreenHeadingRowButtons(

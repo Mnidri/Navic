@@ -1,4 +1,4 @@
-package paige.navic.util.core
+package com.flexify.app.util.core
 
 import kotlin.math.log10
 import kotlin.math.pow

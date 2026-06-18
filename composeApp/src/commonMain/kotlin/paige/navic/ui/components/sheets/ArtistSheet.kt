@@ -1,4 +1,4 @@
-package paige.navic.ui.components.sheets
+package com.flexify.app.ui.components.sheets
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -40,24 +40,24 @@ import navic.composeapp.generated.resources.info_download_failed
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import paige.navic.LocalPlatformContext
-import paige.navic.data.database.entities.DownloadStatus
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.models.DomainArtist
-import paige.navic.icons.Icons
-import paige.navic.icons.brand.Lastfm
-import paige.navic.icons.brand.Musicbrainz
-import paige.navic.icons.filled.Star
-import paige.navic.icons.outlined.Close
-import paige.navic.icons.outlined.Delete
-import paige.navic.icons.outlined.Download
-import paige.navic.icons.outlined.DownloadOff
-import paige.navic.icons.outlined.PlaylistAdd
-import paige.navic.icons.outlined.Queue
-import paige.navic.icons.outlined.QueuePlayNext
-import paige.navic.icons.outlined.Star
-import paige.navic.ui.components.common.CoverArt
-import paige.navic.ui.components.common.MarqueeText
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.data.database.entities.DownloadStatus
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.models.DomainArtist
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.brand.Lastfm
+import com.flexify.app.icons.brand.Musicbrainz
+import com.flexify.app.icons.filled.Star
+import com.flexify.app.icons.outlined.Close
+import com.flexify.app.icons.outlined.Delete
+import com.flexify.app.icons.outlined.Download
+import com.flexify.app.icons.outlined.DownloadOff
+import com.flexify.app.icons.outlined.PlaylistAdd
+import com.flexify.app.icons.outlined.Queue
+import com.flexify.app.icons.outlined.QueuePlayNext
+import com.flexify.app.icons.outlined.Star
+import com.flexify.app.ui.components.common.CoverArt
+import com.flexify.app.ui.components.common.MarqueeText
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
 @Composable

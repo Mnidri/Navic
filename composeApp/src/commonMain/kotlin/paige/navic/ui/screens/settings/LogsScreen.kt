@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.settings
+package com.flexify.app.ui.screens.settings
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.horizontalScroll
@@ -33,12 +33,12 @@ import navic.composeapp.generated.resources.action_delete
 import navic.composeapp.generated.resources.title_logs
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import paige.navic.domain.manager.LogManager
-import paige.navic.domain.parser.LogLine
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.Delete
-import paige.navic.ui.components.layouts.NestedTopBar
-import paige.navic.ui.components.layouts.TopBarButton
+import com.flexify.app.domain.manager.LogManager
+import com.flexify.app.domain.parser.LogLine
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.Delete
+import com.flexify.app.ui.components.layouts.NestedTopBar
+import com.flexify.app.ui.components.layouts.TopBarButton
 
 @Composable
 fun SettingsLogsScreen() {

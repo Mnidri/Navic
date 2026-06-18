@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.collection.viewmodels
+package com.flexify.app.ui.screens.collection.viewmodels
 
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.lifecycle.ViewModel
@@ -11,25 +11,25 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import paige.navic.data.database.entities.DownloadStatus
-import paige.navic.data.database.mappers.toDomainModel
-import paige.navic.domain.manager.SessionManager
-import paige.navic.domain.models.DomainAlbum
-import paige.navic.domain.models.DomainAlbumInfo
-import paige.navic.domain.models.DomainSong
-import paige.navic.domain.models.DomainSongCollection
-import paige.navic.domain.repositories.AlbumRepository
-import paige.navic.domain.repositories.CollectionRepository
-import paige.navic.domain.repositories.SongRepository
-import paige.navic.domain.manager.ConnectivityManager
-import paige.navic.domain.manager.DownloadManager
-import paige.navic.util.core.Logger
-import paige.navic.ui.core.UiState
+import com.flexify.app.data.database.entities.DownloadStatus
+import com.flexify.app.data.database.mappers.toDomainModel
+import com.flexify.app.domain.manager.SessionManager
+import com.flexify.app.domain.models.DomainAlbum
+import com.flexify.app.domain.models.DomainAlbumInfo
+import com.flexify.app.domain.models.DomainSong
+import com.flexify.app.domain.models.DomainSongCollection
+import com.flexify.app.domain.repositories.AlbumRepository
+import com.flexify.app.domain.repositories.CollectionRepository
+import com.flexify.app.domain.repositories.SongRepository
+import com.flexify.app.domain.manager.ConnectivityManager
+import com.flexify.app.domain.manager.DownloadManager
+import com.flexify.app.util.core.Logger
+import com.flexify.app.ui.core.UiState
 import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.notice_download_started
 import navic.composeapp.generated.resources.notice_deleted_download
 import navic.composeapp.generated.resources.notice_removed_from_playlist
-import paige.navic.domain.manager.SnackBarManager
+import com.flexify.app.domain.manager.SnackBarManager
 
 class CollectionDetailViewModel(
 	private val collectionId: String,

@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.queue
+package com.flexify.app.ui.screens.queue
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -33,17 +33,17 @@ import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
-import paige.navic.LocalNavStack
-import paige.navic.LocalPlatformContext
-import paige.navic.ui.navigation.Screen
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.PlaylistRemove
-import paige.navic.shared.MediaPlayerViewModel
-import paige.navic.ui.components.common.ContentUnavailable
-import paige.navic.ui.screens.queue.components.QueueScreenItem
-import paige.navic.ui.screens.queue.viewmodels.QueueViewModel
-import paige.navic.util.ui.draggableItemsIndexed
-import paige.navic.util.ui.rememberDraggableListState
+import com.flexify.app.LocalNavStack
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.ui.navigation.Screen
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.PlaylistRemove
+import com.flexify.app.shared.MediaPlayerViewModel
+import com.flexify.app.ui.components.common.ContentUnavailable
+import com.flexify.app.ui.screens.queue.components.QueueScreenItem
+import com.flexify.app.ui.screens.queue.viewmodels.QueueViewModel
+import com.flexify.app.util.ui.draggableItemsIndexed
+import com.flexify.app.util.ui.rememberDraggableListState
 import kotlin.time.DurationUnit
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)

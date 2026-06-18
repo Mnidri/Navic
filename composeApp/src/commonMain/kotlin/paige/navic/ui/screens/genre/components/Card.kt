@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.genre.components
+package com.flexify.app.ui.screens.genre.components
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
@@ -25,15 +25,15 @@ import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.count_albums
 import org.jetbrains.compose.resources.pluralStringResource
 import org.koin.compose.koinInject
-import paige.navic.LocalNavStack
-import paige.navic.LocalPlatformContext
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.models.DomainAlbumListType
-import paige.navic.domain.models.DomainGenre
-import paige.navic.domain.models.settings.ThemeMode
-import paige.navic.ui.components.common.CoverArt
-import paige.navic.ui.navigation.Screen
-import paige.navic.ui.theme.defaultFont
+import com.flexify.app.LocalNavStack
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.models.DomainAlbumListType
+import com.flexify.app.domain.models.DomainGenre
+import com.flexify.app.domain.models.settings.ThemeMode
+import com.flexify.app.ui.components.common.CoverArt
+import com.flexify.app.ui.navigation.Screen
+import com.flexify.app.ui.theme.defaultFont
 import kotlin.math.abs
 
 @Composable

@@ -1,4 +1,4 @@
-package paige.navic.ui.components.common
+package com.flexify.app.ui.components.common
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.combinedClickable
@@ -24,8 +24,8 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.dropUnlessResumed
 import com.kyant.capsule.ContinuousRoundedRectangle
 import org.koin.compose.koinInject
-import paige.navic.LocalPlatformContext
-import paige.navic.domain.manager.PreferenceManager
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.domain.manager.PreferenceManager
 
 @Composable
 fun FormRow(

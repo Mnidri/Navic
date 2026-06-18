@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.artist.components
+package com.flexify.app.ui.screens.artist.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -27,16 +27,16 @@ import navic.composeapp.generated.resources.count_artists
 import navic.composeapp.generated.resources.info_no_artists
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
-import paige.navic.domain.models.DomainAlbum
-import paige.navic.domain.models.DomainArtist
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.Artist
-import paige.navic.ui.components.common.AlphabeticalScroller
-import paige.navic.ui.components.common.ContentUnavailable
-import paige.navic.ui.components.layouts.ArtGrid
-import paige.navic.ui.screens.artist.ArtistsScreenItem
-import paige.navic.ui.core.UiState
-import paige.navic.util.ui.withoutTop
+import com.flexify.app.domain.models.DomainAlbum
+import com.flexify.app.domain.models.DomainArtist
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.Artist
+import com.flexify.app.ui.components.common.AlphabeticalScroller
+import com.flexify.app.ui.components.common.ContentUnavailable
+import com.flexify.app.ui.components.layouts.ArtGrid
+import com.flexify.app.ui.screens.artist.ArtistsScreenItem
+import com.flexify.app.ui.core.UiState
+import com.flexify.app.util.ui.withoutTop
 
 @Composable
 @OptIn(ExperimentalMaterial3Api::class)

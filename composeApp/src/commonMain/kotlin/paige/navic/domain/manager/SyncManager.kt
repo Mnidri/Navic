@@ -1,4 +1,4 @@
-package paige.navic.domain.manager
+package com.flexify.app.domain.manager
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -16,12 +16,12 @@ import kotlinx.coroutines.sync.withLock
 import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.info_status_idle
 import org.jetbrains.compose.resources.StringResource
-import paige.navic.data.database.dao.AlbumDao
-import paige.navic.data.database.dao.SyncActionDao
-import paige.navic.data.database.entities.SyncActionEntity
-import paige.navic.data.database.entities.SyncActionType
-import paige.navic.domain.repositories.DbRepository
-import paige.navic.util.core.Logger
+import com.flexify.app.data.database.dao.AlbumDao
+import com.flexify.app.data.database.dao.SyncActionDao
+import com.flexify.app.data.database.entities.SyncActionEntity
+import com.flexify.app.data.database.entities.SyncActionType
+import com.flexify.app.domain.repositories.DbRepository
+import com.flexify.app.util.core.Logger
 import kotlin.time.Clock
 import kotlin.time.Duration.Companion.hours
 import kotlin.time.Duration.Companion.minutes

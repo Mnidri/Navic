@@ -1,4 +1,4 @@
-package paige.navic.ui.components.layouts
+package com.flexify.app.ui.components.layouts
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.WindowInsets
@@ -9,8 +9,8 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import org.koin.compose.koinInject
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.models.settings.ToolbarPosition
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.models.settings.ToolbarPosition
 
 @Composable
 fun SheetScaffold(

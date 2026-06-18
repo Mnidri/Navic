@@ -1,11 +1,11 @@
-package paige.navic.ui.navigation
+package com.flexify.app.ui.navigation
 
 import androidx.compose.runtime.Immutable
 import androidx.navigation3.runtime.NavKey
 import kotlinx.serialization.Serializable
-import paige.navic.domain.models.DomainAlbumListType
-import paige.navic.domain.models.DomainArtistListType
-import paige.navic.domain.models.DomainSongListType
+import com.flexify.app.domain.models.DomainAlbumListType
+import com.flexify.app.domain.models.DomainArtistListType
+import com.flexify.app.domain.models.DomainSongListType
 
 @Immutable
 @Serializable

@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.artist.viewmodels
+package com.flexify.app.ui.screens.artist.viewmodels
 
 import androidx.compose.foundation.lazy.grid.LazyGridState
 import androidx.lifecycle.ViewModel
@@ -10,15 +10,15 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.launch
-import paige.navic.data.database.dao.AlbumDao
-import paige.navic.data.database.mappers.toDomainModel
-import paige.navic.domain.manager.SessionManager
-import paige.navic.domain.models.DomainAlbum
-import paige.navic.domain.models.DomainArtist
-import paige.navic.domain.models.DomainArtistListType
-import paige.navic.domain.repositories.ArtistRepository
-import paige.navic.shared.MediaPlayerViewModel
-import paige.navic.ui.core.UiState
+import com.flexify.app.data.database.dao.AlbumDao
+import com.flexify.app.data.database.mappers.toDomainModel
+import com.flexify.app.domain.manager.SessionManager
+import com.flexify.app.domain.models.DomainAlbum
+import com.flexify.app.domain.models.DomainArtist
+import com.flexify.app.domain.models.DomainArtistListType
+import com.flexify.app.domain.repositories.ArtistRepository
+import com.flexify.app.shared.MediaPlayerViewModel
+import com.flexify.app.ui.core.UiState
 
 class ArtistListViewModel(
 	initialListType: DomainArtistListType = DomainArtistListType.AlphabeticalByName,

@@ -1,4 +1,4 @@
-package paige.navic.androidApp
+package com.flexify.app.androidApp
 
 import android.app.ActivityManager
 import android.content.Intent
@@ -7,9 +7,9 @@ import android.util.Log
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.dsl.module
-import paige.navic.androidApp.shared.AndroidResourceProvider
-import paige.navic.di.initKoin
-import paige.navic.util.core.ResourceProvider
+import com.flexify.app.androidApp.shared.AndroidResourceProvider
+import com.flexify.app.di.initKoin
+import com.flexify.app.util.core.ResourceProvider
 import kotlin.system.exitProcess
 
 class Application : android.app.Application() {

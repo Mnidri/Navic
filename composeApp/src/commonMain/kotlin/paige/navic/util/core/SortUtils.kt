@@ -1,14 +1,14 @@
-package paige.navic.util.core
+package com.flexify.app.util.core
 
 import androidx.room3.RoomRawQuery
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
-import paige.navic.data.database.entities.DownloadEntity
-import paige.navic.data.database.entities.DownloadStatus
-import paige.navic.domain.models.DomainAlbum
-import paige.navic.domain.models.DomainAlbumListType
-import paige.navic.domain.models.DomainSong
-import paige.navic.domain.models.DomainSongListType
+import com.flexify.app.data.database.entities.DownloadEntity
+import com.flexify.app.data.database.entities.DownloadStatus
+import com.flexify.app.domain.models.DomainAlbum
+import com.flexify.app.domain.models.DomainAlbumListType
+import com.flexify.app.domain.models.DomainSong
+import com.flexify.app.domain.models.DomainSongListType
 
 // TODO: sort with sql instead
 fun ImmutableList<DomainSong>.sortedByListType(

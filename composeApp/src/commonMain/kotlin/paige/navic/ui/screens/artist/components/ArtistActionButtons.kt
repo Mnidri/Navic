@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.artist.components
+package com.flexify.app.ui.screens.artist.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -32,15 +32,15 @@ import navic.composeapp.generated.resources.action_delete_download
 import navic.composeapp.generated.resources.action_play
 import navic.composeapp.generated.resources.info_download_failed
 import org.jetbrains.compose.resources.stringResource
-import paige.navic.LocalPlatformContext
-import paige.navic.data.database.entities.DownloadStatus
-import paige.navic.icons.Icons
-import paige.navic.icons.filled.Play
-import paige.navic.icons.outlined.Close
-import paige.navic.icons.outlined.Delete
-import paige.navic.icons.outlined.Download
-import paige.navic.icons.outlined.DownloadOff
-import paige.navic.ui.theme.defaultFont
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.data.database.entities.DownloadStatus
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.filled.Play
+import com.flexify.app.icons.outlined.Close
+import com.flexify.app.icons.outlined.Delete
+import com.flexify.app.icons.outlined.Download
+import com.flexify.app.icons.outlined.DownloadOff
+import com.flexify.app.ui.theme.defaultFont
 
 @Composable
 fun ArtistActionButtons(

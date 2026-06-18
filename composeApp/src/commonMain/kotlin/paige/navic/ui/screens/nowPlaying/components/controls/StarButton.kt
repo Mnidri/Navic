@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.nowPlaying.components.controls
+package com.flexify.app.ui.screens.nowPlaying.components.controls
 
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
@@ -13,11 +13,11 @@ import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.action_star
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import paige.navic.LocalPlatformContext
-import paige.navic.icons.Icons
-import paige.navic.icons.filled.Star
-import paige.navic.icons.outlined.Star
-import paige.navic.shared.MediaPlayerViewModel
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.filled.Star
+import com.flexify.app.icons.outlined.Star
+import com.flexify.app.shared.MediaPlayerViewModel
 
 @Composable
 fun NowPlayingStarButton(

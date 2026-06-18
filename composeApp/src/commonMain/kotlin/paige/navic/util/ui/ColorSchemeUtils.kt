@@ -1,4 +1,4 @@
-package paige.navic.util.ui
+package com.flexify.app.util.ui
 
 import androidx.compose.material3.ColorScheme
 import androidx.compose.runtime.Composable

@@ -1,19 +1,19 @@
-package paige.navic.di
+package com.flexify.app.di
 
 import androidx.room3.Room
 import androidx.sqlite.driver.bundled.BundledSQLiteDriver
 import org.koin.android.ext.koin.androidApplication
 import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.module
-import paige.navic.data.database.CacheDatabase
-import paige.navic.data.database.DownloadDatabase
-import paige.navic.domain.manager.ConnectivityManager
-import paige.navic.domain.manager.LogManager
-import paige.navic.domain.manager.ShareManager
-import paige.navic.domain.manager.StorageManager
-import paige.navic.domain.repositories.PlayerStateRepository
-import paige.navic.shared.AndroidMediaPlayerViewModel
-import paige.navic.shared.MediaPlayerViewModel
+import com.flexify.app.data.database.CacheDatabase
+import com.flexify.app.data.database.DownloadDatabase
+import com.flexify.app.domain.manager.ConnectivityManager
+import com.flexify.app.domain.manager.LogManager
+import com.flexify.app.domain.manager.ShareManager
+import com.flexify.app.domain.manager.StorageManager
+import com.flexify.app.domain.repositories.PlayerStateRepository
+import com.flexify.app.shared.AndroidMediaPlayerViewModel
+import com.flexify.app.shared.MediaPlayerViewModel
 
 actual val platformModule = module {
 	single<CacheDatabase> {

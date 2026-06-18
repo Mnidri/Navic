@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.share.viewmodels
+package com.flexify.app.ui.screens.share.viewmodels
 
 import androidx.compose.foundation.lazy.grid.LazyGridState
 import androidx.lifecycle.ViewModel
@@ -6,10 +6,10 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import paige.navic.domain.manager.SessionManager
-import paige.navic.domain.models.DomainShare
-import paige.navic.domain.repositories.ShareRepository
-import paige.navic.ui.core.UiState
+import com.flexify.app.domain.manager.SessionManager
+import com.flexify.app.domain.models.DomainShare
+import com.flexify.app.domain.repositories.ShareRepository
+import com.flexify.app.ui.core.UiState
 
 class ShareListViewModel(
 	private val repository: ShareRepository,

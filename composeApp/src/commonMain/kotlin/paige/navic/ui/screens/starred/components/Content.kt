@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.starred.components
+package com.flexify.app.ui.screens.starred.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.snapping.rememberSnapFlingBehavior
@@ -50,28 +50,28 @@ import navic.composeapp.generated.resources.title_songs
 import org.jetbrains.compose.resources.pluralStringResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import paige.navic.LocalPlatformContext
-import paige.navic.LocalNavStack
-import paige.navic.data.database.entities.DownloadEntity
-import paige.navic.data.database.entities.DownloadStatus
-import paige.navic.ui.navigation.Screen
-import paige.navic.domain.models.DomainAlbum
-import paige.navic.domain.models.DomainAlbumListType
-import paige.navic.domain.models.DomainArtist
-import paige.navic.domain.models.DomainArtistListType
-import paige.navic.domain.models.DomainSong
-import paige.navic.domain.models.DomainSongListType
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.PlaylistRemove
-import paige.navic.domain.manager.DownloadManager
-import paige.navic.ui.components.common.ContentUnavailable
-import paige.navic.ui.components.common.SongRow
-import paige.navic.ui.components.layouts.ArtCarousel
-import paige.navic.ui.components.layouts.ArtCarouselItem
-import paige.navic.ui.components.sheets.ArtistSheet
-import paige.navic.ui.components.sheets.CollectionSheet
-import paige.navic.ui.screens.playlist.dialogs.PlaylistUpdateDialog
-import paige.navic.ui.core.UiState
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.LocalNavStack
+import com.flexify.app.data.database.entities.DownloadEntity
+import com.flexify.app.data.database.entities.DownloadStatus
+import com.flexify.app.ui.navigation.Screen
+import com.flexify.app.domain.models.DomainAlbum
+import com.flexify.app.domain.models.DomainAlbumListType
+import com.flexify.app.domain.models.DomainArtist
+import com.flexify.app.domain.models.DomainArtistListType
+import com.flexify.app.domain.models.DomainSong
+import com.flexify.app.domain.models.DomainSongListType
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.PlaylistRemove
+import com.flexify.app.domain.manager.DownloadManager
+import com.flexify.app.ui.components.common.ContentUnavailable
+import com.flexify.app.ui.components.common.SongRow
+import com.flexify.app.ui.components.layouts.ArtCarousel
+import com.flexify.app.ui.components.layouts.ArtCarouselItem
+import com.flexify.app.ui.components.sheets.ArtistSheet
+import com.flexify.app.ui.components.sheets.CollectionSheet
+import com.flexify.app.ui.screens.playlist.dialogs.PlaylistUpdateDialog
+import com.flexify.app.ui.core.UiState
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

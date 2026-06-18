@@ -1,4 +1,4 @@
-package paige.navic.ui.components.layouts
+package com.flexify.app.ui.components.layouts
 
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloatAsState
@@ -15,10 +15,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.graphicsLayer
 import org.koin.compose.koinInject
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.models.settings.BottomBarCollapseMode
-import paige.navic.domain.models.settings.MiniPlayerStyle
-import paige.navic.util.ui.easedVerticalGradient
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.models.settings.BottomBarCollapseMode
+import com.flexify.app.domain.models.settings.MiniPlayerStyle
+import com.flexify.app.util.ui.easedVerticalGradient
 
 @Composable
 fun RootBottomBar(

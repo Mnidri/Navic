@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.song.viewmodels
+package com.flexify.app.ui.screens.song.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -9,13 +9,13 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
-import paige.navic.domain.manager.SessionManager
-import paige.navic.domain.models.DomainSong
-import paige.navic.domain.models.DomainSongListType
-import paige.navic.domain.repositories.SongRepository
-import paige.navic.domain.manager.ConnectivityManager
-import paige.navic.domain.manager.DownloadManager
-import paige.navic.ui.core.UiState
+import com.flexify.app.domain.manager.SessionManager
+import com.flexify.app.domain.models.DomainSong
+import com.flexify.app.domain.models.DomainSongListType
+import com.flexify.app.domain.repositories.SongRepository
+import com.flexify.app.domain.manager.ConnectivityManager
+import com.flexify.app.domain.manager.DownloadManager
+import com.flexify.app.ui.core.UiState
 
 class SongListViewModel(
 	initialListType: DomainSongListType = DomainSongListType.FrequentlyPlayed,

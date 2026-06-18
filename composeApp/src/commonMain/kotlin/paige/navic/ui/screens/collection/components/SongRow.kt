@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.collection.components
+package com.flexify.app.ui.screens.collection.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -47,25 +47,25 @@ import navic.composeapp.generated.resources.info_downloaded
 import navic.composeapp.generated.resources.info_not_available_offline
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import paige.navic.data.database.entities.DownloadEntity
-import paige.navic.data.database.entities.DownloadStatus
-import paige.navic.domain.models.DomainExplicitStatus
-import paige.navic.domain.models.DomainSong
-import paige.navic.icons.Icons
-import paige.navic.icons.filled.Star
-import paige.navic.icons.outlined.Check
-import paige.navic.icons.outlined.DownloadOff
-import paige.navic.icons.outlined.Offline
-import paige.navic.icons.outlined.Queue
-import paige.navic.icons.outlined.QueuePlayNext
-import paige.navic.shared.MediaPlayerViewModel
-import paige.navic.ui.components.common.CoverArt
-import paige.navic.ui.components.common.MarqueeText
-import paige.navic.ui.components.common.Waveform
-import paige.navic.ui.components.dialogs.QueueDuplicateDialog
-import paige.navic.util.core.InlineExplicitIcon
-import paige.navic.util.ui.segmentedShapes
-import paige.navic.util.core.toHoursMinutesSeconds
+import com.flexify.app.data.database.entities.DownloadEntity
+import com.flexify.app.data.database.entities.DownloadStatus
+import com.flexify.app.domain.models.DomainExplicitStatus
+import com.flexify.app.domain.models.DomainSong
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.filled.Star
+import com.flexify.app.icons.outlined.Check
+import com.flexify.app.icons.outlined.DownloadOff
+import com.flexify.app.icons.outlined.Offline
+import com.flexify.app.icons.outlined.Queue
+import com.flexify.app.icons.outlined.QueuePlayNext
+import com.flexify.app.shared.MediaPlayerViewModel
+import com.flexify.app.ui.components.common.CoverArt
+import com.flexify.app.ui.components.common.MarqueeText
+import com.flexify.app.ui.components.common.Waveform
+import com.flexify.app.ui.components.dialogs.QueueDuplicateDialog
+import com.flexify.app.util.core.InlineExplicitIcon
+import com.flexify.app.util.ui.segmentedShapes
+import com.flexify.app.util.core.toHoursMinutesSeconds
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable

@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.settings.viewmodels
+package com.flexify.app.ui.screens.settings.viewmodels
 
 import androidx.lifecycle.ViewModel
 import com.russhwolf.settings.Settings
@@ -6,8 +6,8 @@ import com.russhwolf.settings.set
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.serialization.json.Json
-import paige.navic.domain.models.lyrics.LyricsConfig
-import paige.navic.ui.core.UiState
+import com.flexify.app.domain.models.lyrics.LyricsConfig
+import com.flexify.app.ui.core.UiState
 
 class LyricsPriorityViewModel(
 	private val settings: Settings

@@ -1,4 +1,4 @@
-package paige.navic.util.core
+package com.flexify.app.util.core
 
 import androidx.compose.runtime.Composable
 import navic.composeapp.generated.resources.Res

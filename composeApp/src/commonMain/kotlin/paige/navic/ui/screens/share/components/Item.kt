@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.share.components
+package com.flexify.app.ui.screens.share.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -37,18 +37,18 @@ import navic.composeapp.generated.resources.info_shared_by
 import org.jetbrains.compose.resources.getString
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import paige.navic.LocalPlatformContext
-import paige.navic.LocalSnackbarState
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.manager.ShareManager
-import paige.navic.domain.models.DomainShare
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.Delete
-import paige.navic.icons.outlined.Share
-import paige.navic.ui.components.common.CoverArt
-import paige.navic.ui.components.common.Dropdown
-import paige.navic.ui.components.common.DropdownItem
-import paige.navic.util.core.toHoursMinutesSeconds
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.LocalSnackbarState
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.manager.ShareManager
+import com.flexify.app.domain.models.DomainShare
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.Delete
+import com.flexify.app.icons.outlined.Share
+import com.flexify.app.ui.components.common.CoverArt
+import com.flexify.app.ui.components.common.Dropdown
+import com.flexify.app.ui.components.common.DropdownItem
+import com.flexify.app.util.core.toHoursMinutesSeconds
 import kotlin.time.Clock
 import kotlin.time.Duration.Companion.seconds
 

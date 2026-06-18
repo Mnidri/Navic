@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.collection.components
+package com.flexify.app.ui.screens.collection.components
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -8,17 +8,17 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.compose.dropUnlessResumed
 import kotlinx.collections.immutable.persistentListOf
 import org.koin.compose.koinInject
-import paige.navic.LocalNavStack
-import paige.navic.data.database.entities.DownloadStatus
-import paige.navic.ui.navigation.Screen
-import paige.navic.domain.models.DomainAlbum
-import paige.navic.domain.models.DomainPlaylist
-import paige.navic.domain.models.DomainSong
-import paige.navic.domain.models.DomainSongCollection
-import paige.navic.shared.MediaPlayerViewModel
-import paige.navic.ui.components.dialogs.QueueDuplicateDialog
-import paige.navic.ui.components.sheets.SongSheet
-import paige.navic.ui.screens.playlist.dialogs.PlaylistUpdateDialog
+import com.flexify.app.LocalNavStack
+import com.flexify.app.data.database.entities.DownloadStatus
+import com.flexify.app.ui.navigation.Screen
+import com.flexify.app.domain.models.DomainAlbum
+import com.flexify.app.domain.models.DomainPlaylist
+import com.flexify.app.domain.models.DomainSong
+import com.flexify.app.domain.models.DomainSongCollection
+import com.flexify.app.shared.MediaPlayerViewModel
+import com.flexify.app.ui.components.dialogs.QueueDuplicateDialog
+import com.flexify.app.ui.components.sheets.SongSheet
+import com.flexify.app.ui.screens.playlist.dialogs.PlaylistUpdateDialog
 
 @Composable
 fun CollectionDetailScreenSongRowDropdown(

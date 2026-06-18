@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.playlist.viewmodels
+package com.flexify.app.ui.screens.playlist.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -7,13 +7,13 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
-import paige.navic.domain.manager.SessionManager
-import paige.navic.domain.models.DomainSong
-import paige.navic.ui.core.UiState
+import com.flexify.app.domain.manager.SessionManager
+import com.flexify.app.domain.models.DomainSong
+import com.flexify.app.ui.core.UiState
 import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.notice_added_to_multiple_playlists
 import navic.composeapp.generated.resources.notice_added_to_playlist
-import paige.navic.domain.manager.SnackBarManager
+import com.flexify.app.domain.manager.SnackBarManager
 import dev.zt64.subsonic.api.model.Playlist as ApiPlaylist
 
 class PlaylistUpdateDialogViewModel(

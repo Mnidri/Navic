@@ -1,4 +1,4 @@
-package paige.navic.ui.components.common
+package com.flexify.app.ui.components.common
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.horizontalScroll
@@ -25,10 +25,10 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.delay
-import paige.navic.LocalPlatformContext
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.Check
-import paige.navic.icons.outlined.Copy
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.Check
+import com.flexify.app.icons.outlined.Copy
 import kotlin.time.Duration.Companion.seconds
 
 @Composable

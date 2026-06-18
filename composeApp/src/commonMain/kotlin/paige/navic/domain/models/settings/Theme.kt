@@ -1,4 +1,4 @@
-package paige.navic.domain.models.settings
+package com.flexify.app.domain.models.settings
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.ColorScheme
@@ -24,10 +24,10 @@ import navic.composeapp.generated.resources.theme_subtitle_seeded
 import navic.composeapp.generated.resources.theme_subtitle_spotify
 import org.jetbrains.compose.resources.StringResource
 import org.koin.compose.koinInject
-import paige.navic.LocalPlatformContext
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.util.ui.darkIosColorScheme
-import paige.navic.util.ui.lightIosColorScheme
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.util.ui.darkIosColorScheme
+import com.flexify.app.util.ui.lightIosColorScheme
 
 /**
  * Theme choices that the user can choose from

@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.lyrics.viewmodels
+package com.flexify.app.ui.screens.lyrics.viewmodels
 
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.lifecycle.ViewModel
@@ -6,10 +6,10 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import paige.navic.domain.models.DomainSong
-import paige.navic.domain.models.lyrics.LyricsResult
-import paige.navic.domain.repositories.LyricsRepository
-import paige.navic.ui.core.UiState
+import com.flexify.app.domain.models.DomainSong
+import com.flexify.app.domain.models.lyrics.LyricsResult
+import com.flexify.app.domain.repositories.LyricsRepository
+import com.flexify.app.ui.core.UiState
 
 class LyricsScreenViewModel(
 	private val song: DomainSong?,

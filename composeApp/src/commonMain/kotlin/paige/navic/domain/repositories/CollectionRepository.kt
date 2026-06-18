@@ -1,4 +1,4 @@
-package paige.navic.domain.repositories
+package com.flexify.app.domain.repositories
 
 import dev.zt64.subsonic.api.model.AlbumInfo as ApiAlbumInfo
 import kotlinx.coroutines.Dispatchers
@@ -7,16 +7,16 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
-import paige.navic.data.database.dao.AlbumDao
-import paige.navic.data.database.dao.PlaylistDao
-import paige.navic.data.database.dao.SongDao
-import paige.navic.data.database.mappers.toDomainModel
-import paige.navic.data.database.mappers.toEntity
-import paige.navic.domain.manager.SessionManager
-import paige.navic.domain.models.DomainAlbum
-import paige.navic.domain.models.DomainPlaylist
-import paige.navic.domain.models.DomainSongCollection
-import paige.navic.ui.core.UiState
+import com.flexify.app.data.database.dao.AlbumDao
+import com.flexify.app.data.database.dao.PlaylistDao
+import com.flexify.app.data.database.dao.SongDao
+import com.flexify.app.data.database.mappers.toDomainModel
+import com.flexify.app.data.database.mappers.toEntity
+import com.flexify.app.domain.manager.SessionManager
+import com.flexify.app.domain.models.DomainAlbum
+import com.flexify.app.domain.models.DomainPlaylist
+import com.flexify.app.domain.models.DomainSongCollection
+import com.flexify.app.ui.core.UiState
 
 class CollectionRepository(
 	private val albumDao: AlbumDao,

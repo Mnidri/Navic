@@ -1,4 +1,4 @@
-package paige.navic.ui.components.common
+package com.flexify.app.ui.components.common
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.layout.Box
@@ -20,8 +20,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
-import paige.navic.LocalPlatformContext
-import paige.navic.ui.theme.defaultFont
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.ui.theme.defaultFont
 
 @Composable
 fun Dropdown(

@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.settings.components
+package com.flexify.app.ui.screens.settings.components
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -15,8 +15,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import kotlinx.collections.immutable.ImmutableList
-import paige.navic.ui.components.common.FormRow
-import paige.navic.ui.components.common.SelectionDropdown
+import com.flexify.app.ui.components.common.FormRow
+import com.flexify.app.ui.components.common.SelectionDropdown
 
 @Composable
 fun <Item> SettingSelectionRow(

@@ -1,4 +1,4 @@
-package paige.navic.ui.components.common
+package com.flexify.app.ui.components.common
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -13,10 +13,10 @@ import androidx.compose.ui.unit.dp
 import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.count_rate_stars
 import org.jetbrains.compose.resources.pluralStringResource
-import paige.navic.LocalPlatformContext
-import paige.navic.icons.Icons
-import paige.navic.icons.filled.Star
-import paige.navic.icons.outlined.Star
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.filled.Star
+import com.flexify.app.icons.outlined.Star
 
 @Composable
 fun RatingRow(

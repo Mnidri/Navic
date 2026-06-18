@@ -1,4 +1,4 @@
-package paige.navic.ui.components.common
+package com.flexify.app.ui.components.common
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.animateFloatAsState
@@ -25,12 +25,12 @@ import com.materialkolor.ktx.darken
 import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.info_error
 import org.jetbrains.compose.resources.stringResource
-import paige.navic.LocalPlatformContext
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.KeyboardArrowDown
-import paige.navic.icons.outlined.Refresh
-import paige.navic.util.core.Logger
-import paige.navic.ui.core.UiState
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.KeyboardArrowDown
+import com.flexify.app.icons.outlined.Refresh
+import com.flexify.app.util.core.Logger
+import com.flexify.app.ui.core.UiState
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable

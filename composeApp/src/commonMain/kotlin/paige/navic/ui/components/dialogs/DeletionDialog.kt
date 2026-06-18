@@ -1,4 +1,4 @@
-package paige.navic.ui.components.dialogs
+package com.flexify.app.ui.components.dialogs
 
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.text.selection.SelectionContainer
@@ -33,15 +33,15 @@ import navic.composeapp.generated.resources.title_delete_share
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
-import paige.navic.domain.manager.SyncManager
-import paige.navic.data.database.dao.PlaylistDao
-import paige.navic.data.database.entities.SyncActionType
-import paige.navic.domain.manager.SessionManager
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.Delete
-import paige.navic.ui.components.common.FormButton
-import paige.navic.domain.manager.SnackBarManager
-import paige.navic.ui.core.UiState
+import com.flexify.app.domain.manager.SyncManager
+import com.flexify.app.data.database.dao.PlaylistDao
+import com.flexify.app.data.database.entities.SyncActionType
+import com.flexify.app.domain.manager.SessionManager
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.Delete
+import com.flexify.app.ui.components.common.FormButton
+import com.flexify.app.domain.manager.SnackBarManager
+import com.flexify.app.ui.core.UiState
 
 enum class DeletionEndpoint(
 	val questionText: StringResource,

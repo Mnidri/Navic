@@ -1,4 +1,4 @@
-package paige.navic.ui.components.common
+package com.flexify.app.ui.components.common
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -28,8 +28,8 @@ import coil3.compose.AsyncImage
 import coil3.request.CachePolicy
 import coil3.request.ImageRequest
 import org.koin.compose.koinInject
-import paige.navic.di.getStaticImageLoader
-import paige.navic.domain.manager.SessionManager
+import com.flexify.app.di.getStaticImageLoader
+import com.flexify.app.domain.manager.SessionManager
 import kotlin.time.TimeSource
 import coil3.compose.LocalPlatformContext as LocalCoilPlatformContext
 

@@ -1,4 +1,4 @@
-package paige.navic.ui.components.sheets
+package com.flexify.app.ui.components.sheets
 
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.WindowInsets
@@ -15,8 +15,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import paige.navic.util.ui.SheetHideMotionSpec
-import paige.navic.util.ui.SheetShowMotionSpec
+import com.flexify.app.util.ui.SheetHideMotionSpec
+import com.flexify.app.util.ui.SheetShowMotionSpec
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

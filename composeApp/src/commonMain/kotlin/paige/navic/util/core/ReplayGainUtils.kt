@@ -1,7 +1,7 @@
-package paige.navic.util.core
+package com.flexify.app.util.core
 
-import paige.navic.domain.models.settings.ReplayGainMode
-import paige.navic.domain.models.DomainReplayGain
+import com.flexify.app.domain.models.settings.ReplayGainMode
+import com.flexify.app.domain.models.DomainReplayGain
 import kotlin.math.pow
 
 fun DomainReplayGain.effectiveGain(mode: ReplayGainMode = ReplayGainMode.Track): Float {

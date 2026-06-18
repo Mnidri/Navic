@@ -1,12 +1,12 @@
-package paige.navic.ui.screens.share.viewmodels
+package com.flexify.app.ui.screens.share.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import paige.navic.domain.manager.SessionManager
-import paige.navic.ui.core.UiState
+import com.flexify.app.domain.manager.SessionManager
+import com.flexify.app.ui.core.UiState
 import kotlin.time.Clock
 import kotlin.time.Duration
 

@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.search.components
+package com.flexify.app.ui.screens.search.components
 
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.layout.Arrangement
@@ -16,10 +16,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.resources.stringResource
-import paige.navic.LocalPlatformContext
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.Check
-import paige.navic.ui.screens.search.SearchCategory
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.Check
+import com.flexify.app.ui.screens.search.SearchCategory
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable

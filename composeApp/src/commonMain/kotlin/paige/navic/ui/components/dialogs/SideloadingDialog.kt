@@ -1,4 +1,4 @@
-package paige.navic.ui.components.dialogs
+package com.flexify.app.ui.components.dialogs
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.AlertDialog
@@ -18,8 +18,8 @@ import navic.composeapp.generated.resources.sideloading_warning_subtitle
 import navic.composeapp.generated.resources.sideloading_warning_title
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import paige.navic.LocalPlatformContext
-import paige.navic.domain.manager.PreferenceManager
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.domain.manager.PreferenceManager
 
 @Composable
 fun SideloadingDialog() {

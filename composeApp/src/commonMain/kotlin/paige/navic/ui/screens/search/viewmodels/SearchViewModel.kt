@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.search.viewmodels
+package com.flexify.app.ui.screens.search.viewmodels
 
 import androidx.compose.foundation.lazy.grid.LazyGridState
 import androidx.compose.foundation.text.input.TextFieldState
@@ -12,12 +12,12 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.launch
-import paige.navic.domain.models.DomainSong
-import paige.navic.domain.repositories.SearchRepository
-import paige.navic.domain.repositories.SongRepository
-import paige.navic.domain.manager.ConnectivityManager
-import paige.navic.domain.manager.DownloadManager
-import paige.navic.ui.core.UiState
+import com.flexify.app.domain.models.DomainSong
+import com.flexify.app.domain.repositories.SearchRepository
+import com.flexify.app.domain.repositories.SongRepository
+import com.flexify.app.domain.manager.ConnectivityManager
+import com.flexify.app.domain.manager.DownloadManager
+import com.flexify.app.ui.core.UiState
 import kotlin.time.Duration.Companion.milliseconds
 
 @OptIn(FlowPreview::class)

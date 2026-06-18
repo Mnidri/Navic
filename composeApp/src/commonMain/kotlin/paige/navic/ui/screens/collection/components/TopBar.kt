@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.collection.components
+package com.flexify.app.ui.screens.collection.components
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.material3.Icon
@@ -18,19 +18,19 @@ import kotlinx.collections.immutable.toPersistentList
 import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.action_more
 import org.jetbrains.compose.resources.stringResource
-import paige.navic.LocalNavStack
-import paige.navic.data.database.entities.DownloadStatus
-import paige.navic.ui.navigation.Screen
-import paige.navic.domain.models.DomainAlbum
-import paige.navic.domain.models.DomainAlbumInfo
-import paige.navic.domain.models.DomainSongCollection
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.MoreVert
-import paige.navic.ui.components.layouts.NestedTopBar
-import paige.navic.ui.components.layouts.TopBarButton
-import paige.navic.ui.components.sheets.CollectionSheet
-import paige.navic.ui.screens.playlist.dialogs.PlaylistUpdateDialog
-import paige.navic.ui.core.UiState
+import com.flexify.app.LocalNavStack
+import com.flexify.app.data.database.entities.DownloadStatus
+import com.flexify.app.ui.navigation.Screen
+import com.flexify.app.domain.models.DomainAlbum
+import com.flexify.app.domain.models.DomainAlbumInfo
+import com.flexify.app.domain.models.DomainSongCollection
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.MoreVert
+import com.flexify.app.ui.components.layouts.NestedTopBar
+import com.flexify.app.ui.components.layouts.TopBarButton
+import com.flexify.app.ui.components.sheets.CollectionSheet
+import com.flexify.app.ui.screens.playlist.dialogs.PlaylistUpdateDialog
+import com.flexify.app.ui.core.UiState
 
 @Composable
 fun CollectionDetailScreenTopBar(

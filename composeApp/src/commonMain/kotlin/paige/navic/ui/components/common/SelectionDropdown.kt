@@ -1,4 +1,4 @@
-package paige.navic.ui.components.common
+package com.flexify.app.ui.components.common
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.animateDpAsState
@@ -38,11 +38,11 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import kotlinx.collections.immutable.ImmutableList
 import org.koin.compose.koinInject
-import paige.navic.LocalPlatformContext
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.Check
-import paige.navic.ui.theme.defaultFont
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.Check
+import com.flexify.app.ui.theme.defaultFont
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable

@@ -1,4 +1,4 @@
-package paige.navic.ui.theme
+package com.flexify.app.ui.theme
 
 import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
@@ -10,8 +10,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import com.kyant.capsule.ContinuousRoundedRectangle
 import org.koin.compose.koinInject
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.models.settings.AnimationStyle
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.models.settings.AnimationStyle
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable

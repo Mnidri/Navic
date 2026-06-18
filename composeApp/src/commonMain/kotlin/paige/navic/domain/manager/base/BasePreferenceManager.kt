@@ -1,4 +1,4 @@
-package paige.navic.domain.manager.base
+package com.flexify.app.domain.manager.base
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf

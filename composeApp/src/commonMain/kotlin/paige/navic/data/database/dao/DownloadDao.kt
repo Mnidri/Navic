@@ -1,12 +1,12 @@
-package paige.navic.data.database.dao
+package com.flexify.app.data.database.dao
 
 import androidx.room3.Dao
 import androidx.room3.Insert
 import androidx.room3.OnConflictStrategy
 import androidx.room3.Query
 import kotlinx.coroutines.flow.Flow
-import paige.navic.data.database.entities.DownloadEntity
-import paige.navic.data.database.entities.DownloadStatus
+import com.flexify.app.data.database.entities.DownloadEntity
+import com.flexify.app.data.database.entities.DownloadStatus
 
 @Dao
 interface DownloadDao {

@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.share.dialogs
+package com.flexify.app.ui.screens.share.dialogs
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
@@ -30,17 +30,17 @@ import navic.composeapp.generated.resources.title_create_share
 import org.jetbrains.compose.resources.getString
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
-import paige.navic.LocalSnackbarState
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.Share
-import paige.navic.ui.components.common.DurationPicker
-import paige.navic.ui.components.common.Form
-import paige.navic.ui.components.common.FormButton
-import paige.navic.ui.components.common.FormRow
-import paige.navic.ui.components.dialogs.FormDialog
-import paige.navic.ui.screens.settings.components.SettingSwitchRow
-import paige.navic.ui.screens.share.viewmodels.ShareDialogViewModel
-import paige.navic.ui.core.UiState
+import com.flexify.app.LocalSnackbarState
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.Share
+import com.flexify.app.ui.components.common.DurationPicker
+import com.flexify.app.ui.components.common.Form
+import com.flexify.app.ui.components.common.FormButton
+import com.flexify.app.ui.components.common.FormRow
+import com.flexify.app.ui.components.dialogs.FormDialog
+import com.flexify.app.ui.screens.settings.components.SettingSwitchRow
+import com.flexify.app.ui.screens.share.viewmodels.ShareDialogViewModel
+import com.flexify.app.ui.core.UiState
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.hours
 

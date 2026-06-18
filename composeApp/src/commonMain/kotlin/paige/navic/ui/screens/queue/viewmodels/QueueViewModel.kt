@@ -1,9 +1,9 @@
-package paige.navic.ui.screens.queue.viewmodels
+package com.flexify.app.ui.screens.queue.viewmodels
 
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.lifecycle.ViewModel
-import paige.navic.domain.manager.ConnectivityManager
-import paige.navic.domain.manager.DownloadManager
+import com.flexify.app.domain.manager.ConnectivityManager
+import com.flexify.app.domain.manager.DownloadManager
 
 class QueueViewModel(
 	connectivityManager: ConnectivityManager,

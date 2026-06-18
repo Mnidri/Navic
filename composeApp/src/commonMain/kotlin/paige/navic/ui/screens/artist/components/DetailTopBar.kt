@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.artist.components
+package com.flexify.app.ui.screens.artist.components
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.animateFloatAsState
@@ -23,15 +23,15 @@ import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.action_more
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.MoreVert
-import paige.navic.shared.MediaPlayerViewModel
-import paige.navic.ui.components.layouts.NestedTopBar
-import paige.navic.ui.components.layouts.TopBarButton
-import paige.navic.ui.components.sheets.ArtistSheet
-import paige.navic.ui.screens.artist.viewmodels.ArtistState
-import paige.navic.ui.screens.playlist.dialogs.PlaylistUpdateDialog
-import paige.navic.ui.core.UiState
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.MoreVert
+import com.flexify.app.shared.MediaPlayerViewModel
+import com.flexify.app.ui.components.layouts.NestedTopBar
+import com.flexify.app.ui.components.layouts.TopBarButton
+import com.flexify.app.ui.components.sheets.ArtistSheet
+import com.flexify.app.ui.screens.artist.viewmodels.ArtistState
+import com.flexify.app.ui.screens.playlist.dialogs.PlaylistUpdateDialog
+import com.flexify.app.ui.core.UiState
 
 @Composable
 fun ArtistDetailScreenTopBar(

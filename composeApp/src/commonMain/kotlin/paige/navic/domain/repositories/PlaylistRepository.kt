@@ -1,4 +1,4 @@
-package paige.navic.domain.repositories
+package com.flexify.app.domain.repositories
 
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
@@ -7,13 +7,13 @@ import kotlinx.coroutines.IO
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
-import paige.navic.data.database.dao.DownloadDao
-import paige.navic.data.database.dao.PlaylistDao
-import paige.navic.data.database.entities.DownloadStatus
-import paige.navic.data.database.mappers.toDomainModel
-import paige.navic.domain.models.DomainPlaylist
-import paige.navic.domain.models.DomainPlaylistListType
-import paige.navic.ui.core.UiState
+import com.flexify.app.data.database.dao.DownloadDao
+import com.flexify.app.data.database.dao.PlaylistDao
+import com.flexify.app.data.database.entities.DownloadStatus
+import com.flexify.app.data.database.mappers.toDomainModel
+import com.flexify.app.domain.models.DomainPlaylist
+import com.flexify.app.domain.models.DomainPlaylistListType
+import com.flexify.app.ui.core.UiState
 
 class PlaylistRepository(
 	private val playlistDao: PlaylistDao,

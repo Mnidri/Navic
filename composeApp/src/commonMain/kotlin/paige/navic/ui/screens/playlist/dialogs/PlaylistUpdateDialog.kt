@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.playlist.dialogs
+package com.flexify.app.ui.screens.playlist.dialogs
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -41,16 +41,16 @@ import navic.composeapp.generated.resources.info_no_playlists
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
 import org.koin.core.parameter.parametersOf
-import paige.navic.LocalPlatformContext
-import paige.navic.domain.models.DomainSong
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.PlaylistAdd
-import paige.navic.icons.outlined.Refresh
-import paige.navic.ui.components.common.ErrorBox
-import paige.navic.ui.components.common.FormButton
-import paige.navic.ui.components.dialogs.FormDialog
-import paige.navic.ui.screens.playlist.viewmodels.PlaylistUpdateDialogViewModel
-import paige.navic.ui.core.UiState
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.domain.models.DomainSong
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.PlaylistAdd
+import com.flexify.app.icons.outlined.Refresh
+import com.flexify.app.ui.components.common.ErrorBox
+import com.flexify.app.ui.components.common.FormButton
+import com.flexify.app.ui.components.dialogs.FormDialog
+import com.flexify.app.ui.screens.playlist.viewmodels.PlaylistUpdateDialogViewModel
+import com.flexify.app.ui.core.UiState
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable

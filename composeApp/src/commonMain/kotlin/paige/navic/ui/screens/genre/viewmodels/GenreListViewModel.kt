@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.genre.viewmodels
+package com.flexify.app.ui.screens.genre.viewmodels
 
 import androidx.compose.foundation.lazy.grid.LazyGridState
 import androidx.lifecycle.ViewModel
@@ -8,10 +8,10 @@ import kotlinx.collections.immutable.persistentListOf
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import paige.navic.domain.manager.SessionManager
-import paige.navic.domain.models.DomainGenre
-import paige.navic.domain.repositories.GenreRepository
-import paige.navic.ui.core.UiState
+import com.flexify.app.domain.manager.SessionManager
+import com.flexify.app.domain.models.DomainGenre
+import com.flexify.app.domain.repositories.GenreRepository
+import com.flexify.app.ui.core.UiState
 
 class GenreListViewModel(
 	private val repository: GenreRepository,

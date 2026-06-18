@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.nowPlaying
+package com.flexify.app.ui.screens.nowPlaying
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -32,24 +32,24 @@ import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
 import org.koin.core.parameter.parametersOf
-import paige.navic.LocalNavStack
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.models.settings.NowPlayingBackgroundStyle
-import paige.navic.domain.models.settings.ToolbarPosition
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.KeyboardArrowDown
-import paige.navic.icons.outlined.List
-import paige.navic.icons.outlined.Lyrics
-import paige.navic.shared.MediaPlayerViewModel
-import paige.navic.ui.components.common.BlendBackground
-import paige.navic.ui.components.layouts.SheetScaffold
-import paige.navic.ui.components.layouts.TopBarButton
-import paige.navic.ui.components.toolbars.SheetActionButton
-import paige.navic.ui.components.toolbars.SheetToolbar
-import paige.navic.ui.navigation.Screen
-import paige.navic.ui.screens.nowPlaying.components.controls.NowPlayingArtworkPager
-import paige.navic.ui.screens.nowPlaying.components.rows.NowPlayingControlsRow
-import paige.navic.ui.screens.nowPlaying.viewmodels.NowPlayingViewModel
+import com.flexify.app.LocalNavStack
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.models.settings.NowPlayingBackgroundStyle
+import com.flexify.app.domain.models.settings.ToolbarPosition
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.KeyboardArrowDown
+import com.flexify.app.icons.outlined.List
+import com.flexify.app.icons.outlined.Lyrics
+import com.flexify.app.shared.MediaPlayerViewModel
+import com.flexify.app.ui.components.common.BlendBackground
+import com.flexify.app.ui.components.layouts.SheetScaffold
+import com.flexify.app.ui.components.layouts.TopBarButton
+import com.flexify.app.ui.components.toolbars.SheetActionButton
+import com.flexify.app.ui.components.toolbars.SheetToolbar
+import com.flexify.app.ui.navigation.Screen
+import com.flexify.app.ui.screens.nowPlaying.components.controls.NowPlayingArtworkPager
+import com.flexify.app.ui.screens.nowPlaying.components.rows.NowPlayingControlsRow
+import com.flexify.app.ui.screens.nowPlaying.viewmodels.NowPlayingViewModel
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
 @Composable

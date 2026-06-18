@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.search.components
+package com.flexify.app.ui.screens.search.components
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -31,12 +31,12 @@ import navic.composeapp.generated.resources.action_clear_search
 import navic.composeapp.generated.resources.action_navigate_back
 import navic.composeapp.generated.resources.title_search
 import org.jetbrains.compose.resources.stringResource
-import paige.navic.LocalPlatformContext
-import paige.navic.LocalNavStack
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.ArrowBack
-import paige.navic.icons.outlined.Close
-import paige.navic.ui.theme.defaultFont
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.LocalNavStack
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.ArrowBack
+import com.flexify.app.icons.outlined.Close
+import com.flexify.app.ui.theme.defaultFont
 
 @Composable
 fun SearchScreenTopBar(

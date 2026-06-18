@@ -1,4 +1,4 @@
-package paige.navic.ui.components.toolbars
+package com.flexify.app.ui.components.toolbars
 
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -27,8 +27,8 @@ import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import com.kyant.capsule.ContinuousRoundedRectangle
-import paige.navic.LocalPlatformContext
-import paige.navic.ui.theme.defaultFont
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.ui.theme.defaultFont
 
 @Composable
 fun SheetToolbar(

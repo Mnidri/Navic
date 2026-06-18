@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.nowPlaying.components.controls
+package com.flexify.app.ui.screens.nowPlaying.components.controls
 
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.snap
@@ -21,10 +21,10 @@ import ir.mahozad.multiplatform.wavyslider.material3.WaveAnimationSpecs
 import ir.mahozad.multiplatform.wavyslider.material3.WaveVelocity
 import ir.mahozad.multiplatform.wavyslider.material3.WavySlider
 import org.koin.compose.koinInject
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.models.settings.NowPlayingSliderStyle
-import paige.navic.shared.MediaPlayerViewModel
-import paige.navic.ui.components.common.SlimSlider
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.models.settings.NowPlayingSliderStyle
+import com.flexify.app.shared.MediaPlayerViewModel
+import com.flexify.app.ui.components.common.SlimSlider
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

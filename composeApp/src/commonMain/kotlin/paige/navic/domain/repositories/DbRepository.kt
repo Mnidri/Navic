@@ -1,4 +1,4 @@
-package paige.navic.domain.repositories
+package com.flexify.app.domain.repositories
 
 import androidx.room3.concurrent.AtomicInt
 import dev.zt64.subsonic.api.model.Album as ApiAlbum
@@ -25,23 +25,23 @@ import navic.composeapp.generated.resources.info_syncing_playlists
 import navic.composeapp.generated.resources.info_syncing_radios
 import navic.composeapp.generated.resources.info_syncing_saved
 import org.jetbrains.compose.resources.StringResource
-import paige.navic.data.database.dao.AlbumDao
-import paige.navic.data.database.dao.ArtistDao
-import paige.navic.data.database.dao.GenreDao
-import paige.navic.data.database.dao.LyricDao
-import paige.navic.data.database.dao.PlaylistDao
-import paige.navic.data.database.dao.RadioDao
-import paige.navic.data.database.dao.SongDao
-import paige.navic.data.database.dao.SyncActionDao
-import paige.navic.data.database.entities.AlbumEntity
-import paige.navic.data.database.entities.PlaylistEntity
-import paige.navic.data.database.entities.PlaylistSongCrossRef
-import paige.navic.data.database.entities.SongEntity
-import paige.navic.data.database.mappers.toDomainModel
-import paige.navic.data.database.mappers.toEntity
-import paige.navic.domain.manager.SessionManager
-import paige.navic.domain.models.DomainArtist
-import paige.navic.util.core.Logger
+import com.flexify.app.data.database.dao.AlbumDao
+import com.flexify.app.data.database.dao.ArtistDao
+import com.flexify.app.data.database.dao.GenreDao
+import com.flexify.app.data.database.dao.LyricDao
+import com.flexify.app.data.database.dao.PlaylistDao
+import com.flexify.app.data.database.dao.RadioDao
+import com.flexify.app.data.database.dao.SongDao
+import com.flexify.app.data.database.dao.SyncActionDao
+import com.flexify.app.data.database.entities.AlbumEntity
+import com.flexify.app.data.database.entities.PlaylistEntity
+import com.flexify.app.data.database.entities.PlaylistSongCrossRef
+import com.flexify.app.data.database.entities.SongEntity
+import com.flexify.app.data.database.mappers.toDomainModel
+import com.flexify.app.data.database.mappers.toEntity
+import com.flexify.app.domain.manager.SessionManager
+import com.flexify.app.domain.models.DomainArtist
+import com.flexify.app.util.core.Logger
 import kotlin.coroutines.cancellation.CancellationException
 
 class DbRepository(

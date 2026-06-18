@@ -1,6 +1,6 @@
-package paige.navic.util.core
+package com.flexify.app.util.core
 
-import paige.navic.domain.models.lyrics.LyricsWord
+import com.flexify.app.domain.models.lyrics.LyricsWord
 import kotlin.time.Duration
 
 fun List<LyricsWord>.calculateWordProgress(

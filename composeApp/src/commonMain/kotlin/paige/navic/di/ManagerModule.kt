@@ -1,13 +1,13 @@
-package paige.navic.di
+package com.flexify.app.di
 
 import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.module
-import paige.navic.domain.manager.DownloadManager
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.manager.SessionManager
-import paige.navic.domain.manager.SleepTimerManager
-import paige.navic.domain.manager.SnackBarManager
-import paige.navic.domain.manager.SyncManager
+import com.flexify.app.domain.manager.DownloadManager
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.manager.SessionManager
+import com.flexify.app.domain.manager.SleepTimerManager
+import com.flexify.app.domain.manager.SnackBarManager
+import com.flexify.app.domain.manager.SyncManager
 
 val managerModule = module {
 	singleOf(::SleepTimerManager)

@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.album.components
+package com.flexify.app.ui.screens.album.components
 
 import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyGridScope
@@ -7,12 +7,12 @@ import androidx.compose.ui.Modifier
 import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.info_no_albums
 import org.jetbrains.compose.resources.stringResource
-import paige.navic.domain.models.DomainAlbum
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.Album
-import paige.navic.ui.components.common.ContentUnavailable
-import paige.navic.ui.components.layouts.artGridPlaceholder
-import paige.navic.ui.core.UiState
+import com.flexify.app.domain.models.DomainAlbum
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.Album
+import com.flexify.app.ui.components.common.ContentUnavailable
+import com.flexify.app.ui.components.layouts.artGridPlaceholder
+import com.flexify.app.ui.core.UiState
 
 fun LazyGridScope.albumListScreenContent(
 	state: UiState<List<DomainAlbum>>,

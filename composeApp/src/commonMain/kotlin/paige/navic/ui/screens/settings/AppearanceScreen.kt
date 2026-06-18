@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.settings
+package com.flexify.app.ui.screens.settings
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -53,24 +53,24 @@ import navic.composeapp.generated.resources.title_layout
 import navic.composeapp.generated.resources.title_miscellaneous
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import paige.navic.LocalNavStack
-import paige.navic.LocalPlatformContext
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.models.settings.AnimationStyle
-import paige.navic.domain.models.settings.MarqueeSpeed
-import paige.navic.domain.models.settings.Theme
-import paige.navic.ui.components.common.Dropdown
-import paige.navic.ui.components.common.Form
-import paige.navic.ui.components.common.FormRow
-import paige.navic.ui.components.common.FormTitle
-import paige.navic.ui.components.layouts.NestedTopBar
-import paige.navic.ui.navigation.Screen
-import paige.navic.ui.screens.settings.components.SettingSelectionRow
-import paige.navic.ui.screens.settings.components.SettingSwitchRow
-import paige.navic.ui.screens.settings.dialogs.ArtworkShapeDialog
-import paige.navic.ui.screens.settings.dialogs.GridSizeDialog
-import paige.navic.ui.screens.settings.dialogs.GridSizePreview
-import paige.navic.ui.screens.settings.dialogs.ThemeDialog
+import com.flexify.app.LocalNavStack
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.models.settings.AnimationStyle
+import com.flexify.app.domain.models.settings.MarqueeSpeed
+import com.flexify.app.domain.models.settings.Theme
+import com.flexify.app.ui.components.common.Dropdown
+import com.flexify.app.ui.components.common.Form
+import com.flexify.app.ui.components.common.FormRow
+import com.flexify.app.ui.components.common.FormTitle
+import com.flexify.app.ui.components.layouts.NestedTopBar
+import com.flexify.app.ui.navigation.Screen
+import com.flexify.app.ui.screens.settings.components.SettingSelectionRow
+import com.flexify.app.ui.screens.settings.components.SettingSwitchRow
+import com.flexify.app.ui.screens.settings.dialogs.ArtworkShapeDialog
+import com.flexify.app.ui.screens.settings.dialogs.GridSizeDialog
+import com.flexify.app.ui.screens.settings.dialogs.GridSizePreview
+import com.flexify.app.ui.screens.settings.dialogs.ThemeDialog
 
 @Composable
 fun SettingsAppearanceScreen() {

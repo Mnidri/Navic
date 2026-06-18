@@ -1,11 +1,11 @@
-package paige.navic.data.database.entities
+package com.flexify.app.data.database.entities
 
 import androidx.room3.Entity
 import androidx.room3.PrimaryKey
 import kotlinx.serialization.Serializable
-import paige.navic.domain.models.DomainContributor
-import paige.navic.domain.models.DomainExplicitStatus
-import paige.navic.domain.models.DomainReplayGain
+import com.flexify.app.domain.models.DomainContributor
+import com.flexify.app.domain.models.DomainExplicitStatus
+import com.flexify.app.domain.models.DomainReplayGain
 import kotlin.time.Duration
 import kotlin.time.Instant
 

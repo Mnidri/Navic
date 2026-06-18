@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.nowPlaying.components.rows
+package com.flexify.app.ui.screens.nowPlaying.components.rows
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -18,9 +18,9 @@ import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import org.koin.compose.koinInject
-import paige.navic.domain.manager.ConnectivityManager
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.shared.MediaPlayerViewModel
+import com.flexify.app.domain.manager.ConnectivityManager
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.shared.MediaPlayerViewModel
 
 @Composable
 fun NowPlayingTechnicalInfoRow() {

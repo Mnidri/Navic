@@ -1,4 +1,4 @@
-package paige.navic.androidApp.utils
+package com.flexify.app.androidApp.utils
 
 import android.R
 import android.os.Build

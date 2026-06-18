@@ -1,4 +1,4 @@
-package paige.navic.domain.repositories
+package com.flexify.app.domain.repositories
 
 import com.russhwolf.settings.Settings
 import io.ktor.client.HttpClient
@@ -10,16 +10,16 @@ import io.ktor.client.statement.bodyAsText
 import io.ktor.http.ContentType
 import io.ktor.http.isSuccess
 import kotlinx.serialization.json.Json
-import paige.navic.data.database.dao.LyricDao
-import paige.navic.data.database.entities.LyricEntity
-import paige.navic.domain.manager.SessionManager
-import paige.navic.domain.models.DomainSong
-import paige.navic.domain.models.lyrics.LyricsConfig
-import paige.navic.domain.models.lyrics.LyricsLine
-import paige.navic.domain.models.lyrics.LyricsProvider
-import paige.navic.domain.models.lyrics.LyricsResult
-import paige.navic.domain.parser.LyricsContentParser
-import paige.navic.util.core.Logger
+import com.flexify.app.data.database.dao.LyricDao
+import com.flexify.app.data.database.entities.LyricEntity
+import com.flexify.app.domain.manager.SessionManager
+import com.flexify.app.domain.models.DomainSong
+import com.flexify.app.domain.models.lyrics.LyricsConfig
+import com.flexify.app.domain.models.lyrics.LyricsLine
+import com.flexify.app.domain.models.lyrics.LyricsProvider
+import com.flexify.app.domain.models.lyrics.LyricsResult
+import com.flexify.app.domain.parser.LyricsContentParser
+import com.flexify.app.util.core.Logger
 import kotlin.time.Duration.Companion.milliseconds
 
 class LyricsRepository(

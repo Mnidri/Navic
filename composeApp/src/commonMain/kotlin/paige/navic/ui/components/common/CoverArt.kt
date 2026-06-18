@@ -1,4 +1,4 @@
-package paige.navic.ui.components.common
+package com.flexify.app.ui.components.common
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.combinedClickable
@@ -35,12 +35,12 @@ import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.info_image_failed_to_load
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.manager.SessionManager
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.Error
-import paige.navic.util.core.Logger
-import paige.navic.ui.theme.defaultFont
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.manager.SessionManager
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.Error
+import com.flexify.app.util.core.Logger
+import com.flexify.app.ui.theme.defaultFont
 import coil3.compose.LocalPlatformContext as LocalCoilPlatformContext
 
 @Composable

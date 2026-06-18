@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.library.components
+package com.flexify.app.ui.screens.library.components
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -25,10 +25,10 @@ import androidx.lifecycle.compose.dropUnlessResumed
 import androidx.navigation3.runtime.NavKey
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
-import paige.navic.LocalPlatformContext
-import paige.navic.LocalNavStack
-import paige.navic.ui.navigation.Screen
-import paige.navic.ui.theme.defaultFont
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.LocalNavStack
+import com.flexify.app.ui.navigation.Screen
+import com.flexify.app.ui.theme.defaultFont
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 fun LazyGridScope.libraryScreenOverviewButton(

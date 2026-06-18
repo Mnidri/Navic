@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.album.components
+package com.flexify.app.ui.screens.album.components
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.runtime.Composable
@@ -13,19 +13,19 @@ import androidx.lifecycle.compose.dropUnlessResumed
 import kotlinx.collections.immutable.toPersistentList
 import kotlinx.coroutines.launch
 import org.koin.compose.koinInject
-import paige.navic.LocalPlatformContext
-import paige.navic.LocalNavStack
-import paige.navic.data.database.entities.DownloadStatus
-import paige.navic.ui.navigation.Screen
-import paige.navic.domain.models.DomainAlbum
-import paige.navic.domain.manager.DownloadManager
-import paige.navic.ui.components.layouts.ArtGridItem
-import paige.navic.ui.components.sheets.CollectionSheet
-import paige.navic.ui.screens.playlist.dialogs.PlaylistUpdateDialog
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.LocalNavStack
+import com.flexify.app.data.database.entities.DownloadStatus
+import com.flexify.app.ui.navigation.Screen
+import com.flexify.app.domain.models.DomainAlbum
+import com.flexify.app.domain.manager.DownloadManager
+import com.flexify.app.ui.components.layouts.ArtGridItem
+import com.flexify.app.ui.components.sheets.CollectionSheet
+import com.flexify.app.ui.screens.playlist.dialogs.PlaylistUpdateDialog
 import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.notice_download_started
 import navic.composeapp.generated.resources.notice_deleted_download
-import paige.navic.domain.manager.SnackBarManager
+import com.flexify.app.domain.manager.SnackBarManager
 
 @Composable
 fun AlbumListScreenItem(

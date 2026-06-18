@@ -1,4 +1,4 @@
-package paige.navic.domain.repositories
+package com.flexify.app.domain.repositories
 
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.PreferenceDataStoreFactory
@@ -8,7 +8,7 @@ import androidx.datastore.preferences.core.stringPreferencesKey
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.flow.map
 import okio.Path.Companion.toPath
-import paige.navic.util.core.synchronized
+import com.flexify.app.util.core.synchronized
 
 class PlayerStateRepository(
 	private val dataStore: DataStore<Preferences>

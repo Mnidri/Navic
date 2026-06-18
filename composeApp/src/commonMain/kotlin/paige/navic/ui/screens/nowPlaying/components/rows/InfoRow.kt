@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.nowPlaying.components.rows
+package com.flexify.app.ui.screens.nowPlaying.components.rows
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -19,14 +19,14 @@ import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.info_not_playing
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import paige.navic.LocalNavStack
-import paige.navic.ui.navigation.Screen
-import paige.navic.domain.models.DomainExplicitStatus
-import paige.navic.shared.MediaPlayerViewModel
-import paige.navic.ui.components.common.MarqueeText
-import paige.navic.ui.screens.nowPlaying.components.controls.NowPlayingMoreButton
-import paige.navic.ui.screens.nowPlaying.components.controls.NowPlayingStarButton
-import paige.navic.util.core.InlineExplicitIconLarge
+import com.flexify.app.LocalNavStack
+import com.flexify.app.ui.navigation.Screen
+import com.flexify.app.domain.models.DomainExplicitStatus
+import com.flexify.app.shared.MediaPlayerViewModel
+import com.flexify.app.ui.components.common.MarqueeText
+import com.flexify.app.ui.screens.nowPlaying.components.controls.NowPlayingMoreButton
+import com.flexify.app.ui.screens.nowPlaying.components.controls.NowPlayingStarButton
+import com.flexify.app.util.core.InlineExplicitIconLarge
 
 @Composable
 fun NowPlayingInfoRow(

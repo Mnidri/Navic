@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.login.pages
+package com.flexify.app.ui.screens.login.pages
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.EaseOut
@@ -14,7 +14,7 @@ import androidx.compose.material3.LinearWavyProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import paige.navic.ui.core.LoginUiState
+import com.flexify.app.ui.core.LoginUiState
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable

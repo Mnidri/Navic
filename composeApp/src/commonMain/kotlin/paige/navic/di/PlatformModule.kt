@@ -1,4 +1,4 @@
-package paige.navic.di
+package com.flexify.app.di
 
 import org.koin.core.module.Module
 

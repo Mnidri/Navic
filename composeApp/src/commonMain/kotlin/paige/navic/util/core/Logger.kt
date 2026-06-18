@@ -1,4 +1,4 @@
-package paige.navic.util.core
+package com.flexify.app.util.core
 
 expect object Logger {
 	fun e(tag: String, msg: String, tr: Throwable? = null)

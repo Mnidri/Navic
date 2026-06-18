@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.settings.components
+package com.flexify.app.ui.screens.settings.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -13,10 +13,10 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import org.koin.compose.koinInject
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.SwitchOff
-import paige.navic.icons.outlined.SwitchOn
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.SwitchOff
+import com.flexify.app.icons.outlined.SwitchOn
 
 @Composable
 fun SettingSwitch(

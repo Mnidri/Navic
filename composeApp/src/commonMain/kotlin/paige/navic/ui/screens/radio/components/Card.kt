@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.radio.components
+package com.flexify.app.ui.screens.radio.components
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
@@ -29,13 +29,13 @@ import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.info_unknown
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import paige.navic.LocalPlatformContext
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.models.DomainRadio
-import paige.navic.domain.models.settings.ThemeMode
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.Radio
-import paige.navic.ui.theme.defaultFont
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.models.DomainRadio
+import com.flexify.app.domain.models.settings.ThemeMode
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.Radio
+import com.flexify.app.ui.theme.defaultFont
 import kotlin.math.abs
 
 @Composable

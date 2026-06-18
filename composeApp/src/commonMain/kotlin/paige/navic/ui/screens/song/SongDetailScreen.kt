@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.song
+package com.flexify.app.ui.screens.song
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
@@ -39,14 +39,14 @@ import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
 import org.koin.core.parameter.parametersOf
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.ui.components.common.Form
-import paige.navic.ui.components.common.FormRow
-import paige.navic.ui.components.layouts.NestedTopBar
-import paige.navic.ui.screens.song.viewmodels.SongDetailViewModel
-import paige.navic.util.core.effectiveGain
-import paige.navic.util.core.toFileSize
-import paige.navic.util.core.toHoursMinutesSeconds
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.ui.components.common.Form
+import com.flexify.app.ui.components.common.FormRow
+import com.flexify.app.ui.components.layouts.NestedTopBar
+import com.flexify.app.ui.screens.song.viewmodels.SongDetailViewModel
+import com.flexify.app.util.core.effectiveGain
+import com.flexify.app.util.core.toFileSize
+import com.flexify.app.util.core.toHoursMinutesSeconds
 
 @Composable
 fun SongDetailScreen(songId: String) {

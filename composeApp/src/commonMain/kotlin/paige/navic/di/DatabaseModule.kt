@@ -1,8 +1,8 @@
-package paige.navic.di
+package com.flexify.app.di
 
 import org.koin.dsl.module
-import paige.navic.data.database.CacheDatabase
-import paige.navic.data.database.DownloadDatabase
+import com.flexify.app.data.database.CacheDatabase
+import com.flexify.app.data.database.DownloadDatabase
 
 val databaseModule = module {
 	// CacheDatabase is initialised inside PlatformModule since we need Context on android

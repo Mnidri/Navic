@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.lyrics.components
+package com.flexify.app.ui.screens.lyrics.components
 
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloatAsState
@@ -30,7 +30,7 @@ import androidx.compose.ui.text.style.ResolvedTextDirection
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 import org.koin.compose.koinInject
-import paige.navic.domain.manager.PreferenceManager
+import com.flexify.app.domain.manager.PreferenceManager
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable

@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.artist.components
+package com.flexify.app.ui.screens.artist.components
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.background
@@ -35,9 +35,9 @@ import androidx.compose.ui.unit.dp
 import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.action_more
 import org.jetbrains.compose.resources.stringResource
-import paige.navic.ui.components.common.CoverArt
-import paige.navic.ui.components.common.MarqueeText
-import paige.navic.ui.screens.artist.truncateText
+import com.flexify.app.ui.components.common.CoverArt
+import com.flexify.app.ui.components.common.MarqueeText
+import com.flexify.app.ui.screens.artist.truncateText
 
 @Composable
 fun ArtistDetailScreenHeading(

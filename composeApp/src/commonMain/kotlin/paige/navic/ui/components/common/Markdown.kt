@@ -1,7 +1,7 @@
 // very limited markdown parser
 // since this is literally just used once i didn't want to add another dependency
 
-package paige.navic.ui.components.common
+package com.flexify.app.ui.components.common
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row

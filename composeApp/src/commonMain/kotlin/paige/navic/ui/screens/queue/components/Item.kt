@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.queue.components
+package com.flexify.app.ui.screens.queue.components
 
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.foundation.background
@@ -33,17 +33,17 @@ import navic.composeapp.generated.resources.action_remove_from_queue
 import navic.composeapp.generated.resources.action_reorder
 import navic.composeapp.generated.resources.info_not_available_offline
 import org.jetbrains.compose.resources.stringResource
-import paige.navic.domain.models.DomainSong
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.Delete
-import paige.navic.icons.outlined.DragHandle
-import paige.navic.icons.outlined.Offline
-import paige.navic.ui.components.common.CoverArt
-import paige.navic.ui.components.common.MarqueeText
-import paige.navic.ui.components.common.Waveform
-import paige.navic.util.ui.DraggableListState
-import paige.navic.util.ui.dragHandle
-import paige.navic.util.ui.segmentedShapes
+import com.flexify.app.domain.models.DomainSong
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.Delete
+import com.flexify.app.icons.outlined.DragHandle
+import com.flexify.app.icons.outlined.Offline
+import com.flexify.app.ui.components.common.CoverArt
+import com.flexify.app.ui.components.common.MarqueeText
+import com.flexify.app.ui.components.common.Waveform
+import com.flexify.app.util.ui.DraggableListState
+import com.flexify.app.util.ui.dragHandle
+import com.flexify.app.util.ui.segmentedShapes
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable

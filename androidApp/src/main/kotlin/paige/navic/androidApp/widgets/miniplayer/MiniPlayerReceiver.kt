@@ -1,5 +1,5 @@
-package paige.navic.androidApp.widgets.miniplayer
+package com.flexify.app.androidApp.widgets.miniplayer
 
-import paige.navic.androidApp.widgets.nowplaying.NowPlayingReceiver
+import com.flexify.app.androidApp.widgets.nowplaying.NowPlayingReceiver
 
 class MiniPlayerReceiver : NowPlayingReceiver(MiniPlayerWidget::class.java)

@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.login.pages
+package com.flexify.app.ui.screens.login.pages
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.expandVertically
@@ -15,7 +15,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.info_syncing
 import org.jetbrains.compose.resources.stringResource
-import paige.navic.ui.core.LoginUiState
+import com.flexify.app.ui.core.LoginUiState
 
 @Composable
 fun LoginScreenSyncStatus(

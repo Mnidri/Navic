@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.library.components
+package com.flexify.app.ui.screens.library.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
@@ -22,24 +22,24 @@ import navic.composeapp.generated.resources.option_sort_starred
 import navic.composeapp.generated.resources.title_artists
 import navic.composeapp.generated.resources.title_genres
 import navic.composeapp.generated.resources.title_playlists
-import paige.navic.ui.navigation.Screen
-import paige.navic.domain.models.DomainAlbum
-import paige.navic.domain.models.DomainAlbumListType
-import paige.navic.domain.models.DomainArtist
-import paige.navic.domain.models.DomainGenre
-import paige.navic.domain.models.DomainPlaylist
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.History
-import paige.navic.icons.outlined.LibraryAdd
-import paige.navic.icons.outlined.Shuffle
-import paige.navic.icons.outlined.Star
-import paige.navic.ui.components.layouts.horizontalSection
-import paige.navic.ui.screens.album.components.AlbumListScreenItem
-import paige.navic.ui.screens.artist.ArtistsScreenItem
-import paige.navic.ui.screens.genre.components.GenreListScreenCard
-import paige.navic.ui.screens.playlist.components.PlaylistListScreenItem
-import paige.navic.ui.core.UiState
-import paige.navic.util.ui.withoutTop
+import com.flexify.app.ui.navigation.Screen
+import com.flexify.app.domain.models.DomainAlbum
+import com.flexify.app.domain.models.DomainAlbumListType
+import com.flexify.app.domain.models.DomainArtist
+import com.flexify.app.domain.models.DomainGenre
+import com.flexify.app.domain.models.DomainPlaylist
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.History
+import com.flexify.app.icons.outlined.LibraryAdd
+import com.flexify.app.icons.outlined.Shuffle
+import com.flexify.app.icons.outlined.Star
+import com.flexify.app.ui.components.layouts.horizontalSection
+import com.flexify.app.ui.screens.album.components.AlbumListScreenItem
+import com.flexify.app.ui.screens.artist.ArtistsScreenItem
+import com.flexify.app.ui.screens.genre.components.GenreListScreenCard
+import com.flexify.app.ui.screens.playlist.components.PlaylistListScreenItem
+import com.flexify.app.ui.core.UiState
+import com.flexify.app.util.ui.withoutTop
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

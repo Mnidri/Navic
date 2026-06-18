@@ -1,11 +1,11 @@
-package paige.navic.androidApp.shared
+package com.flexify.app.androidApp.shared
 
-import paige.navic.util.core.ResourceProvider
+import com.flexify.app.util.core.ResourceProvider
 
 class AndroidResourceProvider(
-	override val icNavic: Int = paige.navic.androidApp.R.drawable.ic_navic,
-	override val animLibrary: Int = paige.navic.androidApp.R.drawable.anim_library,
-	override val animPlaylist: Int = paige.navic.androidApp.R.drawable.anim_playlist,
-	override val animArtist: Int = paige.navic.androidApp.R.drawable.anim_artist,
-	override val animPause: Int = paige.navic.androidApp.R.drawable.anim_pause
+	override val icNavic: Int = com.flexify.app.androidApp.R.drawable.ic_navic,
+	override val animLibrary: Int = com.flexify.app.androidApp.R.drawable.anim_library,
+	override val animPlaylist: Int = com.flexify.app.androidApp.R.drawable.anim_playlist,
+	override val animArtist: Int = com.flexify.app.androidApp.R.drawable.anim_artist,
+	override val animPause: Int = com.flexify.app.androidApp.R.drawable.anim_pause
 ) : ResourceProvider

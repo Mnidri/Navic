@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.song
+package com.flexify.app.ui.screens.song
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -27,23 +27,23 @@ import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
 import org.koin.core.parameter.parametersOf
-import paige.navic.LocalBottomBarScrollManager
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.models.DomainSong
-import paige.navic.domain.models.DomainSongListType
-import paige.navic.domain.models.settings.BottomBarVisibilityMode
-import paige.navic.shared.MediaPlayerViewModel
-import paige.navic.ui.components.dialogs.QueueDuplicateDialog
-import paige.navic.ui.components.layouts.NestedTopBar
-import paige.navic.ui.components.layouts.PullToRefreshBox
-import paige.navic.ui.components.layouts.RootBottomBar
-import paige.navic.ui.components.layouts.RootTopBar
-import paige.navic.ui.core.UiState
-import paige.navic.ui.screens.share.dialogs.ShareDialog
-import paige.navic.ui.screens.song.components.SongListScreenSortButton
-import paige.navic.ui.screens.song.components.songListScreenContent
-import paige.navic.ui.screens.song.viewmodels.SongListViewModel
-import paige.navic.util.ui.withoutTop
+import com.flexify.app.LocalBottomBarScrollManager
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.models.DomainSong
+import com.flexify.app.domain.models.DomainSongListType
+import com.flexify.app.domain.models.settings.BottomBarVisibilityMode
+import com.flexify.app.shared.MediaPlayerViewModel
+import com.flexify.app.ui.components.dialogs.QueueDuplicateDialog
+import com.flexify.app.ui.components.layouts.NestedTopBar
+import com.flexify.app.ui.components.layouts.PullToRefreshBox
+import com.flexify.app.ui.components.layouts.RootBottomBar
+import com.flexify.app.ui.components.layouts.RootTopBar
+import com.flexify.app.ui.core.UiState
+import com.flexify.app.ui.screens.share.dialogs.ShareDialog
+import com.flexify.app.ui.screens.song.components.SongListScreenSortButton
+import com.flexify.app.ui.screens.song.components.songListScreenContent
+import com.flexify.app.ui.screens.song.viewmodels.SongListViewModel
+import com.flexify.app.util.ui.withoutTop
 import kotlin.time.Duration
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)

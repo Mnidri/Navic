@@ -1,9 +1,9 @@
-package paige.navic.data.database.mappers
+package com.flexify.app.data.database.mappers
 
-import paige.navic.data.database.entities.AlbumEntity
-import paige.navic.data.database.relations.AlbumWithSongs
-import paige.navic.domain.models.DomainAlbum
-import paige.navic.domain.models.DomainAlbumInfo
+import com.flexify.app.data.database.entities.AlbumEntity
+import com.flexify.app.data.database.relations.AlbumWithSongs
+import com.flexify.app.domain.models.DomainAlbum
+import com.flexify.app.domain.models.DomainAlbumInfo
 import dev.zt64.subsonic.api.model.Album as ApiAlbum
 import dev.zt64.subsonic.api.model.AlbumInfo as ApiAlbumInfo
 

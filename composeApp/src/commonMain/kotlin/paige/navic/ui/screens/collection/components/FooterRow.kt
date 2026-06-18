@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.collection.components
+package com.flexify.app.ui.screens.collection.components
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -11,8 +11,8 @@ import androidx.compose.ui.unit.dp
 import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.count_songs
 import org.jetbrains.compose.resources.pluralStringResource
-import paige.navic.domain.models.DomainSongCollection
-import paige.navic.ui.theme.defaultFont
+import com.flexify.app.domain.models.DomainSongCollection
+import com.flexify.app.ui.theme.defaultFont
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable

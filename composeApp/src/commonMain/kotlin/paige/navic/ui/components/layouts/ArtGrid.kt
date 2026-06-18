@@ -1,4 +1,4 @@
-package paige.navic.ui.components.layouts
+package com.flexify.app.ui.components.layouts
 
 import androidx.compose.animation.BoundsTransform
 import androidx.compose.animation.core.tween
@@ -34,14 +34,14 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.navigation3.ui.LocalNavAnimatedContentScope
 import org.koin.compose.koinInject
-import paige.navic.LocalPlatformContext
-import paige.navic.LocalSharedTransitionScope
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.ui.components.common.CoverArt
-import paige.navic.ui.components.common.ErrorBox
-import paige.navic.ui.core.UiState
-import paige.navic.util.ui.EmphasizedDecelerateEasing
-import paige.navic.util.ui.shimmerLoading
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.LocalSharedTransitionScope
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.ui.components.common.CoverArt
+import com.flexify.app.ui.components.common.ErrorBox
+import com.flexify.app.ui.core.UiState
+import com.flexify.app.util.ui.EmphasizedDecelerateEasing
+import com.flexify.app.util.ui.shimmerLoading
 
 @Composable
 fun ArtGrid(

@@ -1,4 +1,4 @@
-package paige.navic.ui.components.common
+package com.flexify.app.ui.components.common
 
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Row
@@ -33,23 +33,23 @@ import navic.composeapp.generated.resources.info_unknown_album
 import navic.composeapp.generated.resources.info_unknown_year
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import paige.navic.LocalNavStack
-import paige.navic.data.database.entities.DownloadEntity
-import paige.navic.data.database.entities.DownloadStatus
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.models.DomainExplicitStatus
-import paige.navic.domain.models.DomainSong
-import paige.navic.icons.Icons
-import paige.navic.icons.filled.Star
-import paige.navic.icons.outlined.Check
-import paige.navic.icons.outlined.DownloadOff
-import paige.navic.icons.outlined.Offline
-import paige.navic.shared.MediaPlayerViewModel
-import paige.navic.ui.components.dialogs.QueueDuplicateDialog
-import paige.navic.ui.components.sheets.SongSheet
-import paige.navic.ui.navigation.Screen
-import paige.navic.ui.screens.playlist.dialogs.PlaylistUpdateDialog
-import paige.navic.util.core.InlineExplicitIcon
+import com.flexify.app.LocalNavStack
+import com.flexify.app.data.database.entities.DownloadEntity
+import com.flexify.app.data.database.entities.DownloadStatus
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.models.DomainExplicitStatus
+import com.flexify.app.domain.models.DomainSong
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.filled.Star
+import com.flexify.app.icons.outlined.Check
+import com.flexify.app.icons.outlined.DownloadOff
+import com.flexify.app.icons.outlined.Offline
+import com.flexify.app.shared.MediaPlayerViewModel
+import com.flexify.app.ui.components.dialogs.QueueDuplicateDialog
+import com.flexify.app.ui.components.sheets.SongSheet
+import com.flexify.app.ui.navigation.Screen
+import com.flexify.app.ui.screens.playlist.dialogs.PlaylistUpdateDialog
+import com.flexify.app.util.core.InlineExplicitIcon
 
 @Composable
 fun SongRow(

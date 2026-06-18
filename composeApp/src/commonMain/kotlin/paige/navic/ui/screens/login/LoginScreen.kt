@@ -1,8 +1,8 @@
-package paige.navic.ui.screens.login
+package com.flexify.app.ui.screens.login
 
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
-import paige.navic.ui.screens.login.pages.LoginScreenContent
+import com.flexify.app.ui.screens.login.pages.LoginScreenContent
 
 @Composable
 fun LoginScreen() {

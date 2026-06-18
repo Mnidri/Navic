@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.lyrics.components
+package com.flexify.app.ui.screens.lyrics.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

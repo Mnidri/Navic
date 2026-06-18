@@ -1,6 +1,6 @@
-package paige.navic.data.database.mappers
+package com.flexify.app.data.database.mappers
 
-import paige.navic.domain.models.DomainShare
+import com.flexify.app.domain.models.DomainShare
 import dev.zt64.subsonic.api.model.Share as ApiShare
 
 fun ApiShare.toDomainModel() = DomainShare(

@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.settings.dialogs
+package com.flexify.app.ui.screens.settings.dialogs
 
 import androidx.compose.animation.core.snap
 import androidx.compose.foundation.BorderStroke
@@ -43,10 +43,10 @@ import navic.composeapp.generated.resources.action_ok
 import navic.composeapp.generated.resources.option_now_playing_slider_style
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import paige.navic.LocalPlatformContext
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.models.settings.NowPlayingSliderStyle
-import paige.navic.ui.components.common.SlimSlider
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.models.settings.NowPlayingSliderStyle
+import com.flexify.app.ui.components.common.SlimSlider
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
 @Composable

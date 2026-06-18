@@ -1,7 +1,7 @@
-package paige.navic.data.database.mappers
+package com.flexify.app.data.database.mappers
 
-import paige.navic.data.database.entities.ArtistEntity
-import paige.navic.domain.models.DomainArtist
+import com.flexify.app.data.database.entities.ArtistEntity
+import com.flexify.app.domain.models.DomainArtist
 import dev.zt64.subsonic.api.model.Artist as ApiArtist
 
 fun ApiArtist.toEntity() = ArtistEntity(

@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.nowPlaying.viewmodels
+package com.flexify.app.ui.screens.nowPlaying.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -6,8 +6,8 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.koin.core.component.KoinComponent
-import paige.navic.domain.repositories.SongRepository
-import paige.navic.shared.MediaPlayerViewModel
+import com.flexify.app.domain.repositories.SongRepository
+import com.flexify.app.shared.MediaPlayerViewModel
 
 class NowPlayingViewModel(
 	private val player: MediaPlayerViewModel,

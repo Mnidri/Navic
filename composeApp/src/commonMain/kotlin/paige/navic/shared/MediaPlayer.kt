@@ -1,4 +1,4 @@
-package paige.navic.shared
+package com.flexify.app.shared
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -10,14 +10,14 @@ import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.decodeFromJsonElement
-import paige.navic.domain.models.DomainRadio
-import paige.navic.domain.models.DomainSong
-import paige.navic.domain.models.DomainSongCollection
-import paige.navic.domain.repositories.PlayerStateRepository
-import paige.navic.domain.manager.ConnectivityManager
-import paige.navic.domain.manager.DownloadManager
-import paige.navic.ui.core.PlayerUiState
-import paige.navic.util.core.Logger
+import com.flexify.app.domain.models.DomainRadio
+import com.flexify.app.domain.models.DomainSong
+import com.flexify.app.domain.models.DomainSongCollection
+import com.flexify.app.domain.repositories.PlayerStateRepository
+import com.flexify.app.domain.manager.ConnectivityManager
+import com.flexify.app.domain.manager.DownloadManager
+import com.flexify.app.ui.core.PlayerUiState
+import com.flexify.app.util.core.Logger
 import kotlin.time.Duration.Companion.seconds
 
 abstract class MediaPlayerViewModel(

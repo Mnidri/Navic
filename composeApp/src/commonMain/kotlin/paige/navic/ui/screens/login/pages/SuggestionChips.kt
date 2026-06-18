@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.login.pages
+package com.flexify.app.ui.screens.login.pages
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.expandVertically
@@ -25,7 +25,7 @@ import androidx.compose.ui.unit.dp
 import navic.composeapp.generated.resources.Res
 import navic.composeapp.generated.resources.notice_login_suggestion
 import org.jetbrains.compose.resources.stringResource
-import paige.navic.LocalPlatformContext
+import com.flexify.app.LocalPlatformContext
 
 @Composable
 fun LoginScreenSuggestionChips(

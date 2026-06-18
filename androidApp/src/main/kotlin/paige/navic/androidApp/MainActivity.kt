@@ -1,10 +1,10 @@
-package paige.navic.androidApp
+package com.flexify.app.androidApp
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import paige.navic.App
+import com.flexify.app.App
 
 class MainActivity : ComponentActivity() {
 	override fun onCreate(savedInstanceState: Bundle?) {

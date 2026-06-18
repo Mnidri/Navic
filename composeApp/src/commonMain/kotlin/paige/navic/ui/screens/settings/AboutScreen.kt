@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.settings
+package com.flexify.app.ui.screens.settings
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
@@ -23,14 +23,14 @@ import navic.composeapp.generated.resources.title_acknowledgements
 import navic.composeapp.generated.resources.title_chat
 import navic.composeapp.generated.resources.title_source
 import org.jetbrains.compose.resources.stringResource
-import paige.navic.LocalPlatformContext
-import paige.navic.LocalNavStack
-import paige.navic.ui.navigation.Screen
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.ChevronForward
-import paige.navic.ui.components.common.Form
-import paige.navic.ui.components.common.FormRow
-import paige.navic.ui.components.layouts.NestedTopBar
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.LocalNavStack
+import com.flexify.app.ui.navigation.Screen
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.ChevronForward
+import com.flexify.app.ui.components.common.Form
+import com.flexify.app.ui.components.common.FormRow
+import com.flexify.app.ui.components.layouts.NestedTopBar
 
 @Composable
 fun SettingsAboutScreen() {

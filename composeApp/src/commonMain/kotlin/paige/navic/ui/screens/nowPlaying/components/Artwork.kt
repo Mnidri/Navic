@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.nowPlaying.components
+package com.flexify.app.ui.screens.nowPlaying.components
 
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.foundation.layout.Box
@@ -16,12 +16,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import org.koin.compose.koinInject
-import paige.navic.domain.models.DomainSong
-import paige.navic.icons.Icons
-import paige.navic.icons.filled.Note
-import paige.navic.icons.outlined.Radio
-import paige.navic.shared.MediaPlayerViewModel
-import paige.navic.ui.components.common.CoverArt
+import com.flexify.app.domain.models.DomainSong
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.filled.Note
+import com.flexify.app.icons.outlined.Radio
+import com.flexify.app.shared.MediaPlayerViewModel
+import com.flexify.app.ui.components.common.CoverArt
 
 @Composable
 fun NowPlayingArtwork(

@@ -1,4 +1,4 @@
-package paige.navic.domain.manager
+package com.flexify.app.domain.manager
 
 import coil3.SingletonImageLoader
 import coil3.request.CachePolicy
@@ -31,16 +31,16 @@ import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.Semaphore
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.sync.withPermit
-import paige.navic.data.database.dao.AlbumDao
-import paige.navic.data.database.dao.DownloadDao
-import paige.navic.data.database.dao.LyricDao
-import paige.navic.data.database.entities.DownloadEntity
-import paige.navic.data.database.entities.DownloadStatus
-import paige.navic.data.database.entities.LyricEntity
-import paige.navic.domain.models.DomainSong
-import paige.navic.domain.models.DomainSongCollection
-import paige.navic.domain.repositories.LyricsRepository
-import paige.navic.util.core.Logger
+import com.flexify.app.data.database.dao.AlbumDao
+import com.flexify.app.data.database.dao.DownloadDao
+import com.flexify.app.data.database.dao.LyricDao
+import com.flexify.app.data.database.entities.DownloadEntity
+import com.flexify.app.data.database.entities.DownloadStatus
+import com.flexify.app.data.database.entities.LyricEntity
+import com.flexify.app.domain.models.DomainSong
+import com.flexify.app.domain.models.DomainSongCollection
+import com.flexify.app.domain.repositories.LyricsRepository
+import com.flexify.app.util.core.Logger
 import coil3.PlatformContext as CoilPlatformContext
 
 class DownloadManager(

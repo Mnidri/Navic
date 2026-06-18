@@ -1,4 +1,4 @@
-package paige.navic.util.core
+package com.flexify.app.util.core
 
 import android.Manifest
 import android.app.Activity
@@ -22,8 +22,8 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.app.ActivityCompat.requestPermissions
 import androidx.core.view.WindowCompat
 import org.koin.compose.koinInject
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.models.settings.ThemeMode
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.models.settings.ThemeMode
 
 @OptIn(
 	ExperimentalMaterial3WindowSizeClassApi::class,

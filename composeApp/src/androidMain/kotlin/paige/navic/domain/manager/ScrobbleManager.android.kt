@@ -1,4 +1,4 @@
-package paige.navic.domain.manager
+package com.flexify.app.domain.manager
 
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player

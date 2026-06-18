@@ -1,8 +1,8 @@
-package paige.navic.data.database.entities
+package com.flexify.app.data.database.entities
 
 import androidx.room3.Entity
 import androidx.room3.PrimaryKey
-import paige.navic.domain.models.lyrics.LyricsProvider
+import com.flexify.app.domain.models.lyrics.LyricsProvider
 
 @Entity
 data class LyricEntity(

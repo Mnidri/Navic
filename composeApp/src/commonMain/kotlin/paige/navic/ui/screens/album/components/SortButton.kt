@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.album.components
+package com.flexify.app.ui.screens.album.components
 
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -8,13 +8,13 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import kotlinx.collections.immutable.persistentListOf
-import paige.navic.LocalPlatformContext
-import paige.navic.domain.models.DomainAlbumListType
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.Sort
-import paige.navic.ui.components.layouts.TopBarButton
-import paige.navic.ui.components.sheets.SortSheet
-import paige.navic.ui.screens.library.components.label
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.domain.models.DomainAlbumListType
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.Sort
+import com.flexify.app.ui.components.layouts.TopBarButton
+import com.flexify.app.ui.components.sheets.SortSheet
+import com.flexify.app.ui.screens.library.components.label
 
 @Composable
 fun AlbumListScreenSortButton(

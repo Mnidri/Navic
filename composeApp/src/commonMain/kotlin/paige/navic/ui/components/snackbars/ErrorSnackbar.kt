@@ -1,4 +1,4 @@
-package paige.navic.ui.components.snackbars
+package com.flexify.app.ui.components.snackbars
 
 import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarResult
@@ -15,11 +15,11 @@ import navic.composeapp.generated.resources.info_error
 import navic.composeapp.generated.resources.info_error_show
 import org.jetbrains.compose.resources.getString
 import org.jetbrains.compose.resources.stringResource
-import paige.navic.LocalSnackbarState
-import paige.navic.ui.components.common.ErrorCodeBlock
-import paige.navic.ui.components.common.FormButton
-import paige.navic.util.core.Logger
-import paige.navic.ui.components.dialogs.FormDialog
+import com.flexify.app.LocalSnackbarState
+import com.flexify.app.ui.components.common.ErrorCodeBlock
+import com.flexify.app.ui.components.common.FormButton
+import com.flexify.app.util.core.Logger
+import com.flexify.app.ui.components.dialogs.FormDialog
 
 @Composable
 fun ErrorSnackbar(

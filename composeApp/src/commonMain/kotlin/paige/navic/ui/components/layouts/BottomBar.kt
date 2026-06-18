@@ -1,4 +1,4 @@
-package paige.navic.ui.components.layouts
+package com.flexify.app.ui.components.layouts
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.animateColorAsState
@@ -34,31 +34,31 @@ import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
-import paige.navic.LocalNavStack
-import paige.navic.LocalPlatformContext
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.models.settings.NavbarConfig
-import paige.navic.domain.models.settings.NavbarTab
-import paige.navic.domain.models.settings.NavigationBarLabelVisibility
-import paige.navic.domain.models.settings.NavigationBarStyle
-import paige.navic.icons.Icons
-import paige.navic.icons.filled.Album
-import paige.navic.icons.filled.Artist
-import paige.navic.icons.filled.Genre
-import paige.navic.icons.filled.LibraryMusic
-import paige.navic.icons.filled.Radio
-import paige.navic.icons.outlined.Album
-import paige.navic.icons.outlined.Artist
-import paige.navic.icons.outlined.Genre
-import paige.navic.icons.outlined.LibraryMusic
-import paige.navic.icons.outlined.Note
-import paige.navic.icons.outlined.PlaylistPlay
-import paige.navic.icons.outlined.Radio
-import paige.navic.icons.outlined.Search
-import paige.navic.ui.components.common.animatedTabIconPainter
-import paige.navic.ui.core.UiState
-import paige.navic.ui.navigation.Screen
-import paige.navic.ui.screens.settings.viewmodels.NavtabsViewModel
+import com.flexify.app.LocalNavStack
+import com.flexify.app.LocalPlatformContext
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.models.settings.NavbarConfig
+import com.flexify.app.domain.models.settings.NavbarTab
+import com.flexify.app.domain.models.settings.NavigationBarLabelVisibility
+import com.flexify.app.domain.models.settings.NavigationBarStyle
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.filled.Album
+import com.flexify.app.icons.filled.Artist
+import com.flexify.app.icons.filled.Genre
+import com.flexify.app.icons.filled.LibraryMusic
+import com.flexify.app.icons.filled.Radio
+import com.flexify.app.icons.outlined.Album
+import com.flexify.app.icons.outlined.Artist
+import com.flexify.app.icons.outlined.Genre
+import com.flexify.app.icons.outlined.LibraryMusic
+import com.flexify.app.icons.outlined.Note
+import com.flexify.app.icons.outlined.PlaylistPlay
+import com.flexify.app.icons.outlined.Radio
+import com.flexify.app.icons.outlined.Search
+import com.flexify.app.ui.components.common.animatedTabIconPainter
+import com.flexify.app.ui.core.UiState
+import com.flexify.app.ui.navigation.Screen
+import com.flexify.app.ui.screens.settings.viewmodels.NavtabsViewModel
 
 private enum class NavItem(
 	val destination: Screen,

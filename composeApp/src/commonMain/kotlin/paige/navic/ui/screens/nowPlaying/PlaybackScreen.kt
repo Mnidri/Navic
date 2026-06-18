@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.nowPlaying
+package com.flexify.app.ui.screens.nowPlaying
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -26,8 +26,8 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.kyant.capsule.ContinuousCapsule
 import com.kyant.capsule.ContinuousRoundedRectangle
 import org.koin.compose.koinInject
-import paige.navic.shared.MediaPlayerViewModel
-import paige.navic.util.ui.rememberDraggableListState
+import com.flexify.app.shared.MediaPlayerViewModel
+import com.flexify.app.util.ui.rememberDraggableListState
 import kotlin.math.round
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)

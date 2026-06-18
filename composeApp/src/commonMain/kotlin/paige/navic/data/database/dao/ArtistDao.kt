@@ -1,4 +1,4 @@
-package paige.navic.data.database.dao
+package com.flexify.app.data.database.dao
 
 import androidx.room3.Dao
 import androidx.room3.Insert
@@ -6,8 +6,8 @@ import androidx.room3.OnConflictStrategy
 import androidx.room3.Query
 import androidx.room3.Transaction
 import kotlinx.coroutines.flow.Flow
-import paige.navic.data.database.entities.ArtistEntity
-import paige.navic.util.core.Logger
+import com.flexify.app.data.database.entities.ArtistEntity
+import com.flexify.app.util.core.Logger
 
 @Dao
 interface ArtistDao {

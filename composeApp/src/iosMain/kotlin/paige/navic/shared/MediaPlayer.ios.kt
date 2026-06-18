@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalForeignApi::class)
 
-package paige.navic.shared
+package com.flexify.app.shared
 
 import androidx.lifecycle.viewModelScope
 import kotlinx.cinterop.ExperimentalForeignApi
@@ -9,21 +9,21 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import paige.navic.domain.manager.ConnectivityManager
-import paige.navic.domain.manager.DownloadManager
-import paige.navic.domain.manager.IOSScrobbleManager
-import paige.navic.domain.manager.PreferenceManager
-import paige.navic.domain.manager.SessionManager
-import paige.navic.domain.manager.SyncManager
-import paige.navic.domain.models.DomainAlbum
-import paige.navic.domain.models.DomainExplicitStatus
-import paige.navic.domain.models.DomainRadio
-import paige.navic.domain.models.DomainSong
-import paige.navic.domain.models.DomainSongCollection
-import paige.navic.domain.repositories.PlayerStateRepository
-import paige.navic.domain.manager.SnackBarManager
-import paige.navic.ui.core.PlayerUiState
-import paige.navic.util.core.Logger
+import com.flexify.app.domain.manager.ConnectivityManager
+import com.flexify.app.domain.manager.DownloadManager
+import com.flexify.app.domain.manager.IOSScrobbleManager
+import com.flexify.app.domain.manager.PreferenceManager
+import com.flexify.app.domain.manager.SessionManager
+import com.flexify.app.domain.manager.SyncManager
+import com.flexify.app.domain.models.DomainAlbum
+import com.flexify.app.domain.models.DomainExplicitStatus
+import com.flexify.app.domain.models.DomainRadio
+import com.flexify.app.domain.models.DomainSong
+import com.flexify.app.domain.models.DomainSongCollection
+import com.flexify.app.domain.repositories.PlayerStateRepository
+import com.flexify.app.domain.manager.SnackBarManager
+import com.flexify.app.ui.core.PlayerUiState
+import com.flexify.app.util.core.Logger
 import platform.AVFAudio.AVAudioSession
 import platform.AVFAudio.AVAudioSessionCategoryPlayback
 import platform.AVFAudio.setActive

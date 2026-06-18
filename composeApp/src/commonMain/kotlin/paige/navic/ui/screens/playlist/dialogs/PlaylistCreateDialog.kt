@@ -1,4 +1,4 @@
-package paige.navic.ui.screens.playlist.dialogs
+package com.flexify.app.ui.screens.playlist.dialogs
 
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.text.input.TextFieldLineLimits
@@ -24,15 +24,15 @@ import navic.composeapp.generated.resources.title_create_playlist
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
 import org.koin.core.parameter.parametersOf
-import paige.navic.LocalNavStack
-import paige.navic.ui.navigation.Screen
-import paige.navic.domain.models.DomainSong
-import paige.navic.icons.Icons
-import paige.navic.icons.outlined.PlaylistAdd
-import paige.navic.ui.components.common.FormButton
-import paige.navic.ui.components.dialogs.FormDialog
-import paige.navic.ui.screens.playlist.viewmodels.PlaylistCreateDialogViewModel
-import paige.navic.ui.core.UiState
+import com.flexify.app.LocalNavStack
+import com.flexify.app.ui.navigation.Screen
+import com.flexify.app.domain.models.DomainSong
+import com.flexify.app.icons.Icons
+import com.flexify.app.icons.outlined.PlaylistAdd
+import com.flexify.app.ui.components.common.FormButton
+import com.flexify.app.ui.components.dialogs.FormDialog
+import com.flexify.app.ui.screens.playlist.viewmodels.PlaylistCreateDialogViewModel
+import com.flexify.app.ui.core.UiState
 
 @Composable
 fun PlaylistCreateDialog(
