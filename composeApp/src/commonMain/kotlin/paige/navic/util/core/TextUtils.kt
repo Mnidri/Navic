@@ -6,9 +6,6 @@ import androidx.compose.ui.text.Placeholder
 import androidx.compose.ui.text.PlaceholderVerticalAlign
 import androidx.compose.ui.unit.sp
 import kotlinx.collections.immutable.persistentMapOf
-import com.flexify.app.generated.resources.Res
-import com.flexify.app.generated.resources.info_explicit
-import org.jetbrains.compose.resources.stringResource
 import com.flexify.app.icons.Icons
 import com.flexify.app.icons.filled.Explicit
 
@@ -22,7 +19,7 @@ val InlineExplicitIcon = persistentMapOf(
     ) {
         Icon(
             imageVector = Icons.Filled.Explicit,
-            contentDescription = stringResource(Res.string.info_explicit)
+            contentDescription = "Explicit Content"
         )
     }
 )
@@ -37,7 +34,7 @@ val InlineExplicitIconLarge = persistentMapOf(
     ) {
         Icon(
             imageVector = Icons.Filled.Explicit,
-            contentDescription = stringResource(Res.string.info_explicit)
+            contentDescription = "Explicit Content"
         )
     }
 )
